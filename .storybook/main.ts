@@ -17,7 +17,7 @@ const config: StorybookConfig = {
     config.resolve = config.resolve ?? {};
     config.resolve.alias = {
       ...(config.resolve.alias as Record<string, string> ?? {}),
-      '@storybook/blocks': '@storybook/addon-docs/dist/blocks',
+      '@storybook/blocks': '@storybook/addon-docs/blocks',
     };
     return config;
   },
