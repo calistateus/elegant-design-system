@@ -12,6 +12,14 @@ const config: StorybookConfig = {
     "@storybook/addon-docs",
     "@storybook/addon-onboarding"
   ],
-  "framework": "@storybook/nextjs-vite"
+  "framework": "@storybook/nextjs-vite",
+  viteFinal: async (config) => {
+    config.resolve = config.resolve ?? {};
+    config.resolve.alias = {
+      ...(config.resolve.alias as Record<string, string> ?? {}),
+      '@storybook/blocks': '@storybook/addon-docs/dist/blocks',
+    };
+    return config;
+  },
 };
 export default config;
