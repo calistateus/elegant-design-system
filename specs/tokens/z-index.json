@@ -1,0 +1,26 @@
+{
+  "comment": "Z-index scale — layering order for all positioned elements. Values form a strict ascending stack; never skip a level without a documented reason.",
+
+  "semantic": {
+    "nav": {
+      "cssVar":   "--z-index-nav",
+      "value":    "50",
+      "comment":  "Sticky top and bottom navigation bars."
+    },
+    "drawer": {
+      "cssVar":   "--z-index-drawer",
+      "value":    "51",
+      "comment":  "Side drawer sheet — one above nav so it covers the navigation bar when open."
+    },
+    "overlay": {
+      "cssVar":   "--z-index-overlay",
+      "value":    "100",
+      "comment":  "Tooltips and floating overlay labels (e.g. circular-progress center text)."
+    },
+    "toast": {
+      "cssVar":   "--z-index-toast",
+      "value":    "9999",
+      "comment":  "Toast notifications — topmost layer, must appear above all other UI."
+    }
+  }
+}

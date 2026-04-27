@@ -1,0 +1,73 @@
+{
+  "comment": "Typography tokens — mirrors the --primitive-font-* and --type-* variables in globals.css. Primitives hold raw values; semantic tokens name the intent and resolve to their CSS variable.",
+
+  "primitive": {
+    "family": {
+      "serif": { "cssVar": "--primitive-font-serif", "value": "Lora, serif" },
+      "sans":  { "cssVar": "--primitive-font-sans",  "value": "DM Sans, sans-serif" },
+      "mono":  { "cssVar": "--primitive-font-mono",  "value": "DM Mono, monospace" }
+    },
+    "size": {
+      "2xs":     { "cssVar": "--primitive-font-size-2xs",     "value": "0.625rem", "comment": "10px — micro-labels in dense components (e.g. ElegantStepper badge)" },
+      "xs":      { "cssVar": "--primitive-font-size-xs",      "value": "0.75rem" },
+      "sm":      { "cssVar": "--primitive-font-size-sm",      "value": "0.875rem" },
+      "base":    { "cssVar": "--primitive-font-size-base",    "value": "1rem" },
+      "lg":      { "cssVar": "--primitive-font-size-lg",      "value": "1.125rem" },
+      "xl":      { "cssVar": "--primitive-font-size-xl",      "value": "1.25rem" },
+      "2xl":     { "cssVar": "--primitive-font-size-2xl",     "value": "1.5rem" },
+      "3xl":     { "cssVar": "--primitive-font-size-3xl",     "value": "1.875rem" },
+      "4xl":     { "cssVar": "--primitive-font-size-4xl",     "value": "2.5rem" },
+      "display": { "cssVar": "--primitive-font-size-display", "value": "4.5rem" }
+    },
+    "weight": {
+      "light":   { "cssVar": "--primitive-font-weight-light",   "value": "300" },
+      "regular": { "cssVar": "--primitive-font-weight-regular", "value": "400" },
+      "medium":  { "cssVar": "--primitive-font-weight-medium",  "value": "500" },
+      "bold":    { "cssVar": "--primitive-font-weight-bold",    "value": "700" }
+    }
+  },
+
+  "semantic": {
+    "line-height": {
+      "comment": "Semantic line-height scale. Use these instead of raw numeric values in component styles.",
+      "none":    { "cssVar": "--type-line-height-none",           "value": "1",    "comment": "For icon-only containers and compact badge rows" },
+      "heading": { "cssVar": "--type-heading-line-height",        "value": "1.25", "comment": "Display and large headings" },
+      "heading-tight": { "cssVar": "--type-heading-line-height-tight", "value": "1.3", "comment": "Section headings, form titles" },
+      "tight":   { "cssVar": "--type-body-line-height-tight",     "value": "1.4",  "comment": "Labels, compact body text, most form fields" },
+      "base":    { "cssVar": "--type-body-line-height-base",      "value": "1.5",  "comment": "Standard body text, descriptions, list items" },
+      "relaxed": { "cssVar": "--type-body-line-height-relaxed",   "value": "1.6",  "comment": "Long-form body, accordion content, quote text" }
+    },
+
+    "tracking": {
+      "comment": "Semantic letter-spacing scale. Use these instead of raw em values in component styles.",
+      "tight":   { "cssVar": "--type-tracking-tight",   "value": "-0.01em", "comment": "Default tight tracking for labels and UI text" },
+      "display": { "cssVar": "--type-tracking-display", "value": "-0.02em", "comment": "Tighter tracking for logos, KPI numbers, and display headings" },
+      "wide":    { "cssVar": "--type-tracking-wide",    "value": "0.1em",   "comment": "Wide tracking for uppercase eyebrow labels" }
+    },
+
+    "h5": {
+      "comment": "Bold sans-serif — smallest heading level, used for component and section labels",
+      "family":      { "cssVar": "--type-h5-family",      "resolves": "var(--primitive-font-sans)" },
+      "size":        { "cssVar": "--type-h5-size",        "resolves": "var(--primitive-font-size-base)" },
+      "weight":      { "cssVar": "--type-h5-weight",      "resolves": "var(--primitive-font-weight-bold)" },
+      "line-height": { "cssVar": "--type-h5-line-height", "value": "1.4" }
+    },
+
+    "quote": {
+      "comment": "Serif, large body — for testimonials and pull quotes",
+      "family":      { "cssVar": "--type-quote-family",      "resolves": "var(--primitive-font-serif)" },
+      "size":        { "cssVar": "--type-quote-size",        "resolves": "var(--primitive-font-size-xl)" },
+      "weight":      { "cssVar": "--type-quote-weight",      "resolves": "var(--primitive-font-weight-regular)" },
+      "line-height": { "cssVar": "--type-quote-line-height", "value": "1.6" }
+    },
+
+    "action-link": {
+      "comment": "Sans-serif, medium weight, accent color — for inline interactive links like 'Resend code' or 'Forgot password'",
+      "family":         { "cssVar": "--type-action-link-family",         "resolves": "var(--primitive-font-sans)" },
+      "size":           { "cssVar": "--type-action-link-size",           "resolves": "var(--primitive-font-size-sm)" },
+      "weight":         { "cssVar": "--type-action-link-weight",         "resolves": "var(--primitive-font-weight-medium)" },
+      "line-height":    { "cssVar": "--type-action-link-line-height",    "value": "1.4" },
+      "letter-spacing": { "cssVar": "--type-action-link-letter-spacing", "value": "-0.01em" }
+    }
+  }
+}

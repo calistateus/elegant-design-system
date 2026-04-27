@@ -1,0 +1,30 @@
+# Build & dependency output
+node_modules/
+.next/
+
+# Version control internals
+.git/
+
+# Static assets
+public/
+storybook-static/
+
+# Boilerplate config files
+postcss.config.mjs
+vitest.config.ts
+vitest.shims.d.ts
+
+# Build output
+node_modules/
+.next/
+storybook-static/
+
+# Generated
+tsconfig.tsbuildinfo
+
+# Binary assets
+**/*.woff2
+**/*.ico
+
+# Lockfiles
+package-lock.json

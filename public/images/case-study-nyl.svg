@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <defs>
+    <linearGradient id="g2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a2e1a;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#0d1f0d;stop-opacity:1"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#g2)"/>
+  <!-- Grid lines -->
+  <line x1="0" y1="166" x2="800" y2="166" stroke="#ffffff08" stroke-width="1"/>
+  <line x1="0" y1="333" x2="800" y2="333" stroke="#ffffff08" stroke-width="1"/>
+  <line x1="266" y1="0" x2="266" y2="500" stroke="#ffffff08" stroke-width="1"/>
+  <line x1="533" y1="0" x2="533" y2="500" stroke="#ffffff08" stroke-width="1"/>
+  <!-- Bar chart -->
+  <rect x="290" y="260" width="30" height="80" rx="4" fill="#2d7a3a44"/>
+  <rect x="330" y="210" width="30" height="130" rx="4" fill="#2d7a3a66"/>
+  <rect x="370" y="180" width="30" height="160" rx="4" fill="#2d7a3a88"/>
+  <rect x="410" y="150" width="30" height="190" rx="4" fill="#2d7a3aaa"/>
+  <rect x="450" y="120" width="30" height="220" rx="4" fill="#2d7a3acc"/>
+  <!-- Axis line -->
+  <line x1="285" y1="345" x2="495" y2="345" stroke="#ffffff22" stroke-width="1"/>
+  <line x1="285" y1="120" x2="285" y2="345" stroke="#ffffff22" stroke-width="1"/>
+  <!-- Trend line -->
+  <polyline points="305,260 345,210 385,175 425,145 465,115" fill="none" stroke="#4aff7a66" stroke-width="2" stroke-dasharray="4,3"/>
+  <!-- Value labels -->
+  <text x="305" y="255" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#ffffff33">12%</text>
+  <text x="465" y="110" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#4aff7a88">+34%</text>
+  <!-- Label -->
+  <text x="400" y="410" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="500" fill="#ffffff44" letter-spacing="3">NYL FINANCIAL CALCULATORS</text>
+  <text x="400" y="432" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#ffffff28" letter-spacing="1">CONVERSION · ACCESSIBILITY</text>
+</svg>

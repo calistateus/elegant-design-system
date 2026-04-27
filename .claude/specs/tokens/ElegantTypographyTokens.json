@@ -1,0 +1,123 @@
+{
+  "primitive": {
+    "fontFamily": {
+      "serif": "Lora, serif",
+      "sans": "DM Sans, sans-serif",
+      "mono": "DM Mono, monospace"
+    },
+    "fontSize": {
+      "xs": "0.75rem",
+      "sm": "0.875rem",
+      "base": "1rem",
+      "lg": "1.125rem",
+      "xl": "1.25rem",
+      "2xl": "1.5rem",
+      "3xl": "1.875rem",
+      "4xl": "2.5rem",
+      "display": "4.5rem"
+    },
+    "fontWeight": {
+      "light": "300",
+      "regular": "400",
+      "medium": "500",
+      "bold": "700"
+    }
+  },
+  "semantic": {
+    "display": {
+      "family": "var(--primitive-font-serif)",
+      "size": "var(--primitive-font-size-display)",
+      "weight": "var(--primitive-font-weight-regular)",
+      "lineHeight": "1.05",
+      "letterSpacing": "-0.04em"
+    },
+    "h1": {
+      "family": "var(--primitive-font-serif)",
+      "size": "var(--primitive-font-size-4xl)",
+      "weight": "var(--primitive-font-weight-regular)",
+      "lineHeight": "1.1",
+      "letterSpacing": "-0.02em"
+    },
+    "h2": {
+      "family": "var(--primitive-font-sans)",
+      "size": "var(--primitive-font-size-2xl)",
+      "weight": "var(--primitive-font-weight-medium)",
+      "lineHeight": "1.2",
+      "letterSpacing": "-0.01em"
+    },
+    "h3": {
+      "family": "var(--primitive-font-sans)",
+      "size": "var(--primitive-font-size-xl)",
+      "weight": "var(--primitive-font-weight-medium)",
+      "lineHeight": "1.3"
+    },
+    "h4": {
+      "family": "var(--primitive-font-sans)",
+      "size": "var(--primitive-font-size-lg)",
+      "weight": "var(--primitive-font-weight-medium)",
+      "lineHeight": "1.4"
+    },
+    "h5": {
+      "family": "var(--primitive-font-sans)",
+      "size": "var(--primitive-font-size-base)",
+      "weight": "var(--primitive-font-weight-bold)",
+      "lineHeight": "1.4"
+    },
+    "quote": {
+      "family": "var(--primitive-font-serif)",
+      "size": "var(--primitive-font-size-xl)",
+      "weight": "var(--primitive-font-weight-regular)",
+      "lineHeight": "1.6"
+    },
+    "body": {
+      "family": "var(--primitive-font-sans)",
+      "size": "var(--primitive-font-size-base)",
+      "weight": "var(--primitive-font-weight-regular)",
+      "lineHeight": "1.6"
+    },
+    "body-large": {
+      "family": "var(--primitive-font-sans)",
+      "size": "var(--primitive-font-size-lg)",
+      "weight": "var(--primitive-font-weight-regular)",
+      "lineHeight": "1.6"
+    },
+    "body-small": {
+      "family": "var(--primitive-font-sans)",
+      "size": "var(--primitive-font-size-sm)",
+      "weight": "var(--primitive-font-weight-regular)",
+      "lineHeight": "1.5"
+    },
+    "label": {
+      "family": "var(--primitive-font-mono)",
+      "size": "var(--primitive-font-size-xs)",
+      "weight": "var(--primitive-font-weight-regular)",
+      "letterSpacing": "0.02em"
+    },
+    "eyebrow": {
+      "family": "var(--primitive-font-sans)",
+      "size": "var(--primitive-font-size-xs)",
+      "weight": "var(--primitive-font-weight-light)",
+      "letterSpacing": "0.1em",
+      "textTransform": "uppercase"
+    },
+    "card-title": {
+      "family": "var(--primitive-font-serif)",
+      "size": "var(--primitive-font-size-2xl)",
+      "weight": "var(--primitive-font-weight-regular)",
+      "lineHeight": "1.25",
+      "letterSpacing": "-0.02em"
+    },
+    "button-main": {
+      "family": "var(--primitive-font-sans)",
+      "size": "var(--primitive-font-size-base)",
+      "weight": "var(--primitive-font-weight-medium)",
+      "letterSpacing": "-0.01em"
+    },
+    "button-menu": {
+      "family": "var(--primitive-font-sans)",
+      "size": "var(--primitive-font-size-xs)",
+      "weight": "var(--primitive-font-weight-regular)",
+      "letterSpacing": "-0.01em"
+    }
+  }
+}

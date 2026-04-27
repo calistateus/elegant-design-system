@@ -1,0 +1,227 @@
+{
+  "comment": "Spacing tokens — mirrors the --primitive-scale-* and --size-* variables in globals.css. Primitives hold raw values; semantic tokens name the intent and resolve to their CSS variable.",
+
+  "primitive": {
+    "scale": {
+      "0":  { "cssVar": "--primitive-scale-0",  "value": "0" },
+      "1":  { "cssVar": "--primitive-scale-1",  "value": "0.25rem" },
+      "2":  { "cssVar": "--primitive-scale-2",  "value": "0.5rem" },
+      "3":  { "cssVar": "--primitive-scale-3",  "value": "0.75rem" },
+      "4":  { "cssVar": "--primitive-scale-4",  "value": "1rem" },
+      "6":  { "cssVar": "--primitive-scale-6",  "value": "1.5rem" },
+      "8":  { "cssVar": "--primitive-scale-8",  "value": "2rem" },
+      "9":  { "cssVar": "--primitive-scale-9",  "value": "2.25rem", "comment": "36px — used for grid gutter/margin at medium breakpoint" },
+      "10": { "cssVar": "--primitive-scale-10", "value": "2.5rem" },
+      "12": { "cssVar": "--primitive-scale-12", "value": "3rem" },
+      "16": { "cssVar": "--primitive-scale-16", "value": "4rem" },
+      "20": { "cssVar": "--primitive-scale-20", "value": "5rem", "comment": "80px — used for circular-progress md and normal grid margin at xl" },
+      "24": { "cssVar": "--primitive-scale-24", "value": "6rem" },
+      "32": { "cssVar": "--primitive-scale-32", "value": "8rem" }
+    }
+  },
+
+  "semantic": {
+    "layout": {
+      "page-gutter": {
+        "cssVar":   "--size-page-gutter",
+        "resolves": "var(--primitive-scale-6)",
+        "comment":  "Horizontal padding applied to the page container on all breakpoints"
+      },
+      "section-gap": {
+        "cssVar":   "--size-section-gap",
+        "resolves": "var(--primitive-scale-24)",
+        "comment":  "Vertical gap between top-level page sections"
+      },
+      "max-width": {
+        "cssVar":   "--size-max-width",
+        "value":    "1280px",
+        "comment":  "Maximum content width — not a scale step, set as a fixed pixel value"
+      }
+    },
+
+    "grid": {
+      "comment": "Grid base (mobile-first) values. Responsive overrides live in @media blocks in globals.css and are not duplicated here.",
+      "compact-cols":     { "cssVar": "--grid-compact-cols",     "value": "4" },
+      "compact-template": { "cssVar": "--grid-compact-template", "value": "repeat(4, 1fr)" },
+      "compact-margin":   { "cssVar": "--grid-compact-margin",   "resolves": "var(--primitive-scale-4)", "comment": "16px on mobile" },
+      "compact-gutter":   { "cssVar": "--grid-compact-gutter",   "resolves": "var(--primitive-scale-4)", "comment": "16px on mobile" },
+      "normal-cols":      { "cssVar": "--grid-normal-cols",      "value": "4" },
+      "normal-template":  { "cssVar": "--grid-normal-template",  "value": "repeat(4, 1fr)" },
+      "normal-margin":    { "cssVar": "--grid-normal-margin",    "resolves": "var(--primitive-scale-4)", "comment": "16px on mobile" },
+      "normal-gutter":    { "cssVar": "--grid-normal-gutter",    "resolves": "var(--primitive-scale-4)", "comment": "16px on mobile" }
+    },
+
+    "component": {
+      "card-gap": {
+        "cssVar":   "--size-card-gap",
+        "resolves": "var(--primitive-scale-4)",
+        "comment":  "Internal gap between elements inside a card"
+      },
+      "stack-gap": {
+        "cssVar":   "--size-stack-gap",
+        "resolves": "var(--primitive-scale-8)",
+        "comment":  "Gap between stacked card-level or section-level items"
+      },
+      "tag-gap": {
+        "cssVar":   "--size-tag-gap",
+        "resolves": "var(--primitive-scale-3)",
+        "comment":  "Gap between inline tag chips"
+      },
+      "drawer-width": {
+        "cssVar":  "--size-drawer-width",
+        "value":   "400px",
+        "comment": "Fixed width of the ElegantDrawerSheet panel"
+      }
+    },
+
+    "button": {
+      "px": {
+        "cssVar":   "--size-btn-px",
+        "resolves": "var(--primitive-scale-4)",
+        "comment":  "Horizontal padding inside default-size buttons"
+      },
+      "py": {
+        "cssVar":   "--size-btn-py",
+        "resolves": "var(--primitive-scale-2)",
+        "comment":  "Vertical padding inside default-size buttons"
+      },
+      "px-sm": {
+        "cssVar":   "--size-btn-px-sm",
+        "resolves": "var(--primitive-scale-3)",
+        "comment":  "Horizontal padding inside small buttons"
+      },
+      "py-sm": {
+        "cssVar":   "--size-btn-py-sm",
+        "resolves": "var(--primitive-scale-1)",
+        "comment":  "Vertical padding inside small buttons"
+      },
+      "icon-gap": {
+        "cssVar":   "--size-btn-icon-gap",
+        "resolves": "var(--primitive-scale-2)",
+        "comment":  "Gap between icon and label text in default-size buttons"
+      },
+      "icon-gap-sm": {
+        "cssVar":   "--size-btn-icon-gap-sm",
+        "resolves": "var(--primitive-scale-1)",
+        "comment":  "Gap between icon and label text in small buttons"
+      },
+      "radius": {
+        "cssVar":   "--size-btn-radius",
+        "resolves": "var(--primitive-radius-md)",
+        "comment":  "Border radius for all button variants"
+      }
+    },
+
+    "card": {
+      "padding": {
+        "cssVar":   "--size-card-padding",
+        "resolves": "var(--primitive-scale-6)",
+        "comment":  "Uniform inset padding applied inside card containers"
+      },
+      "radius": {
+        "cssVar":   "--size-card-radius",
+        "resolves": "var(--primitive-radius-md)",
+        "comment":  "Border radius for card containers"
+      }
+    },
+
+    "chip": {
+      "comment": "Chip (dismissible tag) sizing.",
+      "radius": { "cssVar": "--size-chip-radius", "resolves": "var(--primitive-radius-full)" },
+      "px":     { "cssVar": "--size-chip-px",     "resolves": "var(--primitive-scale-2)" },
+      "py":     { "cssVar": "--size-chip-py",     "resolves": "var(--primitive-scale-1)" },
+      "gap":    { "cssVar": "--size-chip-gap",    "resolves": "var(--primitive-scale-1)" }
+    },
+
+    "heatmap": {
+      "comment": "Heatmap cell sizing.",
+      "cell":        { "cssVar": "--size-heatmap-cell",        "value": "10px" },
+      "gap":         { "cssVar": "--size-heatmap-gap",         "value": "3px" },
+      "cell-radius": { "cssVar": "--size-heatmap-cell-radius", "resolves": "var(--primitive-radius-sm)" }
+    },
+
+    "skeleton": {
+      "comment": "Skeleton loading placeholder sizing.",
+      "radius": { "cssVar": "--size-skeleton-radius", "resolves": "var(--primitive-radius-sm)" }
+    },
+
+    "fileupload": {
+      "comment": "File upload dropzone sizing — all resolved from existing card/tag tokens.",
+      "dropzone-radius":  { "cssVar": "--size-fileupload-dropzone-radius",  "resolves": "var(--size-card-radius)" },
+      "dropzone-padding": { "cssVar": "--size-fileupload-dropzone-padding", "resolves": "var(--size-card-padding)" },
+      "chip-gap":         { "cssVar": "--size-fileupload-chip-gap",         "resolves": "var(--size-tag-gap)" }
+    },
+
+    "spinner": {
+      "comment": "Spinner diameter per size variant.",
+      "sm": { "cssVar": "--size-spinner-sm", "resolves": "var(--primitive-scale-4)" },
+      "md": { "cssVar": "--size-spinner-md", "resolves": "var(--primitive-scale-6)" },
+      "lg": { "cssVar": "--size-spinner-lg", "resolves": "var(--primitive-scale-10)" }
+    },
+
+    "progress": {
+      "comment": "Linear progress bar dimensions.",
+      "track-height": { "cssVar": "--size-progress-track-height", "resolves": "var(--primitive-scale-1)" },
+      "track-length": { "cssVar": "--size-progress-track-length", "resolves": "var(--primitive-scale-32)" }
+    },
+
+    "circular-progress": {
+      "comment": "Circular progress diameter per size variant.",
+      "sm": { "cssVar": "--size-circular-progress-sm", "resolves": "var(--primitive-scale-12)" },
+      "md": { "cssVar": "--size-circular-progress-md", "resolves": "var(--primitive-scale-20)" },
+      "lg": { "cssVar": "--size-circular-progress-lg", "resolves": "var(--primitive-scale-32)" }
+    },
+
+    "typography": {
+      "heading-to-sub": {
+        "cssVar":   "--size-heading-to-sub",
+        "resolves": "var(--primitive-scale-3)",
+        "comment":  "Gap from a heading to its subheading or eyebrow label"
+      },
+      "heading-to-body": {
+        "cssVar":   "--size-heading-to-body",
+        "resolves": "var(--primitive-scale-4)",
+        "comment":  "Gap from a heading down to the first body paragraph"
+      },
+      "body-to-body": {
+        "cssVar":   "--size-body-to-body",
+        "resolves": "var(--primitive-scale-2)",
+        "comment":  "Gap between consecutive body paragraphs"
+      },
+      "body-to-button": {
+        "cssVar":   "--size-body-to-button",
+        "resolves": "var(--primitive-scale-6)",
+        "comment":  "Gap from the last body line to a following CTA button"
+      },
+      "label-to-description": {
+        "cssVar":   "--size-label-to-description",
+        "resolves": "var(--primitive-scale-1)",
+        "comment":  "Gap from a form label to its helper / description text"
+      }
+    },
+
+    "form": {
+      "group-gap": {
+        "cssVar":   "--size-form-group-gap",
+        "resolves": "var(--primitive-scale-3)",
+        "tailwind": "--spacing-form-group-gap",
+        "comment":  "Vertical gap between individual controls (checkboxes, radios) within a form group"
+      }
+    },
+
+    "border": {
+      "comment": "Standard border widths. Use these instead of raw px values in component styles.",
+      "default": { "cssVar": "--size-border-default", "value": "1px", "comment": "Standard 1px border — dividers, input outlines, card edges" },
+      "thick":   { "cssVar": "--size-border-thick",   "value": "2px", "comment": "Thicker border — avatar rings, tab indicators, dashed borders" }
+    },
+
+    "icon": {
+      "comment": "Icon size and stroke presets matching the Lucide icon size prop.",
+      "xs":     { "cssVar": "--size-icon-xs",     "value": "10px", "comment": "Extra-small — badge dismiss X, chip X" },
+      "sm":     { "cssVar": "--size-icon-sm",     "value": "14px", "comment": "Small — inline alert/action icons" },
+      "md":     { "cssVar": "--size-icon-md",     "value": "16px", "comment": "Default — most component icons" },
+      "lg":     { "cssVar": "--size-icon-lg",     "value": "24px", "comment": "Large — upload placeholder, hero icons" },
+      "stroke": { "cssVar": "--size-icon-stroke", "value": "1.5",  "comment": "System-wide Lucide strokeWidth default" }
+    }
+  }
+}

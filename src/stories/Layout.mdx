@@ -1,0 +1,165 @@
+import { Meta, Canvas, Story } from '@storybook/blocks';
+import * as ContainerStories from './ElegantContainer.stories';
+
+<Meta title="Simple/Layout/Docs" />
+
+# Layout System
+
+The layout system is built on a set of semantic size tokens and a single flexible primitive — `ElegantContainer`. Every spacing value in the UI maps to one of these tokens; hardcoded pixel values and `primitive-*` tokens are never used directly in layout code.
+
+---
+
+## Spacing tokens
+
+These are the tokens you'll use for gaps, padding, and section rhythm. All values resolve to entries on the primitive scale.
+
+<div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'var(--size-card-gap)', marginBlock: 'var(--size-stack-gap)' }}>
+
+  <div>
+
+### Page structure
+
+| Token | Scale step | Value |
+|---|---|---|
+| `--size-max-width` | — | 1280px |
+| `--size-page-gutter` | scale-6 | 1.5 rem |
+| `--size-section-gap` | scale-24 | 6 rem |
+
+  </div>
+
+  <div>
+
+### Content rhythm
+
+| Token | Scale step | Value |
+|---|---|---|
+| `--size-stack-gap` | scale-8 | 2 rem |
+| `--size-card-gap` | scale-4 | 1 rem |
+| `--size-tag-gap` | scale-3 | 0.75 rem |
+
+  </div>
+
+</div>
+
+<div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'var(--size-card-gap)', marginBottom: 'var(--size-stack-gap)' }}>
+
+  <div>
+
+### Card internals
+
+| Token | Scale step | Value |
+|---|---|---|
+| `--size-card-padding` | scale-6 | 1.5 rem |
+| `--size-card-radius` | radius-md | 4 px |
+
+  </div>
+
+  <div>
+
+### Typography spacing
+
+| Token | Scale step | Value |
+|---|---|---|
+| `--size-heading-to-sub` | scale-3 | 0.75 rem |
+| `--size-heading-to-body` | scale-4 | 1 rem |
+| `--size-body-to-body` | scale-2 | 0.5 rem |
+| `--size-body-to-button` | scale-6 | 1.5 rem |
+| `--size-label-to-description` | scale-1 | 0.25 rem |
+
+  </div>
+
+</div>
+
+---
+
+## ElegantContainer
+
+`ElegantContainer` is the only layout primitive. It renders as any block element and composes flex layout entirely through token-backed props — no raw CSS required in page code.
+
+```tsx
+import { ElegantContainer } from '@/components/simple/ElegantContainer';
+```
+
+### Props
+
+| Prop | Type | Default | Description |
+|---|---|---|---|
+| `as` | `div \| section \| article \| main \| aside \| header \| footer \| nav` | `div` | Rendered HTML element |
+| `maxWidth` | `'page' \| 'full'` | — | `page` clamps to `--size-max-width` (1280 px) |
+| `center` | `boolean` | `false` | Adds `margin-inline: auto` |
+| `fullWidth` | `boolean` | `false` | Sets `width: 100%` |
+| `paddingX` | `'none' \| 'gutter' \| 'card'` | `'none'` | Horizontal inner padding |
+| `paddingY` | `'none' \| 'gutter' \| 'card' \| 'stack' \| 'section'` | `'none'` | Vertical inner padding |
+| `gap` | `'none' \| 'tag' \| 'card' \| 'stack' \| 'section'` | `'none'` | Gap between direct children |
+| `direction` | `'column' \| 'row' \| 'row-wrap'` | `'column'` | Flex direction |
+| `align` | `'start' \| 'center' \| 'end' \| 'stretch'` | `'stretch'` | `align-items` |
+| `justify` | `'start' \| 'center' \| 'end' \| 'between' \| 'around'` | `'start'` | `justify-content` |
+
+---
+
+## Patterns
+
+### Vertical stack
+
+A column of content blocks spaced at the card gap. Use for lists, form fields, or article content.
+
+<Canvas of={ContainerStories.VerticalStack} />
+
+### Horizontal row
+
+A row of items aligned on the center axis. Use for toolbars, tag clusters, or inline controls.
+
+<Canvas of={ContainerStories.HorizontalRow} />
+
+### Wrapping row
+
+A row that wraps onto new lines. Use for tag clouds, chip groups, or responsive card grids.
+
+<Canvas of={ContainerStories.WrappingRow} />
+
+### Page section
+
+A `<section>` capped at the page max-width, centered, and padded with section-scale vertical rhythm. This is the standard outer wrapper for every page section.
+
+<Canvas of={ContainerStories.PageSection} />
+
+---
+
+## Nesting rules
+
+Containers nest freely. The outer container controls page rhythm; inner containers control component-level layout.
+
+```tsx
+// Page section wrapper
+<ElegantContainer
+  as="section"
+  maxWidth="page"
+  center
+  paddingX="gutter"
+  paddingY="section"
+  fullWidth
+>
+  {/* Heading + body group */}
+  <ElegantContainer direction="column" gap="card">
+    <h2>Section heading</h2>
+    <p>Supporting description.</p>
+  </ElegantContainer>
+
+  {/* Card row */}
+  <ElegantContainer direction="row-wrap" gap="card" fullWidth>
+    <Card />
+    <Card />
+    <Card />
+  </ElegantContainer>
+</ElegantContainer>
+```
+
+---
+
+## Token usage rules
+
+- Use only `--color-*` and `--size-*` tokens in layout code.
+- Never reference `--primitive-*` directly in component or page markup — primitives are the raw scale; semantics are the contract.
+- Never hardcode hex values, pixel sizes, or font stacks.
+- `--size-page-gutter` is the canonical horizontal padding for every page-level section. Do not substitute `--size-card-padding` at the page edge.
+- `--size-section-gap` is for vertical rhythm between full-width page sections only — not between cards or stack items.

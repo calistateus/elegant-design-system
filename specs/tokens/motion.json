@@ -1,0 +1,153 @@
+{
+  "comment": "Motion tokens — mirrors the --primitive-duration-*, --primitive-easing-*, and --motion-* variables in globals.css. Primitives hold raw values; semantic tokens name the intent and resolve to their CSS variable.",
+
+  "primitive": {
+    "duration": {
+      "instant":  { "cssVar": "--primitive-duration-instant", "value": "100ms" },
+      "fast":     { "cssVar": "--primitive-duration-fast",    "value": "150ms" },
+      "base":     { "cssVar": "--primitive-duration-base",    "value": "200ms" },
+      "relaxed":  { "cssVar": "--primitive-duration-relaxed", "value": "350ms" }
+    },
+    "easing": {
+      "default":       { "cssVar": "--primitive-easing-default",       "value": "ease" },
+      "power2-out":    { "cssVar": "--primitive-easing-power2-out",    "value": "cubic-bezier(0.22, 1, 0.36, 1)" },
+      "power2-in-out": { "cssVar": "--primitive-easing-power2-in-out", "value": "cubic-bezier(0.45, 0, 0.55, 1)" }
+    },
+    "scale": {
+      "hover": 1.05,
+      "rest":  1,
+      "comment": "No CSS var — used inline as a transform value, not composable into a transition shorthand"
+    },
+    "opacity": {
+      "hover": 0.85,
+      "rest":  1,
+      "comment": "No CSS var — applied inline to the element style, not composable into a transition shorthand"
+    }
+  },
+
+  "semantic": {
+    "toggle": {
+      "pill-bg": {
+        "cssVar":   "--motion-toggle-bg",
+        "resolves": "background-color var(--primitive-duration-base) var(--primitive-easing-default)",
+        "comment":  "Pill fill cross-fades between on/off colors"
+      },
+      "thumb-slide": {
+        "cssVar":   "--motion-toggle-thumb",
+        "resolves": "left var(--primitive-duration-base) var(--primitive-easing-default)",
+        "comment":  "Thumb translates left/right on toggle"
+      }
+    },
+
+    "button": {
+      "primary": {
+        "cssVar":   "--motion-btn-primary",
+        "resolves": "opacity var(--primitive-duration-fast) var(--primitive-easing-default), transform var(--primitive-duration-fast) var(--primitive-easing-default)",
+        "scale":    "primitive.scale.hover",
+        "opacity":  "primitive.opacity.hover",
+        "comment":  "Primary button scales up and dims slightly on hover"
+      },
+      "secondary": {
+        "cssVar":   "--motion-btn-secondary",
+        "resolves": "color var(--primitive-duration-fast) var(--primitive-easing-default), opacity var(--primitive-duration-fast) var(--primitive-easing-default), transform var(--primitive-duration-fast) var(--primitive-easing-default)",
+        "scale":    "primitive.scale.hover",
+        "opacity":  "primitive.opacity.hover",
+        "comment":  "Secondary button shifts text color, scales, and dims on hover"
+      }
+    },
+
+    "dropdown": {
+      "trigger-border": {
+        "cssVar":   "--motion-dropdown-trigger",
+        "resolves": "border-color var(--primitive-duration-fast) var(--primitive-easing-default), box-shadow var(--primitive-duration-fast) var(--primitive-easing-default)",
+        "comment":  "Trigger field border and focus-ring on focus/open"
+      },
+      "chevron-rotate": {
+        "cssVar":   "--motion-dropdown-chevron",
+        "resolves": "transform var(--primitive-duration-fast) var(--primitive-easing-default)",
+        "open":     "rotate(180deg)",
+        "closed":   "rotate(0deg)",
+        "comment":  "Chevron icon rotates 180° when menu opens"
+      },
+      "item-hover": {
+        "cssVar":   "--motion-dropdown-item",
+        "resolves": "background-color var(--primitive-duration-instant) var(--primitive-easing-default)",
+        "comment":  "List item background snaps on cursor enter/leave — faster than other interactions to feel responsive"
+      }
+    },
+
+    "case-study-image": {
+      "zoom-in": {
+        "cssVar":    "--motion-case-study-easing-in",
+        "resolves":  "var(--primitive-easing-power2-out)",
+        "duration":  "primitive.duration.relaxed (0.35s for GSAP)",
+        "scale":     "primitive.scale.hover",
+        "engine":    "gsap",
+        "comment":   "Image zooms in on card hover. GSAP reads duration as a unitless seconds value (0.35); easing resolves to its cubic-bezier equivalent"
+      },
+      "zoom-out": {
+        "cssVar":    "--motion-case-study-easing-out",
+        "resolves":  "var(--primitive-easing-power2-in-out)",
+        "duration":  "primitive.duration.relaxed (0.35s for GSAP)",
+        "scale":     "primitive.scale.rest",
+        "engine":    "gsap",
+        "comment":   "Image eases back with a symmetric in-out on mouse-leave. GSAP reads duration as a unitless seconds value (0.35)"
+      }
+    },
+
+    "input": {
+      "focus": {
+        "cssVar":   "--motion-input-focus",
+        "resolves": "border-color var(--primitive-duration-fast) var(--primitive-easing-default), box-shadow var(--primitive-duration-fast) var(--primitive-easing-default)",
+        "comment":  "Canonical focus transition for all form field inputs — replaces the duplicated raw 150ms ease strings across components"
+      }
+    },
+
+    "interactive": {
+      "color": {
+        "cssVar":   "--motion-interactive-color",
+        "resolves": "color var(--primitive-duration-fast) var(--primitive-easing-default)",
+        "comment":  "Color-only transition for nav links, breadcrumbs, and other text-color hover states"
+      }
+    },
+
+    "state-values": {
+      "comment": "JS-readable scalar motion values. Also exposed in src/lib/motion-constants.ts for GSAP and JS consumers that cannot read CSS custom properties at runtime.",
+      "opacity-hover": {
+        "cssVar":   "--motion-opacity-hover",
+        "value":    "0.85",
+        "comment":  "Matches primitive.opacity.hover — hover opacity for interactive elements"
+      },
+      "scale-hover": {
+        "cssVar":   "--motion-scale-hover",
+        "value":    "1.05",
+        "comment":  "Matches primitive.scale.hover — hover scale for GSAP transforms"
+      },
+      "scale-rest": {
+        "cssVar":   "--motion-scale-rest",
+        "value":    "1",
+        "comment":  "Resting scale — explicit return value for GSAP mouse-leave handlers"
+      }
+    },
+
+    "toast": {
+      "dismiss-ms": {
+        "cssVar":   "--motion-toast-dismiss-ms",
+        "value":    "4000",
+        "comment":  "Auto-dismiss delay in milliseconds. Use MOTION.duration.toast in JS; unit-free so it can be read directly via getComputedStyle if needed."
+      }
+    },
+
+    "spinner": {
+      "comment": "Spinner keyframe animation parameters.",
+      "duration": { "cssVar": "--motion-spinner-duration", "value": "700ms", "comment": "One full rotation" },
+      "easing":   { "cssVar": "--motion-spinner-easing",   "value": "linear", "comment": "Constant rotation speed" }
+    },
+
+    "skeleton": {
+      "comment": "Skeleton shimmer keyframe animation parameters.",
+      "duration": { "cssVar": "--motion-skeleton-duration", "value": "1.6s",       "comment": "One shimmer sweep" },
+      "easing":   { "cssVar": "--motion-skeleton-easing",   "value": "ease-in-out", "comment": "Smooth sweep in and out" }
+    }
+  }
+}

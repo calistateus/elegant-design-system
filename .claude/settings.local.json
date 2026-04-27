@@ -1,0 +1,39 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx storybook@latest init)",
+      "Bash(npx create-next-app@latest . --typescript --tailwind --app --src-dir --import-alias \"@/*\")",
+      "Bash(npx create-next-app@latest . --typescript --tailwind --app --src-dir --import-alias \"@/*\" --name personal-website)",
+      "Bash(INIT_CWD=\"/Users/calistamateuszczyk/personal website\" npx create-next-app@latest . --ts --tailwind --app --src-dir --import-alias \"@/*\" --skip-install)",
+      "Read(//private/tmp/**)",
+      "Bash(npx create-next-app@latest personal-website --typescript --tailwind --app --src-dir --import-alias \"@/*\" --yes)",
+      "Bash(cp -n /tmp/personal-website/package.json \"/Users/calistamateuszczyk/personal website/package.json\")",
+      "Bash(cp -n /tmp/personal-website/tsconfig.json \"/Users/calistamateuszczyk/personal website/tsconfig.json\")",
+      "Bash(cp -n /tmp/personal-website/next.config.ts \"/Users/calistamateuszczyk/personal website/next.config.ts\")",
+      "Bash(cp -n /tmp/personal-website/postcss.config.mjs \"/Users/calistamateuszczyk/personal website/postcss.config.mjs\")",
+      "Bash(cp -n /tmp/personal-website/.gitignore \"/Users/calistamateuszczyk/personal website/.gitignore\")",
+      "Bash(npm install:*)",
+      "Bash(npx storybook@latest init --yes)",
+      "Bash(npm run:*)",
+      "Bash(node -e \"const g = require\\('gsap'\\); console.log\\(g.version || 'ok'\\)\")",
+      "Bash(echo \"PID $!\")",
+      "Bash(npx tsc:*)",
+      "Bash(ls .chromatic* chromatic.config*)",
+      "Bash(cat .env*)",
+      "Bash(npx storybook:*)",
+      "Bash(mv button-spec.md ElegantButtonSpec.md)",
+      "Bash(mv card-pack-spec.md ElegantCardPackSpec.md)",
+      "Bash(mv case-study-card-spec.md ElegantCaseStudyCardSpec.md)",
+      "Bash(mv icon-card-spec.md ElegantIconCardSpec.md)",
+      "Bash(mv referral-card-spec.md ElegantReferralCardSpec.md)",
+      "Bash(mv color-tokens.json ElegantColorTokens.json)",
+      "Bash(mv sizing-tokens.json ElegantSizingTokens.json)",
+      "Bash(mv typography-tokens.json ElegantTypographyTokens.json)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(curl -s http://localhost:6006 -o /dev/null -w \"%{http_code}\")",
+      "Bash(wc -l \"/Users/calistamateuszczyk/personal website/src/components/simple\"/*.tsx)",
+      "Bash(node scripts/build-tokens.mjs)",
+      "Bash(node -)"
+    ]
+  }
+}

@@ -1,0 +1,202 @@
+{
+  "comment": "Color tokens — mirrors the --primitive-* and --color-* variables in globals.css. 800-on-100 contrast ratios are all ≥ 4.5:1 (WCAG AA).",
+
+  "primitive": {
+    "white":  { "cssVar": "--primitive-white",  "value": "#ffffff" },
+    "black":  { "cssVar": "--primitive-black",  "value": "#1e1e1e" },
+
+    "gray": {
+      "50":  { "cssVar": "--primitive-gray-50",  "value": "#fafafa" },
+      "100": { "cssVar": "--primitive-gray-100", "value": "#f5f5f5" },
+      "200": { "cssVar": "--primitive-gray-200", "value": "#e5e5e5" },
+      "300": { "cssVar": "--primitive-gray-300", "value": "#d4d4d4" },
+      "400": { "cssVar": "--primitive-gray-400", "value": "#a3a3a3" },
+      "500": { "cssVar": "--primitive-gray-500", "value": "#8c8c8c", "comment": "Lightest gray that passes WCAG 1.4.11 non-text contrast (≈ 3.3:1 on white) — used for inactive star outlines" },
+      "600": { "cssVar": "--primitive-gray-600", "value": "#666666" },
+      "900": { "cssVar": "--primitive-gray-900", "value": "#171717" }
+    },
+
+    "red": {
+      "100": { "cssVar": "--primitive-red-100", "value": "#fee2e2", "comment": "Light tint — used as badge background" },
+      "300": { "cssVar": "--primitive-red-300", "value": "#f87171", "comment": "Light/warm red — used for heart fills (softer than red-500)" },
+      "500": { "cssVar": "--primitive-red-500", "value": "#dc2626", "comment": "Mid — used for error states" },
+      "800": { "cssVar": "--primitive-red-800", "value": "#991b1b", "comment": "Dark — contrast on red-100 ≈ 9.5:1" }
+    },
+
+    "green": {
+      "100": { "cssVar": "--primitive-green-100", "value": "#dcfce7", "comment": "Light tint — used as badge background" },
+      "300": { "cssVar": "--primitive-green-300", "value": "#6dbd84", "comment": "Mid-light — used for heatmap medium level and green-to-red shader" },
+      "500": { "cssVar": "--primitive-green-500", "value": "#2e6f40", "comment": "Mid — used for accent" },
+      "800": { "cssVar": "--primitive-green-800", "value": "#166534", "comment": "Dark — contrast on green-100 ≈ 9.2:1" }
+    },
+
+    "blue": {
+      "100": { "cssVar": "--primitive-blue-100", "value": "#dbeafe", "comment": "Light tint — used as badge background" },
+      "800": { "cssVar": "--primitive-blue-800", "value": "#1e40af", "comment": "Dark — contrast on blue-100 ≈ 8.6:1" }
+    },
+
+    "yellow": {
+      "100": { "cssVar": "--primitive-yellow-100", "value": "#fef9c3", "comment": "Light tint — used as badge background" },
+      "800": { "cssVar": "--primitive-yellow-800", "value": "#854d0e", "comment": "Dark amber — contrast on yellow-100 ≈ 8.8:1" }
+    },
+
+    "amber": {
+      "500": { "cssVar": "--primitive-amber-500", "value": "#f59e0b", "comment": "Amber — mid level in the green-to-red heatmap shader" }
+    },
+
+    "purple": {
+      "100": { "cssVar": "--primitive-purple-100", "value": "#f3e8ff", "comment": "Light tint — used as badge background" },
+      "800": { "cssVar": "--primitive-purple-800", "value": "#6b21a8", "comment": "Dark — contrast on purple-100 ≈ 8.1:1" }
+    },
+
+    "radius": {
+      "none": { "cssVar": "--primitive-radius-none", "value": "0" },
+      "sm":   { "cssVar": "--primitive-radius-sm",   "value": "2px" },
+      "md":   { "cssVar": "--primitive-radius-md",   "value": "4px" },
+      "full": { "cssVar": "--primitive-radius-full",  "value": "999px", "comment": "Near-infinite — produces a pill shape on any height" }
+    }
+  },
+
+  "semantic": {
+    "background": {
+      "comment": "Page-level surface colors.",
+      "main":    { "cssVar": "--color-bg-main",    "resolves": "var(--primitive-white)" },
+      "surface": { "cssVar": "--color-bg-surface", "resolves": "var(--primitive-gray-50)" }
+    },
+
+    "text": {
+      "comment": "Text intent tokens.",
+      "title":  { "cssVar": "--color-text-title",  "resolves": "var(--primitive-black)" },
+      "body":   { "cssVar": "--color-text-body",   "resolves": "var(--primitive-gray-900)" },
+      "muted":  { "cssVar": "--color-text-muted",  "resolves": "var(--primitive-gray-600)" },
+      "accent": { "cssVar": "--color-text-accent", "resolves": "var(--primitive-green-500)" }
+    },
+
+    "border": {
+      "subtle": { "cssVar": "--color-border-subtle", "resolves": "var(--primitive-gray-100)" }
+    },
+
+    "progress": {
+      "track": { "cssVar": "--color-progress-track", "resolves": "var(--primitive-gray-200)" }
+    },
+
+    "interactive": {
+      "comment": "Primary action colors.",
+      "primary-bg": { "cssVar": "--color-interactive-primary-bg", "resolves": "var(--primitive-black)" },
+      "primary-fg": { "cssVar": "--color-interactive-primary-fg", "resolves": "var(--primitive-white)" }
+    },
+
+    "heatmap": {
+      "comment": "Heatmap visualization palette. Two shader variants: green-scale and green-to-red.",
+      "empty":  { "cssVar": "--color-heatmap-empty",  "resolves": "var(--primitive-gray-200)" },
+      "low":    { "cssVar": "--color-heatmap-low",    "resolves": "var(--primitive-green-100)" },
+      "medium": { "cssVar": "--color-heatmap-medium", "resolves": "var(--primitive-green-300)" },
+      "high":   { "cssVar": "--color-heatmap-high",   "resolves": "var(--primitive-green-500)" },
+      "max":    { "cssVar": "--color-heatmap-max",    "resolves": "var(--primitive-green-800)" },
+      "accent": {
+        "comment": "Theme-aware accent shader using color-mix().",
+        "1": { "cssVar": "--color-heatmap-accent-1", "resolves": "color-mix(in srgb, var(--color-text-accent) 20%, var(--color-bg-main))" },
+        "2": { "cssVar": "--color-heatmap-accent-2", "resolves": "color-mix(in srgb, var(--color-text-accent) 40%, var(--color-bg-main))" },
+        "3": { "cssVar": "--color-heatmap-accent-3", "resolves": "color-mix(in srgb, var(--color-text-accent) 70%, var(--color-bg-main))" },
+        "4": { "cssVar": "--color-heatmap-accent-4", "resolves": "var(--color-text-accent)" }
+      },
+      "redgreen": {
+        "comment": "Green-to-red heat shader (good → warning → bad).",
+        "1": { "cssVar": "--color-heatmap-redgreen-1", "resolves": "var(--primitive-green-300)" },
+        "2": { "cssVar": "--color-heatmap-redgreen-2", "resolves": "var(--primitive-amber-500)" },
+        "3": { "cssVar": "--color-heatmap-redgreen-3", "resolves": "var(--primitive-red-500)" },
+        "4": { "cssVar": "--color-heatmap-redgreen-4", "resolves": "var(--primitive-red-800)" }
+      }
+    },
+
+    "error": {
+      "text":   { "cssVar": "--color-error-text",   "resolves": "var(--primitive-red-500)" },
+      "border": { "cssVar": "--color-error-border", "resolves": "var(--primitive-red-500)" }
+    },
+
+    "badge": {
+      "comment": "Per-color badge tokens. Each color provides bg (100 tint), text (800 dark), and border (100 tint).",
+      "neutral": {
+        "bg":     { "cssVar": "--color-badge-neutral-bg",     "resolves": "var(--primitive-gray-50)" },
+        "text":   { "cssVar": "--color-badge-neutral-text",   "resolves": "var(--primitive-gray-600)" },
+        "border": { "cssVar": "--color-badge-neutral-border", "resolves": "var(--primitive-gray-100)" }
+      },
+      "red": {
+        "bg":     { "cssVar": "--color-badge-red-bg",     "resolves": "var(--primitive-red-100)" },
+        "text":   { "cssVar": "--color-badge-red-text",   "resolves": "var(--primitive-red-800)" },
+        "border": { "cssVar": "--color-badge-red-border", "resolves": "var(--primitive-red-100)" }
+      },
+      "green": {
+        "bg":     { "cssVar": "--color-badge-green-bg",     "resolves": "var(--primitive-green-100)" },
+        "text":   { "cssVar": "--color-badge-green-text",   "resolves": "var(--primitive-green-800)" },
+        "border": { "cssVar": "--color-badge-green-border", "resolves": "var(--primitive-green-100)" }
+      },
+      "blue": {
+        "bg":     { "cssVar": "--color-badge-blue-bg",     "resolves": "var(--primitive-blue-100)" },
+        "text":   { "cssVar": "--color-badge-blue-text",   "resolves": "var(--primitive-blue-800)" },
+        "border": { "cssVar": "--color-badge-blue-border", "resolves": "var(--primitive-blue-100)" }
+      },
+      "yellow": {
+        "bg":     { "cssVar": "--color-badge-yellow-bg",     "resolves": "var(--primitive-yellow-100)" },
+        "text":   { "cssVar": "--color-badge-yellow-text",   "resolves": "var(--primitive-yellow-800)" },
+        "border": { "cssVar": "--color-badge-yellow-border", "resolves": "var(--primitive-yellow-100)" }
+      },
+      "purple": {
+        "bg":     { "cssVar": "--color-badge-purple-bg",     "resolves": "var(--primitive-purple-100)" },
+        "text":   { "cssVar": "--color-badge-purple-text",   "resolves": "var(--primitive-purple-800)" },
+        "border": { "cssVar": "--color-badge-purple-border", "resolves": "var(--primitive-purple-100)" }
+      },
+      "white": {
+        "bg":     { "cssVar": "--color-badge-white-bg",     "resolves": "transparent" },
+        "text":   { "cssVar": "--color-badge-white-text",   "resolves": "var(--primitive-white)" },
+        "border": { "cssVar": "--color-badge-white-border", "resolves": "var(--primitive-white)" }
+      },
+      "black": {
+        "bg":     { "cssVar": "--color-badge-black-bg",     "resolves": "transparent" },
+        "text":   { "cssVar": "--color-badge-black-text",   "resolves": "var(--primitive-black)" },
+        "border": { "cssVar": "--color-badge-black-border", "resolves": "var(--primitive-black)" }
+      },
+      "radius": {
+        "cssVar": "--size-badge-radius",
+        "resolves": "var(--primitive-radius-full)"
+      }
+    },
+
+    "chip": {
+      "comment": "Chip (dismissible tag) — subset of badge colors: neutral, black, white only.",
+      "neutral": {
+        "bg":     { "cssVar": "--color-chip-neutral-bg",     "resolves": "var(--color-badge-neutral-bg)" },
+        "text":   { "cssVar": "--color-chip-neutral-text",   "resolves": "var(--color-badge-neutral-text)" },
+        "border": { "cssVar": "--color-chip-neutral-border", "resolves": "var(--color-badge-neutral-border)" }
+      },
+      "black": {
+        "bg":     { "cssVar": "--color-chip-black-bg",     "resolves": "var(--color-badge-black-bg)" },
+        "text":   { "cssVar": "--color-chip-black-text",   "resolves": "var(--color-badge-black-text)" },
+        "border": { "cssVar": "--color-chip-black-border", "resolves": "var(--color-badge-black-border)" }
+      },
+      "white": {
+        "bg":     { "cssVar": "--color-chip-white-bg",     "resolves": "var(--color-badge-white-bg)" },
+        "text":   { "cssVar": "--color-chip-white-text",   "resolves": "var(--color-badge-white-text)" },
+        "border": { "cssVar": "--color-chip-white-border", "resolves": "var(--color-badge-white-border)" }
+      }
+    },
+
+    "fileupload": {
+      "comment": "File upload dropzone color tokens.",
+      "dropzone-bg":            { "cssVar": "--color-fileupload-dropzone-bg",            "resolves": "var(--color-bg-surface)" },
+      "dropzone-border":        { "cssVar": "--color-fileupload-dropzone-border",        "resolves": "var(--color-border-subtle)" },
+      "dropzone-active-border": { "cssVar": "--color-fileupload-dropzone-active-border", "resolves": "var(--color-interactive-primary-bg)" },
+      "dropzone-text":          { "cssVar": "--color-fileupload-dropzone-text",          "resolves": "var(--color-text-muted)" }
+    },
+
+    "skeleton": {
+      "comment": "Skeleton loading placeholder shimmer colors.",
+      "base":      { "cssVar": "--color-skeleton-base",      "resolves": "var(--primitive-gray-200)" },
+      "highlight": { "cssVar": "--color-skeleton-highlight", "resolves": "var(--primitive-gray-100)" }
+    },
+
+    "overlay": {
+      "scrim": { "cssVar": "--color-overlay-scrim", "value": "rgba(30, 30, 30, 0.4)", "comment": "Modal/drawer backdrop. Uses rgb(30,30,30) = --primitive-black at 40% opacity." }
+    }
+  }
+}
