@@ -1,4 +1,4 @@
-# Portfolio System
+# Elegant Design System
 
 ## Stack
 Next.js App Router · Tailwind · GSAP · Lucide Icons · TypeScript strict (no `any`)
