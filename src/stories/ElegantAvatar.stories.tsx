@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { ElegantAvatar } from '@/components/simple/ElegantAvatar';
+import { ElegantAvatar } from '@/components/simple/assets/ElegantAvatar';
 
 const meta: Meta<typeof ElegantAvatar> = {
   title: 'Simple/Assets/ElegantAvatar',

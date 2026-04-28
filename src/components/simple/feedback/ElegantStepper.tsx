@@ -138,7 +138,6 @@ function StepCopy({
       {visibleLabel && (
         <span
           style={{
-            fontFamily: 'var(--primitive-font-sans)',
             fontSize: 'var(--primitive-font-size-sm)',
             fontWeight:
               state === 'active'
@@ -155,7 +154,6 @@ function StepCopy({
       {visibleDesc && (
         <span
           style={{
-            fontFamily: 'var(--primitive-font-sans)',
             fontSize: 'var(--primitive-font-size-xs)',
             color: 'var(--color-text-muted)',
             textAlign,
@@ -386,8 +384,7 @@ function TabStepper({
                 {showLabel !== false && item.label && (
                   <span
                     style={{
-                      fontFamily: 'var(--primitive-font-sans)',
-                      fontSize: 'var(--primitive-font-size-sm)',
+                                fontSize: 'var(--primitive-font-size-sm)',
                       fontWeight:
                         state === 'active'
                           ? 'var(--primitive-font-weight-medium)'
@@ -402,8 +399,7 @@ function TabStepper({
                 {showDescription !== false && item.description && (
                   <span
                     style={{
-                      fontFamily: 'var(--primitive-font-sans)',
-                      fontSize: 'var(--primitive-font-size-xs)',
+                                fontSize: 'var(--primitive-font-size-xs)',
                       color: 'var(--color-text-muted)',
                     }}
                   >
@@ -542,8 +538,7 @@ function ArrowsStepper({
                 {showLabel !== false && item.label && (
                   <span
                     style={{
-                      fontFamily: 'var(--primitive-font-sans)',
-                      fontSize: 'var(--primitive-font-size-xs)',
+                                fontSize: 'var(--primitive-font-size-xs)',
                       fontWeight:
                         state === 'active'
                           ? 'var(--primitive-font-weight-medium)'
@@ -558,8 +553,7 @@ function ArrowsStepper({
                 {showDescription !== false && item.description && (
                   <span
                     style={{
-                      fontFamily: 'var(--primitive-font-sans)',
-                      fontSize: '0.625rem',
+                                fontSize: '0.625rem',
                       color: state === 'upcoming' ? 'var(--color-text-muted)' : 'rgba(255,255,255,0.7)',
                       whiteSpace: 'nowrap',
                     }}

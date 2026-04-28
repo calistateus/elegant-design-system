@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { ElegantBreadcrumbs } from '../components/simple/ElegantBreadcrumbs';
+import { ElegantBreadcrumbs } from '../components/simple/navigation/ElegantBreadcrumbs';
 
 type StoryArgs = {
   count: 2 | 3 | 4 | 5;

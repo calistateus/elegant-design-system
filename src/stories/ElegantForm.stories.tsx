@@ -6,19 +6,19 @@ import {
   ElegantFormSection,
   ElegantFormFooter,
   ElegantField,
-} from '../components/simple/ElegantForm';
-import { ElegantTextInput } from '../components/simple/ElegantTextInput';
-import { ElegantDropdown } from '../components/simple/ElegantDropdown';
-import { ElegantSearch } from '../components/simple/ElegantSearch';
-import { ElegantCheckbox } from '../components/simple/ElegantCheckbox';
-import type { CheckboxState } from '../components/simple/ElegantCheckbox';
-import { ElegantCheckboxGroup } from '../components/simple/ElegantCheckboxGroup';
-import { ElegantRadio } from '../components/simple/ElegantRadio';
-import type { RadioState } from '../components/simple/ElegantRadio';
-import { ElegantRadioGroup } from '../components/simple/ElegantRadioGroup';
-import { ElegantToggle } from '../components/simple/ElegantToggle';
-import { ElegantDateInput } from '../components/simple/ElegantDateInput';
-import { ElegantButton } from '../components/simple/ElegantButton';
+} from '../components/simple/forms/ElegantForm';
+import { ElegantTextInput } from '../components/simple/forms/ElegantTextInput';
+import { ElegantDropdown } from '../components/simple/forms/ElegantDropdown';
+import { ElegantSearch } from '../components/simple/forms/ElegantSearch';
+import { ElegantCheckbox } from '../components/simple/forms/ElegantCheckbox';
+import type { CheckboxState } from '../components/simple/forms/ElegantCheckbox';
+import { ElegantCheckboxGroup } from '../components/simple/forms/ElegantCheckboxGroup';
+import { ElegantRadio } from '../components/simple/forms/ElegantRadio';
+import type { RadioState } from '../components/simple/forms/ElegantRadio';
+import { ElegantRadioGroup } from '../components/simple/forms/ElegantRadioGroup';
+import { ElegantToggle } from '../components/simple/forms/ElegantToggle';
+import { ElegantDateInput } from '../components/simple/forms/ElegantDateInput';
+import { ElegantButton } from '../components/simple/forms/ElegantButton';
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -400,15 +400,14 @@ const meta: Meta<Args> = {
       return (
         <div style={{
           border: '1px solid var(--color-border-subtle)',
-          borderRadius: 'var(--primitive-radius-md)',
-          padding: 'var(--primitive-scale-8)',
-          fontFamily: 'var(--primitive-font-sans)',
+          borderRadius: 'var(--size-card-radius)',
+          padding: 'var(--size-card-padding)',
           fontSize: 'var(--primitive-font-size-sm)',
           color: 'var(--color-text-muted)',
           textAlign: 'center',
         }}>
           Form submitted.
-          <div style={{ marginTop: 'var(--primitive-scale-4)' }}>
+          <div style={{ marginTop: 'var(--size-heading-to-body)' }}>
             <ElegantButton text="Reset" style="secondary" onClick={() => setSubmitted(false)} />
           </div>
         </div>

@@ -6,7 +6,7 @@ import {
   PenLine, Palette, Link2, LayoutGrid, Eye, Lightbulb,
 } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
-import { ElegantIconCard } from '@/components/simple/ElegantIconCard';
+import { ElegantIconCard } from '@/components/simple/cards/ElegantIconCard';
 
 const iconOptions: Record<string, LucideIcon> = {
   Zap, ShieldCheck, Star, ArrowRight, Globe, Lock,

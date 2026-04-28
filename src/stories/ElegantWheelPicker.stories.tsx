@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/nextjs-vite';
 import { useState } from 'react';
-import { ElegantWheelPicker, type ElegantWheelPickerProps } from '../components/simple/ElegantWheelPicker';
+import { ElegantWheelPicker, type ElegantWheelPickerProps } from '../components/simple/forms/ElegantWheelPicker';
 
 /* ── Data sets ───────────────────────────────────────────────── */
 const HOURS   = Array.from({ length: 12 }, (_, i) => String(i + 1).padStart(2, '0'));

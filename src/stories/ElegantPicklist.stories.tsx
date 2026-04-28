@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/nextjs-vite';
 import { useState } from 'react';
-import { ElegantPicklist, type ElegantPicklistProps } from '../components/simple/ElegantPicklist';
+import { ElegantPicklist, type ElegantPicklistProps } from '../components/simple/forms/ElegantPicklist';
 
 const FIXED_OPTIONS = [
   { label: 'Design', value: 'design' },

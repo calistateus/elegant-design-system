@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { ElegantContainer } from '../components/simple/ElegantContainer';
+import { ElegantContainer } from '../components/simple/layout/ElegantContainer';
 
 // ─── Placeholder child ────────────────────────────────────────────────────────
 

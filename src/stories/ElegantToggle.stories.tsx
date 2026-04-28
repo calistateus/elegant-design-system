@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { ElegantToggle } from '@/components/simple/ElegantToggle';
+import { ElegantToggle } from '@/components/simple/forms/ElegantToggle';
 
 type Args = {
   label: string;

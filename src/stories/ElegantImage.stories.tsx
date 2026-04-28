@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { ElegantImage } from '../components/simple/ElegantImage';
+import { ElegantImage } from '../components/simple/assets/ElegantImage';
 
 // ─── Flat args type ───────────────────────────────────────────
 

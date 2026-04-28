@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/nextjs-vite';
 import { useState } from 'react';
-import { ElegantDateInput, type ElegantDateInputProps } from '../components/simple/ElegantDateInput';
+import { ElegantDateInput, type ElegantDateInputProps } from '../components/simple/forms/ElegantDateInput';
 
 function ElegantDateInputDemo(args: ElegantDateInputProps) {
   const [value, setValue] = useState('');

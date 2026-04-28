@@ -7,8 +7,8 @@ import {
   ExternalLink,
   Send,
 } from 'lucide-react';
-import { ElegantButtonGroup } from '../components/simple/ElegantButtonGroup';
-import type { ButtonGroupContext } from '../components/simple/ElegantButtonGroup';
+import { ElegantButtonGroup } from '../components/simple/forms/ElegantButtonGroup';
+import type { ButtonGroupContext } from '../components/simple/forms/ElegantButtonGroup';
 
 const iconOptions: Record<string, LucideIcon | undefined> = {
   none: undefined,

@@ -115,7 +115,6 @@ export function ElegantBarChart({
           {renderTitle && (
             <p
               style={{
-                fontFamily:    'var(--primitive-font-sans)',
                 fontSize:      'var(--primitive-font-size-base)',
                 fontWeight:    'var(--primitive-font-weight-medium)',
                 color:         'var(--color-text-title)',
@@ -129,7 +128,6 @@ export function ElegantBarChart({
           {renderDescription && (
             <p
               style={{
-                fontFamily:    'var(--primitive-font-sans)',
                 fontSize:      'var(--primitive-font-size-xs)',
                 fontWeight:    'var(--primitive-font-weight-regular)',
                 color:         'var(--color-text-muted)',

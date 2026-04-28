@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/nextjs-vite';
 import { useState } from 'react';
-import { ElegantDropdown, type ElegantDropdownProps } from '../components/simple/ElegantDropdown';
+import { ElegantDropdown, type ElegantDropdownProps } from '../components/simple/forms/ElegantDropdown';
 
 const FIXED_OPTIONS = [
   { label: 'Design', value: 'design' },

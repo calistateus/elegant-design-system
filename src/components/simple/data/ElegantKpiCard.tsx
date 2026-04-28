@@ -79,7 +79,6 @@ export function ElegantKpiCard({
       >
         <span
           style={{
-            fontFamily: 'var(--primitive-font-sans)',
             fontSize: 'var(--primitive-font-size-sm)',
             fontWeight: 'var(--primitive-font-weight-medium)',
             lineHeight: 1.4,
@@ -102,7 +101,6 @@ export function ElegantKpiCard({
       {/* Primary value */}
       <p
         style={{
-          fontFamily: 'var(--primitive-font-sans)',
           fontSize: 'var(--primitive-font-size-3xl)',
           fontWeight: 'var(--primitive-font-weight-bold)',
           lineHeight: 1.1,
@@ -136,7 +134,6 @@ export function ElegantKpiCard({
               borderRadius: 'var(--size-badge-radius)',
               paddingInline: 'var(--primitive-scale-2)',
               paddingBlock: 'var(--primitive-scale-1)',
-              fontFamily: 'var(--primitive-font-sans)',
               fontSize: 'var(--primitive-font-size-xs)',
               fontWeight: 'var(--primitive-font-weight-medium)',
               lineHeight: 1.4,
@@ -150,7 +147,6 @@ export function ElegantKpiCard({
           {period && (
             <span
               style={{
-                fontFamily: 'var(--primitive-font-sans)',
                 fontSize: 'var(--primitive-font-size-xs)',
                 fontWeight: 'var(--primitive-font-weight-regular)',
                 color: 'var(--color-text-muted)',

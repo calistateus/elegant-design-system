@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { ElegantBottomNav } from '@/components/simple/ElegantBottomNav';
+import { ElegantBottomNav } from '@/components/simple/navigation/ElegantBottomNav';
 
 type Args = {
   count: 2 | 3 | 4;

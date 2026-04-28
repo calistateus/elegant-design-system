@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
-import { ElegantPagination } from '../components/simple/ElegantPagination';
+import { ElegantPagination } from '../components/simple/navigation/ElegantPagination';
 
 type Args = {
   totalPages: number;

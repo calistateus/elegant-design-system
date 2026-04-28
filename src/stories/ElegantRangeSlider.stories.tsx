@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { useState } from 'react';
-import { ElegantRangeSlider } from '@/components/simple/ElegantRangeSlider';
+import { ElegantRangeSlider } from '@/components/simple/forms/ElegantRangeSlider';
 
 type Args = {
   label: string;

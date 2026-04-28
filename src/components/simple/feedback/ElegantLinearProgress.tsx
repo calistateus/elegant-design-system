@@ -1,7 +1,7 @@
 'use client';
 
 import { ArrowRight } from 'lucide-react';
-import { ElegantButton } from '@/components/simple/ElegantButton';
+import { ElegantButton } from '@/components/simple/forms/ElegantButton';
 
 export interface ElegantLinearProgressProps {
   /** Total number of steps */
@@ -46,7 +46,6 @@ function LabelRow({
       {heading ? (
         <span
           style={{
-            fontFamily: 'var(--primitive-font-sans)',
             fontSize: 'var(--primitive-font-size-sm)',
             fontWeight: 'var(--primitive-font-weight-medium)',
             color: 'var(--color-text-body)',
@@ -73,13 +72,20 @@ function LabelRow({
   );
 }
 
-function HorizontalTrack({ fillPercent }: { fillPercent: number }) {
+function HorizontalTrack({
+  fillPercent,
+  valueText,
+}: {
+  fillPercent: number;
+  valueText?: string;
+}) {
   return (
     <div
       role="progressbar"
       aria-valuenow={fillPercent}
       aria-valuemin={0}
       aria-valuemax={100}
+      aria-valuetext={valueText}
       style={{
         position: 'relative',
         height: 'var(--size-progress-track-height)',
@@ -101,13 +107,20 @@ function HorizontalTrack({ fillPercent }: { fillPercent: number }) {
   );
 }
 
-function VerticalTrack({ fillPercent }: { fillPercent: number }) {
+function VerticalTrack({
+  fillPercent,
+  valueText,
+}: {
+  fillPercent: number;
+  valueText?: string;
+}) {
   return (
     <div
       role="progressbar"
       aria-valuenow={fillPercent}
       aria-valuemin={0}
       aria-valuemax={100}
+      aria-valuetext={valueText}
       style={{
         position: 'relative',
         width: 'var(--size-progress-track-height)',
@@ -145,6 +158,8 @@ export function ElegantLinearProgress({
 }: ElegantLinearProgressProps) {
   const clamped = Math.min(Math.max(currentStep, 0), steps);
   const fillPercent = steps > 0 ? (clamped / steps) * 100 : 0;
+  // Step-based text gives screen readers "Step 3 of 5" instead of a raw percentage
+  const valueText = `Step ${clamped} of ${steps}`;
 
   const labelRow = (
     <LabelRow
@@ -165,7 +180,7 @@ export function ElegantLinearProgress({
           gap: 'var(--size-card-gap)',
         }}
       >
-        <VerticalTrack fillPercent={fillPercent} />
+        <VerticalTrack fillPercent={fillPercent} valueText={valueText} />
 
         {(heading || showStepCount) && (
           <div
@@ -179,7 +194,6 @@ export function ElegantLinearProgress({
             {heading && (
               <span
                 style={{
-                  fontFamily: 'var(--primitive-font-sans)',
                   fontSize: 'var(--primitive-font-size-sm)',
                   fontWeight: 'var(--primitive-font-weight-medium)',
                   color: 'var(--color-text-body)',
@@ -238,7 +252,7 @@ export function ElegantLinearProgress({
       }}
     >
       {placement === 'top' && labelRow}
-      <HorizontalTrack fillPercent={fillPercent} />
+      <HorizontalTrack fillPercent={fillPercent} valueText={valueText} />
       {placement === 'bottom' && bottomRow}
     </div>
   );

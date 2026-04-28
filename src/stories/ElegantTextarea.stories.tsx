@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/nextjs-vite';
 import { useState } from 'react';
-import { ElegantTextarea, type ElegantTextareaProps } from '../components/simple/ElegantTextarea';
+import { ElegantTextarea, type ElegantTextareaProps } from '../components/simple/forms/ElegantTextarea';
 
 function ElegantTextareaDemo(args: ElegantTextareaProps) {
   const [value, setValue] = useState('');

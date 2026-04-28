@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { ElegantTopNav } from '@/components/simple/ElegantTopNav';
+import { ElegantTopNav } from '@/components/simple/navigation/ElegantTopNav';
 
 type Args = {
   logo: string;

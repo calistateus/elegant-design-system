@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { ElegantTabs } from '../components/simple/ElegantTabs';
-import type { TabsStyle } from '../components/simple/ElegantTabs';
+import { ElegantTabs } from '../components/simple/content/ElegantTabs';
+import type { TabsStyle } from '../components/simple/content/ElegantTabs';
 
 type StoryArgs = {
   tabStyle: TabsStyle;

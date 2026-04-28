@@ -7,8 +7,8 @@ import {
   Check, ChevronRight, Dot, Circle, Square, Minus,
 } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
-import { ElegantList } from '@/components/simple/ElegantList';
-import type { ElegantListProps } from '@/components/simple/ElegantList';
+import { ElegantList } from '@/components/simple/content/ElegantList';
+import type { ElegantListProps } from '@/components/simple/content/ElegantList';
 
 const iconOptions: Record<string, LucideIcon> = {
   Zap, ShieldCheck, Star, ArrowRight, Globe, Lock,

@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/nextjs-vite';
-import { ElegantActionMenu } from '../components/simple/ElegantActionMenu';
-import type { ActionMenuItem, SubMenuItem } from '../components/simple/ElegantActionMenu';
+import { ElegantActionMenu } from '../components/simple/navigation/ElegantActionMenu';
+import type { ActionMenuItem, SubMenuItem } from '../components/simple/navigation/ElegantActionMenu';
 
 // ─── Icon options ─────────────────────────────────────────────────────────────
 

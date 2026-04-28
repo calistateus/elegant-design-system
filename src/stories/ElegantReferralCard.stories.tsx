@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { ElegantReferralCard } from '@/components/simple/ElegantReferralCard';
+import { ElegantReferralCard } from '@/components/simple/cards/ElegantReferralCard';
 
 const meta: Meta<typeof ElegantReferralCard> = {
   title: 'Simple/Cards/ElegantReferralCard',

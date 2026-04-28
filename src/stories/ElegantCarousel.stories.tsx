@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { ElegantCarousel, type ElegantCarouselProps } from '@/components/simple/ElegantCarousel';
+import { ElegantCarousel, type ElegantCarouselProps } from '@/components/simple/assets/ElegantCarousel';
 
 const meta: Meta<ElegantCarouselProps> = {
   title: 'Simple/Assets/ElegantCarousel',

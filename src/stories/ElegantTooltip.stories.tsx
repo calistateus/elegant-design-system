@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { ElegantTooltip } from '../components/simple/ElegantTooltip';
+import { ElegantTooltip } from '../components/simple/communications/ElegantTooltip';
 
 const meta: Meta<typeof ElegantTooltip> = {
   title: 'Simple/Communications/ElegantTooltip',
@@ -23,11 +23,10 @@ type Story = StoryObj<typeof ElegantTooltip>;
 const Trigger = () => (
   <button
     style={{
-      padding: 'var(--primitive-scale-2) var(--primitive-scale-4)',
+      padding: 'var(--size-input-padding)',
       backgroundColor: 'var(--color-bg-surface)',
       border: '1px solid var(--color-border-subtle)',
       borderRadius: 'var(--size-btn-radius)',
-      fontFamily: 'var(--primitive-font-sans)',
       fontSize: 'var(--primitive-font-size-sm)',
       color: 'var(--color-text-body)',
       cursor: 'default',

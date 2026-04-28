@@ -282,7 +282,7 @@ function ElegantDataTableInner({
   // ─── Render ───────────────────────────────────────────────────
 
   return (
-    <div style={{ fontFamily: 'var(--primitive-font-sans)', width: '100%' }}>
+    <div style={{ width: '100%' }}>
 
       {/* Toolbar */}
       <div
@@ -321,7 +321,6 @@ function ElegantDataTableInner({
             color: 'var(--color-interactive-primary-fg)',
             border: 'none',
             borderRadius: 'var(--size-btn-radius)',
-            fontFamily: 'var(--primitive-font-sans)',
             fontSize: 'var(--primitive-font-size-sm)',
             fontWeight: 'var(--primitive-font-weight-medium)',
             cursor: 'pointer',
@@ -370,6 +369,7 @@ function ElegantDataTableInner({
             >
               {hasSelection && (
                 <th
+                  scope="col"
                   style={{
                     width: '2.5rem',
                     padding: 'var(--primitive-scale-3)',
@@ -392,6 +392,7 @@ function ElegantDataTableInner({
               {tableData.headers.map((header, colIdx) => (
                 <th
                   key={colIdx}
+                  scope="col"
                   onClick={columnSort ? () => handleColumnSort(colIdx) : undefined}
                   style={{
                     padding: 'var(--primitive-scale-3) var(--primitive-scale-4)',

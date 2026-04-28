@@ -14,11 +14,36 @@ const config: StorybookConfig = {
   ],
   "framework": "@storybook/nextjs-vite",
   viteFinal: async (config) => {
+    // Alias fix
     config.resolve = config.resolve ?? {};
     config.resolve.alias = {
       ...(config.resolve.alias as Record<string, string> ?? {}),
       '@storybook/blocks': '@storybook/addon-docs/blocks',
     };
+
+    // Pre-bundle heavy deps once at startup so individual story imports
+    // don't trigger transforms on first navigation (lazy compilation).
+    config.optimizeDeps = {
+      ...config.optimizeDeps,
+      include: [
+        ...(config.optimizeDeps?.include ?? []),
+        'react',
+        'react-dom',
+        'react/jsx-runtime',
+        'react/jsx-dev-runtime',
+        'gsap',
+        'lucide-react',
+      ],
+    };
+
+    // Only pre-warm the global stylesheet; story modules compile on demand.
+    config.server = {
+      ...config.server,
+      warmup: {
+        clientFiles: ['../src/app/globals.css'],
+      },
+    };
+
     return config;
   },
 };

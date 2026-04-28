@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/nextjs-vite';
 import { useState } from 'react';
-import { ElegantSearch, type ElegantSearchProps } from '../components/simple/ElegantSearch';
+import { ElegantSearch, type ElegantSearchProps } from '../components/simple/forms/ElegantSearch';
 
 const SUGGESTIONS = [
   'Product design',

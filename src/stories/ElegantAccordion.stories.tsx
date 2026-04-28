@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { ElegantAccordion, type AccordionItem } from '@/components/simple/ElegantAccordion';
+import { ElegantAccordion, type AccordionItem } from '@/components/simple/content/ElegantAccordion';
 
 type Args = {
   size: 'default' | 'compact';

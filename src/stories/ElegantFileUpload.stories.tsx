@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { ElegantFileUpload } from '@/components/simple/ElegantFileUpload';
+import { ElegantFileUpload } from '@/components/simple/forms/ElegantFileUpload';
 
 type Args = {
   variant: 'button' | 'dropzone';

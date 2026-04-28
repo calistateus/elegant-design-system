@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { ElegantAvatarGroup } from '@/components/simple/ElegantAvatarGroup';
+import { ElegantAvatarGroup } from '@/components/simple/assets/ElegantAvatarGroup';
 
 const SAMPLE_AVATARS = [
   { src: 'https://i.pravatar.cc/150?img=1', alt: 'Alice' },

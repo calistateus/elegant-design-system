@@ -93,6 +93,12 @@
   --color-progress-track: var(--primitive-gray-200);
   --color-interactive-primary-bg: var(--primitive-black);
   --color-interactive-primary-fg: var(--primitive-white);
+  --color-interactive-primary-hover-bg: var(--primitive-white);
+  --color-interactive-hover-bg: var(--primitive-gray-100);
+  --color-interactive-disabled-bg: var(--primitive-gray-100);
+  --color-interactive-disabled-border: var(--primitive-gray-200);
+  --color-interactive-disabled-fg: var(--primitive-gray-400);
+  --opacity-disabled: 0.5;
   --color-heatmap-empty: var(--primitive-gray-200);
   --color-heatmap-low: var(--primitive-green-100);
   --color-heatmap-medium: var(--primitive-green-300);
@@ -126,6 +132,9 @@
   --color-badge-purple-bg: var(--primitive-purple-100);
   --color-badge-purple-text: var(--primitive-purple-800);
   --color-badge-purple-border: var(--primitive-purple-100);
+  /* ⚠️  Contrast notice: white badge uses white text on a transparent background.
+     This only passes WCAG AA contrast when placed on a dark image or dark-coloured
+     background (e.g. a hero photo, dark card). Never place it on a light background. */
   --color-badge-white-bg: transparent;
   --color-badge-white-text: var(--primitive-white);
   --color-badge-white-border: var(--primitive-white);
@@ -149,6 +158,9 @@
   --color-skeleton-base: var(--primitive-gray-200);
   --color-skeleton-highlight: var(--primitive-gray-100);
   --color-overlay-scrim: rgba(30, 30, 30, 0.4);
+  --color-border-default: var(--primitive-gray-200);      /* structural dividers, widget borders */
+  --color-border-input: var(--primitive-gray-300);        /* form control default border */
+  --color-border-input-focus: var(--primitive-gray-600);  /* form control focused border */
 
   /* spacing */
   --size-page-gutter: var(--primitive-scale-6);
@@ -207,6 +219,12 @@
   --size-icon-md: 16px;
   --size-icon-lg: 24px;
   --size-icon-stroke: 1.5;
+  --size-input-padding: var(--primitive-scale-2) var(--primitive-scale-3);
+  --size-input-radius: var(--primitive-radius-md);
+  --size-notification-padding: var(--primitive-scale-3) var(--primitive-scale-4);
+  --size-notification-gap: var(--primitive-scale-3);
+  --size-notification-radius: var(--primitive-radius-md);
+  --size-menu-item-padding: var(--primitive-scale-2) var(--primitive-scale-3);
 
   /* typography */
   --type-line-height-none: 1;
@@ -218,6 +236,11 @@
   --type-tracking-tight: -0.01em;
   --type-tracking-display: -0.02em;
   --type-tracking-wide: 0.1em;
+  /* h4 — sans, lg, medium */
+  --type-h4-family: var(--primitive-font-sans);
+  --type-h4-size: var(--primitive-font-size-lg);
+  --type-h4-weight: var(--primitive-font-weight-medium);
+  --type-h4-line-height: 1.4;
   --type-h5-family: var(--primitive-font-sans);
   --type-h5-size: var(--primitive-font-size-base);
   --type-h5-weight: var(--primitive-font-weight-bold);
@@ -431,3 +454,67 @@ body {
   color: var(--color-text-body);
   font-family: var(--font-sans);
 }
+
+/* ─── Button focus-visible ───────────────────────────────── */
+.elegant-btn:focus-visible {
+  outline: 2px solid var(--color-interactive-primary-bg);
+  outline-offset: 3px;
+  border-radius: var(--size-btn-radius);
+}
+
+/* ─── Form field ─────────────────────────────────────────── */
+/* Shared layout for label / description / input stacks.
+   Apply .elegant-field to the wrapper, .elegant-field-label to
+   <label>, .elegant-field-description to the description <span>. */
+.elegant-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-label-to-description);
+  width: 100%;
+}
+.elegant-field-label {
+  font-size: var(--primitive-font-size-sm);
+  font-weight: var(--primitive-font-weight-medium);
+  color: var(--color-text-title);
+  line-height: 1.4;
+}
+.elegant-field-description {
+  font-size: var(--primitive-font-size-xs);
+  color: var(--color-text-muted);
+  line-height: 1.5;
+  margin-bottom: var(--size-label-to-description);
+}
+
+/* ─── Menu / dropdown list ───────────────────────────────── */
+/* Apply to the floating container that holds menu items. */
+.elegant-menu-list {
+  background-color: var(--color-bg-main);
+  border: 1px solid var(--color-border-input);
+  border-radius: var(--size-input-radius);
+  box-shadow: var(--shadow-menu);
+  padding: var(--primitive-scale-1) 0;
+}
+/* Apply to each individual row inside an elegant-menu-list. */
+.elegant-menu-item {
+  padding: var(--size-menu-item-padding);
+  font-size: var(--primitive-font-size-sm);
+  cursor: pointer;
+}
+
+/* ─── Reduced motion ─────────────────────────────────────── */
+/* Honour the OS "reduce motion" setting. Collapses all CSS
+   transitions and animations to an instant snap. Components
+   that use GSAP should read this preference via
+   window.matchMedia('(prefers-reduced-motion: reduce)')
+   and set their tween duration to 0 accordingly. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+

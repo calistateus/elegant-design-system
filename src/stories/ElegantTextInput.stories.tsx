@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/nextjs-vite';
 import { useState } from 'react';
-import { ElegantTextInput, type ElegantTextInputProps } from '../components/simple/ElegantTextInput';
+import { ElegantTextInput, type ElegantTextInputProps } from '../components/simple/forms/ElegantTextInput';
 
 function ElegantTextInputDemo(args: ElegantTextInputProps) {
   const [value, setValue] = useState('');

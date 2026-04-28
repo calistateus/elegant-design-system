@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { useEffect } from 'react';
-import { ToastProvider, useToast } from '../components/simple/ElegantToast';
+import { ToastProvider, useToast } from '../components/simple/communications/ElegantToast';
 
 // ─── Types ────────────────────────────────────────────────────
 
@@ -22,10 +22,9 @@ function ToastTrigger({ variant, message }: ToastStoryProps) {
         display: 'inline-flex',
         alignItems: 'center',
         padding: '0.5rem 1rem',
-        border: '1px solid var(--primitive-gray-300)',
-        borderRadius: 'var(--primitive-radius-md)',
+        border: '1px solid var(--color-border-input)',
+        borderRadius: 'var(--size-input-radius)',
         background: 'none',
-        fontFamily: 'var(--primitive-font-sans)',
         fontSize: 'var(--primitive-font-size-sm)',
         cursor: 'pointer',
       }}

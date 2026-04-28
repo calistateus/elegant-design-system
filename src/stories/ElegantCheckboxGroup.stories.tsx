@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
-import { ElegantCheckboxGroup } from '@/components/simple/ElegantCheckboxGroup';
-import type { CheckboxGroupItem } from '@/components/simple/ElegantCheckboxGroup';
-import type { CheckboxState } from '@/components/simple/ElegantCheckbox';
+import { ElegantCheckboxGroup } from '@/components/simple/forms/ElegantCheckboxGroup';
+import type { CheckboxGroupItem } from '@/components/simple/forms/ElegantCheckboxGroup';
+import type { CheckboxState } from '@/components/simple/forms/ElegantCheckbox';
 
 type Args = {
   heading: string;

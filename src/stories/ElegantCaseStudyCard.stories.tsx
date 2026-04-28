@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { ElegantCaseStudyCard } from '../components/simple/ElegantCaseStudyCard';
+import { ElegantCaseStudyCard } from '../components/simple/cards/ElegantCaseStudyCard';
 import colorTokens from '../../.claude/specs/tokens/ElegantColorTokens.json';
 import typography from '../../.claude/specs/tokens/ElegantTypographyTokens.json';
 import sizing from '../../.claude/specs/tokens/ElegantSizingTokens.json';

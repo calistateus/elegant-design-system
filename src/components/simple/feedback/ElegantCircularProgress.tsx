@@ -88,7 +88,6 @@ function OutsideContent({
       {label && (
         <span
           style={{
-            fontFamily: 'var(--primitive-font-sans)',
             fontSize: 'var(--primitive-font-size-sm)',
             color: 'var(--color-text-muted)',
             lineHeight: 1.4,
@@ -221,7 +220,6 @@ export function ElegantCircularProgress({
           fontSize="10"
           style={{
             fill: 'var(--color-text-muted)',
-            fontFamily: 'var(--primitive-font-sans)',
           }}
         >
           {label}

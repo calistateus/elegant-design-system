@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { useState } from 'react';
-import { ElegantModal } from '../components/simple/ElegantModal';
+import { ElegantModal } from '../components/simple/communications/ElegantModal';
 
 // ─── Wrapper (manages open state) ─────────────────────────────
 
@@ -18,7 +18,6 @@ function ModalDemo(args: Args) {
       <button
         onClick={() => setOpen(true)}
         style={{
-          fontFamily: 'var(--primitive-font-sans)',
           fontSize: 'var(--primitive-font-size-sm)',
           fontWeight: 'var(--primitive-font-weight-medium)',
           color: 'var(--color-interactive-primary-fg)',

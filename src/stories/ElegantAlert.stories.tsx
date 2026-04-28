@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { useState } from 'react';
-import { ElegantAlert } from '../components/simple/ElegantAlert';
-import type { AlertVariant } from '../components/simple/ElegantAlert';
+import { ElegantAlert } from '../components/simple/communications/ElegantAlert';
+import type { AlertVariant } from '../components/simple/communications/ElegantAlert';
 
 // ─── Flat args type (onDismiss is derived from showDismiss) ───
 
@@ -24,13 +24,12 @@ function AlertDemo(args: Args) {
       <button
         onClick={() => setVisible(true)}
         style={{
-          fontFamily: 'var(--primitive-font-sans)',
           fontSize: 'var(--primitive-font-size-sm)',
           color: 'var(--color-text-muted)',
           background: 'none',
-          border: '1px dashed var(--primitive-gray-300)',
-          borderRadius: 'var(--primitive-radius-md)',
-          padding: 'var(--primitive-scale-3) var(--primitive-scale-4)',
+          border: '1px dashed var(--color-border-input)',
+          borderRadius: 'var(--size-notification-radius)',
+          padding: 'var(--size-notification-padding)',
           cursor: 'pointer',
           width: '100%',
         }}

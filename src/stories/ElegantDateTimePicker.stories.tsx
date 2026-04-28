@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/nextjs-vite';
 import { useState } from 'react';
-import { ElegantDateTimePicker, type ElegantDateTimePickerProps } from '../components/simple/ElegantDateTimePicker';
+import { ElegantDateTimePicker, type ElegantDateTimePickerProps } from '../components/simple/forms/ElegantDateTimePicker';
 
 function Demo(args: ElegantDateTimePickerProps) {
   const [value, setValue] = useState<Date | null>(null);

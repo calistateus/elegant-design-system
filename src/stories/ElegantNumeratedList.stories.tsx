@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { ElegantNumeratedList } from '@/components/simple/ElegantNumeratedList';
-import type { ElegantNumeratedListProps } from '@/components/simple/ElegantNumeratedList';
+import { ElegantNumeratedList } from '@/components/simple/content/ElegantNumeratedList';
+import type { ElegantNumeratedListProps } from '@/components/simple/content/ElegantNumeratedList';
 
 type Args = {
   heading: string;

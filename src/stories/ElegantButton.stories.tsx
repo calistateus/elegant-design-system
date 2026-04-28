@@ -6,7 +6,7 @@ import {
   ExternalLink,
   Send,
 } from 'lucide-react';
-import { ElegantButton } from '../components/simple/ElegantButton';
+import { ElegantButton } from '../components/simple/forms/ElegantButton';
 
 const iconOptions = {
   none: undefined,

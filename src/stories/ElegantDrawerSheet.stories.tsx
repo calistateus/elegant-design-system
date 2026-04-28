@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { useState } from 'react';
-import { ElegantDrawerSheet } from '@/components/simple/ElegantDrawerSheet';
-import type { DrawerSide } from '@/components/simple/ElegantDrawerSheet';
+import { ElegantDrawerSheet } from '@/components/simple/navigation/ElegantDrawerSheet';
+import type { DrawerSide } from '@/components/simple/navigation/ElegantDrawerSheet';
 
 // ─── Args type ────────────────────────────────────────────────
 
@@ -22,7 +22,6 @@ function DrawerDemo(args: Args) {
       <button
         onClick={() => setOpen(true)}
         style={{
-          fontFamily: 'var(--primitive-font-sans)',
           fontSize: 'var(--primitive-font-size-sm)',
           fontWeight: 'var(--primitive-font-weight-medium)',
           color: 'var(--color-interactive-primary-fg)',

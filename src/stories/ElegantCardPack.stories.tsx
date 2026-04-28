@@ -7,7 +7,7 @@ import {
   DollarSign, Activity,
   type LucideIcon,
 } from 'lucide-react';
-import { ElegantCardPack, type ElegantCardPackProps } from '@/components/simple/ElegantCardPack';
+import { ElegantCardPack, type ElegantCardPackProps } from '@/components/simple/cards/ElegantCardPack';
 
 // ─── Icon palette ──────────────────────────────────────────────────────────────
 

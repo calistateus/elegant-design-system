@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/nextjs-vite';
 import { useState } from 'react';
-import { ElegantPinInput } from '../components/simple/ElegantPinInput';
+import { ElegantPinInput } from '../components/simple/forms/ElegantPinInput';
 
 const meta: Meta<typeof ElegantPinInput> = {
   title: 'Simple/Forms/ElegantPinInput',

@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { ElegantRatingInput } from '@/components/simple/ElegantRatingInput';
+import { ElegantRatingInput } from '@/components/simple/forms/ElegantRatingInput';
 
 type Args = {
   variant: 'thumbs' | 'stars' | 'heart';

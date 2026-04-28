@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
-import { ElegantRadioGroup } from '@/components/simple/ElegantRadioGroup';
-import type { RadioGroupItem } from '@/components/simple/ElegantRadioGroup';
+import { ElegantRadioGroup } from '@/components/simple/forms/ElegantRadioGroup';
+import type { RadioGroupItem } from '@/components/simple/forms/ElegantRadioGroup';
 
 type Args = {
   heading: string;

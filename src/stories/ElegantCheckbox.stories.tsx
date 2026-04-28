@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
-import { ElegantCheckbox } from '@/components/simple/ElegantCheckbox';
-import type { CheckboxState } from '@/components/simple/ElegantCheckbox';
+import { ElegantCheckbox } from '@/components/simple/forms/ElegantCheckbox';
+import type { CheckboxState } from '@/components/simple/forms/ElegantCheckbox';
 
 type Args = {
   label: string;
