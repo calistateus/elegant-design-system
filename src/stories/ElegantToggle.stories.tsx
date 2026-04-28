@@ -40,3 +40,12 @@ export const Default: Story = {
     toggled: false,
   },
 };
+
+export const WithoutDescription: Story = {
+  args: {
+    label: 'Enable notifications',
+    description: "You'll receive alerts for important updates.",
+    showDescription: false,
+    toggled: false,
+  },
+};

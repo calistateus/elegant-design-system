@@ -57,9 +57,16 @@ The Checkbox has a single visual form. State variants (unselected, selected, ind
 - Label only; `description` set to `false`.
 - Use for self-explanatory options.
 
-`[STORYBOOK BLOCK: Simple/Forms/ElegantCheckbox/Default]`
+`[STORYBOOK BLOCK: Simple/Forms/ElegantCheckbox/WithoutDescription]`
 
 ## 5. States
+
+| State | Box fill | Border | Icon |
+|---|---|---|---|
+| **Unselected** | `--primitive-white` | `--primitive-gray-300` | None |
+| **Selected** | `--color-interactive-primary-bg` | `--color-interactive-primary-bg` | White checkmark SVG |
+| **Indeterminate** | `--color-interactive-primary-bg` | `--color-interactive-primary-bg` | White horizontal dash |
+| **Disabled** | `--color-interactive-disabled-bg` | `--color-interactive-disabled-border` | Preserved (greyed); opacity 0.5; cursor not-allowed |
 
 **Unselected (default)**
 - Box: `--primitive-white` fill, `--primitive-gray-300` border.
@@ -83,7 +90,7 @@ The Checkbox has a single visual form. State variants (unselected, selected, ind
 
 **Disabled**
 - Triggered: when `disabled={true}`.
-- Visually: box background becomes `--color-interactive-disabled-bg` (#f5f5f5); border becomes `--color-interactive-disabled-border` (#e5e5e5). Wrapper opacity drops to `var(--opacity-disabled)` (0.5); cursor becomes `not-allowed`.
+- Visually: box background becomes `--color-interactive-disabled-bg`; border becomes `--color-interactive-disabled-border`. Wrapper opacity drops to `var(--opacity-disabled)` (0.5); cursor becomes `not-allowed`.
 - Behavior: the native `<input>` receives the `disabled` attribute and `aria-disabled="true"`. `onChange` is blocked even when provided. The checkbox cannot be toggled.
 - The check mark and indeterminate bar are still rendered (within the greyed-out box) to preserve information about the underlying state.
 
@@ -154,9 +161,9 @@ Set `checkboxState="indeterminate"` programmatically when some but not all child
 ## 12. Related components
 | Component | When to use it instead |
 |---|---|
-| CheckboxGroup | When presenting multiple checkboxes under a shared heading with optional error validation |
-| RadioGroup | When only one option from a set may be selected at a time |
-| Toggle | When the control represents an immediate on/off setting rather than a form field selection |
+| [CheckboxGroup](/design-system/docs/checkbox-group-zh) | When presenting multiple checkboxes under a shared heading with optional error validation |
+| [RadioGroup](/design-system/docs/radio-group-zh) | When only one option from a set may be selected at a time |
+| [Toggle](/design-system/docs/toggle-zh) | When the control represents an immediate on/off setting rather than a form field selection |
 
 ## 13. Do's and don'ts
 

@@ -56,9 +56,15 @@ Radio has a single visual form. State differences (selected/unselected) are the 
 - Label only; `description` set to `false`.
 - Use for self-explanatory options.
 
-`[STORYBOOK BLOCK: Simple/Forms/ElegantRadio/Default]`
+`[STORYBOOK BLOCK: Simple/Forms/ElegantRadio/WithoutDescription]`
 
 ## 5. States
+
+| State | Circle fill | Border | Inner dot |
+|---|---|---|---|
+| **Unselected** | `--primitive-white` | `--primitive-gray-300` | None |
+| **Selected** | `--color-interactive-primary-bg` | `--color-interactive-primary-bg` | White 6×6px dot centered |
+| **Disabled** | `--color-interactive-disabled-bg` | `--color-interactive-disabled-border` | Preserved (greyed); opacity 0.5; cursor not-allowed |
 
 **Unselected (default)**
 - Circle: `--primitive-white` fill, `--primitive-gray-300` border.
@@ -74,7 +80,7 @@ Radio has a single visual form. State differences (selected/unselected) are the 
 
 **Disabled**
 - Triggered: when `disabled={true}`.
-- Visually: circle background becomes `--color-interactive-disabled-bg` (#f5f5f5); border becomes `--color-interactive-disabled-border` (#e5e5e5). Wrapper opacity drops to `var(--opacity-disabled)` (0.5); cursor becomes `not-allowed`.
+- Visually: circle background becomes `--color-interactive-disabled-bg`; border becomes `--color-interactive-disabled-border`. Wrapper opacity drops to `var(--opacity-disabled)` (0.5); cursor becomes `not-allowed`.
 - Behavior: the native `<input>` receives the `disabled` attribute and `aria-disabled="true"`. `onClick` is blocked when disabled.
 - The inner dot is still rendered (within the greyed-out circle) to preserve state information.
 
@@ -147,9 +153,9 @@ Pass `radioState` with no `onClick` to render a non-interactive radio indicator 
 ## 12. Related components
 | Component | When to use it instead |
 |---|---|
-| RadioGroup | The primary way to use Radio — provides semantic grouping, shared state, and error handling |
-| Checkbox | When multiple options can be selected simultaneously |
-| Toggle | When the control is a binary on/off that takes immediate effect |
+| [RadioGroup](/design-system/docs/radio-group-zh) | The primary way to use Radio — provides semantic grouping, shared state, and error handling |
+| [Checkbox](/design-system/docs/checkbox-zh) | When multiple options can be selected simultaneously |
+| [Toggle](/design-system/docs/toggle-zh) | When the control is a binary on/off that takes immediate effect |
 
 ## 13. Do's and don'ts
 

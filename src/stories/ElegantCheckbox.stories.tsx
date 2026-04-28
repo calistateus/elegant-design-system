@@ -49,3 +49,12 @@ export const Default: Story = {
     checkboxState: 'unselected',
   },
 };
+
+export const WithoutDescription: Story = {
+  args: {
+    label: 'Accept terms and conditions',
+    description: 'You agree to our terms of service and privacy policy.',
+    showDescription: false,
+    checkboxState: 'unselected',
+  },
+};

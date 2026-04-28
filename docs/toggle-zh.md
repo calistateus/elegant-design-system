@@ -59,19 +59,26 @@ The Toggle has a single visual form but two content configurations:
 - Shows label only; `description` prop set to `false`.
 - Use for self-explanatory settings where additional text would add noise.
 
-`[STORYBOOK BLOCK: Simple/Forms/ElegantToggle/Default]`
+`[STORYBOOK BLOCK: Simple/Forms/ElegantToggle/WithoutDescription]`
 
 ## 5. States
 
+| State | Pill background | Thumb position | `aria-checked` |
+|---|---|---|---|
+| **Off** | `--primitive-gray-300` | `left: 0.125rem` | `"false"` |
+| **On** | `--color-interactive-primary-bg` | `left: 0.875rem` | `"true"` |
+| **Focus** | Unchanged | Unchanged | — (browser default outline; no custom ring; known gap) |
+| **Disabled** | Unchanged; wrapper opacity 0.5 | Unchanged | `aria-disabled="true"`; `tabIndex="-1"` |
+
 **Off (default)**
-- Pill background: `--primitive-gray-300` (#d4d4d4).
+- Pill background: `--primitive-gray-300`.
 - Thumb positioned at left: `left: 0.125rem`.
 - `aria-checked="false"`.
 
 `[STORYBOOK BLOCK: Simple/Forms/ElegantToggle/Default]`
 
 **On (toggled)**
-- Pill background: `--color-interactive-primary-bg` (#1e1e1e).
+- Pill background: `--color-interactive-primary-bg`.
 - Thumb positioned at right: `left: calc(2rem - 1rem - 0.125rem)` = `0.875rem`.
 - `aria-checked="true"`.
 - Transition: `background-color 200ms ease` on pill; `left 200ms ease` on thumb.
@@ -146,9 +153,9 @@ Omit `onToggle` to let the component manage its own state internally. Suitable f
 ## 12. Related components
 | Component | When to use it instead |
 |---|---|
-| Checkbox | When confirming an agreement or selecting an item from a list that requires explicit acknowledgement |
-| RadioGroup | When choosing one option from a mutually exclusive set of 2+ options |
-| CheckboxGroup | When enabling multiple independent options from a labeled group |
+| [Checkbox](/design-system/docs/checkbox-zh) | When confirming an agreement or selecting an item from a list that requires explicit acknowledgement |
+| [RadioGroup](/design-system/docs/radio-group-zh) | When choosing one option from a mutually exclusive set of 2+ options |
+| [CheckboxGroup](/design-system/docs/checkbox-group-zh) | When enabling multiple independent options from a labeled group |
 
 ## 13. Do's and don'ts
 

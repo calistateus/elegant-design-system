@@ -49,3 +49,12 @@ export const Default: Story = {
     radioState: 'unselected',
   },
 };
+
+export const WithoutDescription: Story = {
+  args: {
+    label: 'Receive email notifications',
+    description: "We'll send you updates about your account and activity.",
+    showDescription: false,
+    radioState: 'unselected',
+  },
+};
