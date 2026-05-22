@@ -147,7 +147,7 @@ export default async function DocPage({ params }: Props) {
   }
 
   const raw = readFileSync(filePath, 'utf-8');
-  const storybookUrl = process.env.NEXT_PUBLIC_STORYBOOK_URL ?? 'http://localhost:6007';
+  const storybookUrl = process.env.NEXT_PUBLIC_STORYBOOK_URL ?? 'https://elegant-design-system-6jr9.vercel.app';
   const html = mdToHtml(raw, storybookUrl);
 
   // Extract component name from the first h1 in the raw markdown
