@@ -3,13 +3,14 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
 import { ChevronLeft, ChevronRight, ImagePlus, Sparkles, Zap, Layers, Globe, ShieldCheck, type LucideIcon } from 'lucide-react';
 import { ElegantCaseStudyCard } from '../cards/ElegantCaseStudyCard';
+import type { CaseStudy } from '../cards/ElegantCaseStudyCard';
 import { ElegantIconCard } from '../cards/ElegantIconCard';
 import { ElegantImage } from './ElegantImage';
 import { ElegantReferralCard } from '../cards/ElegantReferralCard';
 
 // ─── Generic placeholder data ──────────────────────────────────────────────────
 
-const PLACEHOLDER_CASE_STUDIES: import('./ElegantCaseStudyCard').CaseStudy[] = [
+const PLACEHOLDER_CASE_STUDIES: CaseStudy[] = [
   {
     id: 'placeholder-1',
     tags: ['UX Design'],

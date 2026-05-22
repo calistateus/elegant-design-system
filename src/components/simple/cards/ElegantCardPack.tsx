@@ -15,13 +15,14 @@ import {
   type LucideIcon,
 } from 'lucide-react';
 import { ElegantCaseStudyCard } from './ElegantCaseStudyCard';
+import type { CaseStudy } from './ElegantCaseStudyCard';
 import { ElegantIconCard } from './ElegantIconCard';
 import { ElegantReferralCard } from './ElegantReferralCard';
 import { ElegantKpiCard } from '../data/ElegantKpiCard';
 
 // ─── Generic placeholder data ──────────────────────────────────────────────────
 
-const PLACEHOLDER_CASE_STUDIES: import('./ElegantCaseStudyCard').CaseStudy[] = [
+const PLACEHOLDER_CASE_STUDIES: CaseStudy[] = [
   {
     id: 'placeholder-1',
     tags: ['UX Design'],
