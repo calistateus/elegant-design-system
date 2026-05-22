@@ -51,6 +51,7 @@ export function ElegantTopNav({ logo = 'Portfolio', items, cta }: ElegantTopNavP
     letterSpacing: '-0.01em',
     textDecoration: 'none',
     transition: 'background-color var(--primitive-duration-fast) var(--primitive-easing-default), color var(--primitive-duration-fast) var(--primitive-easing-default)',
+    whiteSpace: 'nowrap',
   };
 
   const mobileMenuItemStyle: React.CSSProperties = {
@@ -70,6 +71,40 @@ export function ElegantTopNav({ logo = 'Portfolio', items, cta }: ElegantTopNavP
     textAlign: 'left',
   };
 
+  const ctaElement = cta ? (
+    cta.href ? (
+      <a
+        href={cta.href}
+        style={ctaStyle}
+        onMouseEnter={(e) => {
+          e.currentTarget.style.backgroundColor = 'var(--color-bg-main)';
+          e.currentTarget.style.color = 'var(--color-interactive-primary-bg)';
+        }}
+        onMouseLeave={(e) => {
+          e.currentTarget.style.backgroundColor = 'var(--color-interactive-primary-bg)';
+          e.currentTarget.style.color = 'var(--color-interactive-primary-fg)';
+        }}
+      >
+        {cta.label}
+      </a>
+    ) : (
+      <button
+        onClick={cta.onClick}
+        style={ctaStyle}
+        onMouseEnter={(e) => {
+          e.currentTarget.style.backgroundColor = 'var(--color-bg-main)';
+          e.currentTarget.style.color = 'var(--color-interactive-primary-bg)';
+        }}
+        onMouseLeave={(e) => {
+          e.currentTarget.style.backgroundColor = 'var(--color-interactive-primary-bg)';
+          e.currentTarget.style.color = 'var(--color-interactive-primary-fg)';
+        }}
+      >
+        {cta.label}
+      </button>
+    )
+  ) : null;
+
   return (
     <nav
       style={{
@@ -77,10 +112,11 @@ export function ElegantTopNav({ logo = 'Portfolio', items, cta }: ElegantTopNavP
         borderBottom: '1px solid var(--color-border-subtle)',
         position: 'sticky',
         top: 0,
-        zIndex: 50,
+        zIndex: 40,
+        width: '100%',
       }}
     >
-      {/* Skip link — screen-reader / keyboard-only. Visually hidden until focused. */}
+      {/* Skip link */}
       <a
         href="#main-content"
         style={{
@@ -118,6 +154,7 @@ export function ElegantTopNav({ logo = 'Portfolio', items, cta }: ElegantTopNavP
       >
         Skip to content
       </a>
+
       {/* Top bar */}
       <div
         style={{
@@ -126,99 +163,85 @@ export function ElegantTopNav({ logo = 'Portfolio', items, cta }: ElegantTopNavP
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'space-between',
+          width: '100%',
+          boxSizing: 'border-box',
         }}
       >
-        {/* Logo */}
-        <span
-          style={{
-            fontSize: 'var(--primitive-font-size-sm)',
-            fontWeight: 'var(--primitive-font-weight-medium)',
-            color: 'var(--color-text-title)',
-            letterSpacing: '-0.02em',
-          }}
-        >
-          {logo}
-        </span>
+        {/* ── Left slot ── */}
+        {/* Desktop: logo | Mobile: hamburger */}
+        <div style={{ display: 'flex', alignItems: 'center' }}>
+          {/* Logo — desktop only */}
+          <span
+            className="elegant-nav-logo"
+            style={{
+              fontSize: 'var(--primitive-font-size-sm)',
+              fontWeight: 'var(--primitive-font-weight-medium)',
+              color: 'var(--color-text-title)',
+              letterSpacing: '-0.02em',
+            }}
+          >
+            {logo}
+          </span>
 
-        {/* Desktop menu */}
+          {/* Hamburger — mobile only */}
+          <button
+            ref={hamburgerRef}
+            className="elegant-nav-hamburger"
+            onClick={() => setOpen((v) => !v)}
+            aria-label={open ? 'Close menu' : 'Open menu'}
+            aria-expanded={open}
+            style={{
+              display: 'none',
+              background: 'none',
+              border: 'none',
+              cursor: 'pointer',
+              color: 'var(--color-text-body)',
+              padding: 'var(--size-btn-py-sm)',
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}
+          >
+            {open ? <X size={20} strokeWidth={1.5} /> : <Menu size={20} strokeWidth={1.5} />}
+          </button>
+        </div>
+
+        {/* ── Right slot ── */}
+        {/* Desktop: links + CTA | Mobile: CTA only */}
         <div
-          className="elegant-nav-desktop"
           style={{
             display: 'flex',
             alignItems: 'center',
             gap: 'var(--size-btn-px)',
           }}
         >
-          {items.map((item) => (
-            <a
-              key={item.href}
-              href={item.href}
-              style={linkStyle}
-              onMouseEnter={(e) => { e.currentTarget.style.color = 'var(--color-text-title)'; }}
-              onMouseLeave={(e) => { e.currentTarget.style.color = 'var(--color-text-muted)'; }}
-            >
-              {item.label}
-            </a>
-          ))}
-
-          {cta && (
-            cta.href ? (
+          {/* Nav links — desktop only */}
+          <div
+            className="elegant-nav-links"
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: 'var(--size-btn-px)',
+            }}
+          >
+            {items.map((item) => (
               <a
-                href={cta.href}
-                style={ctaStyle}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundColor = 'var(--color-bg-main)';
-                  e.currentTarget.style.color = 'var(--color-interactive-primary-bg)';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.backgroundColor = 'var(--color-interactive-primary-bg)';
-                  e.currentTarget.style.color = 'var(--color-interactive-primary-fg)';
-                }}
+                key={item.href}
+                href={item.href}
+                style={linkStyle}
+                onMouseEnter={(e) => { e.currentTarget.style.color = 'var(--color-text-title)'; }}
+                onMouseLeave={(e) => { e.currentTarget.style.color = 'var(--color-text-muted)'; }}
               >
-                {cta.label}
+                {item.label}
               </a>
-            ) : (
-              <button
-                onClick={cta.onClick}
-                style={ctaStyle}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundColor = 'var(--color-bg-main)';
-                  e.currentTarget.style.color = 'var(--color-interactive-primary-bg)';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.backgroundColor = 'var(--color-interactive-primary-bg)';
-                  e.currentTarget.style.color = 'var(--color-interactive-primary-fg)';
-                }}
-              >
-                {cta.label}
-              </button>
-            )
-          )}
-        </div>
+            ))}
+          </div>
 
-        {/* Hamburger — mobile only */}
-        <button
-          ref={hamburgerRef}
-          className="elegant-nav-hamburger"
-          onClick={() => setOpen((v) => !v)}
-          aria-label={open ? 'Close menu' : 'Open menu'}
-          aria-expanded={open}
-          style={{
-            display: 'none',
-            background: 'none',
-            border: 'none',
-            cursor: 'pointer',
-            color: 'var(--color-text-body)',
-            padding: 'var(--size-btn-py-sm)',
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}
-        >
-          {open ? <X size={20} strokeWidth={1.5} /> : <Menu size={20} strokeWidth={1.5} />}
-        </button>
+          {/* CTA — always visible */}
+          {ctaElement}
+        </div>
       </div>
 
-      {/* Mobile drawer */}
+      {/* Mobile drawer — links only (CTA is always in the header) */}
       {open && (
         <div
           style={{
@@ -242,39 +265,20 @@ export function ElegantTopNav({ logo = 'Portfolio', items, cta }: ElegantTopNavP
               {item.label}
             </a>
           ))}
-
-          {cta && (
-            <div style={{ paddingTop: 'var(--size-btn-py)' }}>
-              {cta.href ? (
-                <a
-                  href={cta.href}
-                  style={{ ...ctaStyle, width: '100%', justifyContent: 'center' }}
-                  onClick={() => setOpen(false)}
-                >
-                  {cta.label}
-                </a>
-              ) : (
-                <button
-                  onClick={() => { cta.onClick?.(); setOpen(false); }}
-                  style={{ ...ctaStyle, width: '100%', justifyContent: 'center' }}
-                >
-                  {cta.label}
-                </button>
-              )}
-            </div>
-          )}
         </div>
       )}
 
-      {/* Responsive visibility helpers — scoped to this component */}
+      {/* Responsive visibility — scoped to this component */}
       <style>{`
         @media (min-width: 600px) {
-          .elegant-nav-desktop { display: flex !important; }
+          .elegant-nav-logo    { display: inline !important; }
           .elegant-nav-hamburger { display: none !important; }
+          .elegant-nav-links   { display: flex !important; }
         }
         @media (max-width: 599px) {
-          .elegant-nav-desktop { display: none !important; }
+          .elegant-nav-logo    { display: none !important; }
           .elegant-nav-hamburger { display: flex !important; }
+          .elegant-nav-links   { display: none !important; }
         }
       `}</style>
     </nav>
