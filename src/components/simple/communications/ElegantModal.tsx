@@ -1,6 +1,7 @@
 'use client';
 
-import { useRef, useEffect } from 'react';
+import { useRef, useEffect, useState } from 'react';
+import { createPortal } from 'react-dom';
 import { X } from 'lucide-react';
 
 // ─── Types ────────────────────────────────────────────────────
@@ -39,8 +40,10 @@ export function ElegantModal({
   onClose,
 }: ElegantModalProps) {
   const panelRef = useRef<HTMLDivElement>(null);
-  // Remember which element had focus before the modal opened so we can restore it
   const previousFocusRef = useRef<HTMLElement | null>(null);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => { setMounted(true); }, []);
 
   useEffect(() => {
     if (!open) return;
@@ -98,9 +101,9 @@ export function ElegantModal({
     }
   }, [open]);
 
-  if (!open) return null;
+  if (!open || !mounted) return null;
 
-  return (
+  return createPortal(
     /* Backdrop */
     <div
       role="dialog"
@@ -207,6 +210,7 @@ export function ElegantModal({
           </div>
         )}
       </div>
-    </div>
+    </div>,
+    document.body
   );
 }

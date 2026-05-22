@@ -184,6 +184,8 @@
   --size-btn-radius: var(--primitive-radius-md);
   --size-card-padding: var(--primitive-scale-6);
   --size-card-radius: var(--primitive-radius-md);
+  --size-alert-padding: var(--primitive-scale-3) var(--primitive-scale-4);
+  --size-alert-gap: var(--primitive-scale-3);
   --size-chip-radius: var(--primitive-radius-full);
   --size-chip-px: var(--primitive-scale-2);
   --size-chip-py: var(--primitive-scale-1);
