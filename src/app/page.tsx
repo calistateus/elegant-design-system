@@ -76,7 +76,7 @@ export default function DesignSystemPage() {
           height: '56px',
         }}
       >
-        <a href="/design-system" style={{ display: 'flex', alignItems: 'center', gap: '8px', textDecoration: 'none' }}>
+        <a href="/" style={{ display: 'flex', alignItems: 'center', gap: '8px', textDecoration: 'none' }}>
           <Layers size={16} style={{ color: 'var(--color-text-title)' }} />
           <span style={{
             fontFamily: 'var(--primitive-font-serif)',
@@ -668,7 +668,7 @@ function ComponentCard({ component }: { component: ComponentDef }) {
             Storybook
           </a>
           <a
-            href={`/design-system/docs/${component.docFile.replace('.md', '')}`}
+            href={`/docs/${component.docFile.replace('.md', '')}`}
             style={{
               display: 'inline-flex',
               alignItems: 'center',
@@ -693,7 +693,7 @@ function ComponentCard({ component }: { component: ComponentDef }) {
 function DocCard({ component }: { component: ComponentDef }) {
   return (
     <a
-      href={`/design-system/docs/${component.docFile.replace('.md', '')}`}
+      href={`/docs/${component.docFile.replace('.md', '')}`}
       style={{
         display: 'flex',
         alignItems: 'center',

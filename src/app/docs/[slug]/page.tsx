@@ -312,7 +312,7 @@ export default async function DocPage({ params }: Props) {
           padding: '0 var(--size-page-gutter)',
           height: '56px',
         }}>
-          <a href="/design-system" style={{
+          <a href="/" style={{
             display: 'flex',
             alignItems: 'center',
             gap: '8px',
@@ -367,7 +367,7 @@ export default async function DocPage({ params }: Props) {
           }}>
             {prevComponent && (
               <a
-                href={`/design-system/docs/${prevComponent.docFile.replace('.md', '')}`}
+                href={`/docs/${prevComponent.docFile.replace('.md', '')}`}
                 className="doc-nav-btn"
                 style={{
                   display: 'flex',
@@ -406,7 +406,7 @@ export default async function DocPage({ params }: Props) {
 
             {nextComponent && (
               <a
-                href={`/design-system/docs/${nextComponent.docFile.replace('.md', '')}`}
+                href={`/docs/${nextComponent.docFile.replace('.md', '')}`}
                 className="doc-nav-btn"
                 style={{
                   display: 'flex',
