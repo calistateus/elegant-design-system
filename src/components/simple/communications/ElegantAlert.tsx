@@ -67,10 +67,10 @@ export function ElegantAlert({
       style={{
         display: 'flex',
         alignItems: 'flex-start',
-        gap: 'var(--size-notification-gap)',
-        padding: 'var(--size-notification-padding)',
+        gap: 'var(--size-card-gap)',
+        padding: 'var(--size-card-padding)',
         border: `1px solid ${VARIANT_BORDER[variant]}`,
-        borderRadius: 'var(--size-notification-radius)',
+        borderRadius: 'var(--size-card-radius)',
         backgroundColor: 'var(--color-bg-surface)',
       }}
     >
