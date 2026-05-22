@@ -22,10 +22,10 @@ function GitHubIcon({ size = 16 }: { size?: number }) {
 // Set NEXT_PUBLIC_STORYBOOK_URL in .env.local for your hosted Storybook.
 // Set NEXT_PUBLIC_GITHUB_URL for your repository URL.
 const STORYBOOK_URL =
-  process.env.NEXT_PUBLIC_STORYBOOK_URL ?? 'http://localhost:6006';
+  process.env.NEXT_PUBLIC_STORYBOOK_URL ?? 'https://elegant-design-system-6jr9.vercel.app';
 const STORYBOOK_IS_LOCAL = STORYBOOK_URL.includes('localhost');
 const GITHUB_URL =
-  process.env.NEXT_PUBLIC_GITHUB_URL ?? 'https://github.com';
+  process.env.NEXT_PUBLIC_GITHUB_URL ?? 'https://github.com/calistateus/elegant-design-system';
 
 import { COMPONENTS, type Category, type ComponentDef } from './components-data';
 
