@@ -1,5 +1,6 @@
 'use client';
 
+import React from 'react';
 import { Check } from 'lucide-react';
 
 export interface StepItem {
@@ -13,13 +14,11 @@ export interface ElegantStepperProps {
   /** Current active step (1-based) */
   currentStep: number;
   /** Visual style of the stepper */
-  variant?: 'circle' | 'tab' | 'arrows';
+  variant?: 'circle' | 'tab';
   /** Per-step label and description */
   stepItems?: StepItem[];
   /** Layout direction */
   orientation?: 'horizontal' | 'vertical';
-  /** Hide labels and descriptions below the md breakpoint (600px) */
-  hideCopyOnMobile?: boolean;
   /** Show the step number (01, 02… or number inside circle) */
   showStepNumber?: boolean;
   /** Show the step label */
@@ -101,18 +100,18 @@ function StepCopy({
   label,
   description,
   state,
-  hideCopyOnMobile,
   showLabel = true,
   showDescription = true,
   textAlign = 'center',
+  responsive = false,
 }: {
   label?: string;
   description?: string;
   state: StepState;
-  hideCopyOnMobile?: boolean;
   showLabel?: boolean;
   showDescription?: boolean;
   textAlign?: 'center' | 'left';
+  responsive?: boolean;
 }) {
   const visibleLabel = showLabel ? label : undefined;
   const visibleDesc = showDescription ? description : undefined;
@@ -128,11 +127,13 @@ function StepCopy({
 
   return (
     <div
-      className={hideCopyOnMobile ? 'hidden md:flex' : 'flex'}
+      className="hidden md:flex"
       style={{
         flexDirection: 'column',
         gap: 'var(--size-label-to-description)',
         alignItems: textAlign === 'center' ? 'center' : 'flex-start',
+        maxWidth: '100%',
+        overflow: 'hidden',
       }}
     >
       {visibleLabel && (
@@ -146,6 +147,9 @@ function StepCopy({
             color: labelColor,
             textAlign,
             whiteSpace: 'nowrap',
+            overflow: 'hidden',
+            textOverflow: 'ellipsis',
+            maxWidth: '100%',
           }}
         >
           {visibleLabel}
@@ -153,10 +157,15 @@ function StepCopy({
       )}
       {visibleDesc && (
         <span
+          className={responsive ? 'hidden lg:block' : ''}
           style={{
             fontSize: 'var(--primitive-font-size-xs)',
             color: 'var(--color-text-muted)',
             textAlign,
+            whiteSpace: 'nowrap',
+            overflow: 'hidden',
+            textOverflow: 'ellipsis',
+            maxWidth: '100%',
           }}
         >
           {visibleDesc}
@@ -172,7 +181,6 @@ function CircleStepper({
   currentStep,
   stepItems,
   orientation,
-  hideCopyOnMobile,
   showStepNumber,
   showLabel,
   showDescription,
@@ -181,7 +189,6 @@ function CircleStepper({
   currentStep: number;
   stepItems: StepItem[];
   orientation: 'horizontal' | 'vertical';
-  hideCopyOnMobile?: boolean;
   showStepNumber?: boolean;
   showLabel?: boolean;
   showDescription?: boolean;
@@ -195,42 +202,54 @@ function CircleStepper({
           const state = getState(i, currentStep);
           const item = stepItems[i] ?? {};
           const connectorFilled = state === 'completed';
+          const isLast = i === count - 1;
 
           return (
-            <div key={i}>
+            <div key={i} style={{ display: 'flex', flexDirection: 'row', alignItems: 'stretch' }}>
+              {/* Left column: circle + connector line in same column so spacing is symmetric */}
               <div
                 style={{
                   display: 'flex',
-                  flexDirection: 'row',
-                  alignItems: 'flex-start',
-                  gap: 'var(--primitive-scale-3)',
+                  flexDirection: 'column',
+                  alignItems: 'center',
+                  flexShrink: 0,
                 }}
               >
                 <CircleIndicator state={state} number={i + 1} showStepNumber={showStepNumber} />
+                {!isLast && (
+                  <div
+                    style={{
+                      width: '1px',
+                      flex: 1,
+                      minHeight: 'var(--primitive-scale-6)',
+                      backgroundColor: connectorFilled
+                        ? 'var(--color-text-accent)'
+                        : 'var(--color-progress-track)',
+                      marginBlock: 'var(--primitive-scale-1)',
+                    }}
+                  />
+                )}
+              </div>
+
+              {/* Right column: text */}
+              <div
+                style={{
+                  paddingLeft: 'var(--primitive-scale-3)',
+                  paddingBottom: !isLast ? 'var(--primitive-scale-6)' : 0,
+                  display: 'flex',
+                  flexDirection: 'column',
+                  justifyContent: 'flex-start',
+                }}
+              >
                 <StepCopy
                   label={item.label}
                   description={item.description}
                   state={state}
-                  hideCopyOnMobile={hideCopyOnMobile}
                   showLabel={showLabel}
                   showDescription={showDescription}
                   textAlign="left"
                 />
               </div>
-
-              {i < count - 1 && (
-                <div
-                  style={{
-                    width: '1px',
-                    height: 'var(--primitive-scale-6)',
-                    backgroundColor: connectorFilled
-                      ? 'var(--color-text-accent)'
-                      : 'var(--color-progress-track)',
-                    marginLeft: '11px',
-                    marginBlock: 'var(--primitive-scale-1)',
-                  }}
-                />
-              )}
             </div>
           );
         })}
@@ -250,11 +269,12 @@ function CircleStepper({
           <div key={i} style={{ display: 'contents' }}>
             <div
               style={{
+                flex: 4,
+                minWidth: 0,
                 display: 'flex',
                 flexDirection: 'column',
                 alignItems: 'center',
                 gap: 'var(--size-label-to-description)',
-                flexShrink: 0,
               }}
             >
               <CircleIndicator state={state} number={i + 1} showStepNumber={showStepNumber} />
@@ -262,10 +282,10 @@ function CircleStepper({
                 label={item.label}
                 description={item.description}
                 state={state}
-                hideCopyOnMobile={hideCopyOnMobile}
                 showLabel={showLabel}
                 showDescription={showDescription}
                 textAlign="center"
+                responsive
               />
             </div>
 
@@ -273,13 +293,13 @@ function CircleStepper({
               <div
                 style={{
                   flex: 1,
+                  minWidth: '12px',
                   height: '1px',
                   backgroundColor: connectorFilled
                     ? 'var(--color-text-accent)'
                     : 'var(--color-progress-track)',
                   marginTop: '11px',
-                  flexShrink: 0,
-                  minWidth: 'var(--primitive-scale-4)',
+                  alignSelf: 'flex-start',
                 }}
               />
             )}
@@ -296,7 +316,6 @@ function TabStepper({
   currentStep,
   stepItems,
   orientation,
-  hideCopyOnMobile,
   showStepNumber,
   showLabel,
   showDescription,
@@ -305,7 +324,6 @@ function TabStepper({
   currentStep: number;
   stepItems: StepItem[];
   orientation: 'horizontal' | 'vertical';
-  hideCopyOnMobile?: boolean;
   showStepNumber?: boolean;
   showLabel?: boolean;
   showDescription?: boolean;
@@ -333,6 +351,13 @@ function TabStepper({
             ? 'var(--color-text-title)'
             : 'var(--color-progress-track)';
 
+        const numberColor =
+          state === 'completed'
+            ? 'var(--color-text-accent)'
+            : state === 'active'
+            ? 'var(--color-text-title)'
+            : 'var(--color-text-muted)';
+
         const labelColor =
           state === 'active'
             ? 'var(--color-text-title)'
@@ -349,6 +374,7 @@ function TabStepper({
             key={i}
             style={{
               flex: isVertical ? 'none' : 1,
+              minWidth: isVertical ? undefined : 0,
               padding: isVertical
                 ? 'var(--primitive-scale-2) var(--primitive-scale-3)'
                 : 'var(--primitive-scale-2) var(--primitive-scale-2) var(--primitive-scale-3)',
@@ -365,7 +391,7 @@ function TabStepper({
                 style={{
                   fontFamily: 'var(--primitive-font-mono)',
                   fontSize: 'var(--primitive-font-size-xs)',
-                  color: accentColor,
+                  color: numberColor,
                   lineHeight: 1,
                 }}
               >
@@ -375,7 +401,7 @@ function TabStepper({
 
             {((showLabel !== false && item.label) || (showDescription !== false && item.description)) && (
               <div
-                className={hideCopyOnMobile ? 'hidden md:flex' : 'flex'}
+                className={isVertical ? 'flex' : 'hidden md:flex'}
                 style={{
                   flexDirection: 'column',
                   gap: 'var(--size-label-to-description)',
@@ -384,7 +410,7 @@ function TabStepper({
                 {showLabel !== false && item.label && (
                   <span
                     style={{
-                                fontSize: 'var(--primitive-font-size-sm)',
+                      fontSize: 'var(--primitive-font-size-sm)',
                       fontWeight:
                         state === 'active'
                           ? 'var(--primitive-font-weight-medium)'
@@ -398,163 +424,10 @@ function TabStepper({
                 )}
                 {showDescription !== false && item.description && (
                   <span
+                    className={isVertical ? '' : 'hidden lg:block'}
                     style={{
-                                fontSize: 'var(--primitive-font-size-xs)',
+                      fontSize: 'var(--primitive-font-size-xs)',
                       color: 'var(--color-text-muted)',
-                    }}
-                  >
-                    {item.description}
-                  </span>
-                )}
-              </div>
-            )}
-          </div>
-        );
-      })}
-    </div>
-  );
-}
-
-// ── Arrows variant ────────────────────────────────────────────────
-const ARROW_SIZE = 10; // px — chevron notch depth
-
-function arrowClipPath(i: number, count: number): string {
-  const isFirst = i === 0;
-  const isLast = i === count - 1;
-  const s = ARROW_SIZE;
-
-  if (isFirst && isLast) return 'none';
-  if (isFirst) return `polygon(0 0, calc(100% - ${s}px) 0, 100% 50%, calc(100% - ${s}px) 100%, 0 100%)`;
-  if (isLast) return `polygon(0 0, 100% 0, 100% 100%, 0 100%, ${s}px 50%)`;
-  return `polygon(0 0, calc(100% - ${s}px) 0, 100% 50%, calc(100% - ${s}px) 100%, 0 100%, ${s}px 50%)`;
-}
-
-function arrowClipPathVertical(i: number, count: number): string {
-  const isFirst = i === 0;
-  const isLast = i === count - 1;
-  const s = ARROW_SIZE;
-
-  if (isFirst && isLast) return 'none';
-  if (isFirst) return `polygon(0 0, 100% 0, 100% calc(100% - ${s}px), 50% 100%, 0 calc(100% - ${s}px))`;
-  if (isLast) return `polygon(50% 0, 100% ${s}px, 100% 100%, 0 100%, 0 ${s}px)`;
-  return `polygon(50% 0, 100% ${s}px, 100% calc(100% - ${s}px), 50% 100%, 0 calc(100% - ${s}px), 0 ${s}px)`;
-}
-
-function ArrowsStepper({
-  count,
-  currentStep,
-  stepItems,
-  orientation,
-  hideCopyOnMobile,
-  showStepNumber,
-  showLabel,
-  showDescription,
-}: {
-  count: number;
-  currentStep: number;
-  stepItems: StepItem[];
-  orientation: 'horizontal' | 'vertical';
-  hideCopyOnMobile?: boolean;
-  showStepNumber?: boolean;
-  showLabel?: boolean;
-  showDescription?: boolean;
-}) {
-  const indices = Array.from({ length: count }, (_, i) => i);
-  const isVertical = orientation === 'vertical';
-
-  return (
-    <div
-      style={{
-        display: 'flex',
-        flexDirection: isVertical ? 'column' : 'row',
-        width: isVertical ? 'fit-content' : '100%',
-      }}
-    >
-      {indices.map((i) => {
-        const state = getState(i, currentStep);
-        const item = stepItems[i] ?? {};
-
-        const bg =
-          state === 'completed'
-            ? 'var(--color-text-accent)'
-            : state === 'active'
-            ? 'var(--color-text-title)'
-            : 'var(--color-progress-track)';
-
-        const fg =
-          state === 'upcoming'
-            ? 'var(--color-text-muted)'
-            : 'var(--color-interactive-primary-fg)';
-
-        const clipPath = isVertical
-          ? arrowClipPathVertical(i, count)
-          : arrowClipPath(i, count);
-
-        const overlap = isVertical
-          ? { marginTop: i > 0 ? `-${ARROW_SIZE}px` : 0, zIndex: i }
-          : { marginLeft: i > 0 ? `-${ARROW_SIZE}px` : 0, zIndex: i };
-
-        return (
-          <div
-            key={i}
-            style={{
-              flex: isVertical ? 'none' : 1,
-              clipPath,
-              backgroundColor: bg,
-              padding: isVertical
-                ? `${i === 0 ? ARROW_SIZE : ARROW_SIZE * 2}px var(--primitive-scale-4) ${i === count - 1 ? ARROW_SIZE : ARROW_SIZE * 2}px`
-                : `var(--primitive-scale-2) var(--primitive-scale-4) var(--primitive-scale-2) ${i === 0 ? 'var(--primitive-scale-4)' : `${ARROW_SIZE + 16}px`}`,
-              position: 'relative',
-              display: 'flex',
-              flexDirection: isVertical ? 'row' : 'column',
-              alignItems: 'center',
-              gap: 'var(--primitive-scale-1)',
-              ...overlap,
-            }}
-          >
-            {showStepNumber !== false && (
-              <span
-                style={{
-                  fontFamily: 'var(--primitive-font-mono)',
-                  fontSize: 'var(--primitive-font-size-xs)',
-                  fontWeight: 'var(--primitive-font-weight-bold)',
-                  color: fg,
-                  flexShrink: 0,
-                }}
-              >
-                {String(i + 1).padStart(2, '0')}
-              </span>
-            )}
-
-            {((showLabel !== false && item.label) || (showDescription !== false && item.description)) && (
-              <div
-                className={hideCopyOnMobile ? 'hidden md:flex' : 'flex'}
-                style={{
-                  flexDirection: 'column',
-                  gap: '2px',
-                  alignItems: isVertical ? 'flex-start' : 'center',
-                }}
-              >
-                {showLabel !== false && item.label && (
-                  <span
-                    style={{
-                                fontSize: 'var(--primitive-font-size-xs)',
-                      fontWeight:
-                        state === 'active'
-                          ? 'var(--primitive-font-weight-medium)'
-                          : 'var(--primitive-font-weight-regular)',
-                      color: fg,
-                      whiteSpace: 'nowrap',
-                    }}
-                  >
-                    {item.label}
-                  </span>
-                )}
-                {showDescription !== false && item.description && (
-                  <span
-                    style={{
-                                fontSize: '0.625rem',
-                      color: state === 'upcoming' ? 'var(--color-text-muted)' : 'rgba(255,255,255,0.7)',
                       whiteSpace: 'nowrap',
                     }}
                   >
@@ -577,7 +450,6 @@ export function ElegantStepper({
   variant = 'circle',
   stepItems = [],
   orientation = 'horizontal',
-  hideCopyOnMobile,
   showStepNumber = true,
   showLabel = true,
   showDescription = true,
@@ -586,9 +458,14 @@ export function ElegantStepper({
   const clamped = Math.min(Math.max(currentStep, 1), count);
   const items = Array.from({ length: count }, (_, i) => stepItems[i] ?? {});
 
-  const shared = { count, currentStep: clamped, stepItems: items, orientation, hideCopyOnMobile, showStepNumber, showLabel, showDescription };
+  const shared = { count, currentStep: clamped, stepItems: items, orientation, showStepNumber, showLabel, showDescription };
 
-  if (variant === 'tab') return <TabStepper {...shared} />;
-  if (variant === 'arrows') return <ArrowsStepper {...shared} />;
-  return <CircleStepper {...shared} />;
+  const isHorizontal = orientation === 'horizontal';
+  const wrapStyle = isHorizontal ? { width: '100%' } : undefined;
+
+  let inner: React.ReactNode;
+  if (variant === 'tab') inner = <TabStepper {...shared} />;
+  else inner = <CircleStepper {...shared} />;
+
+  return <div style={wrapStyle}>{inner}</div>;
 }

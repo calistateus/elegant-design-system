@@ -12,13 +12,12 @@ const meta: Meta<typeof ElegantStepper> = {
     currentStep: { control: { type: 'number', min: 1, max: 8 } },
     variant: {
       control: 'select',
-      options: ['circle', 'tab', 'arrows'],
+      options: ['circle', 'tab'],
     },
     orientation: {
       control: 'radio',
       options: ['horizontal', 'vertical'],
     },
-    hideCopyOnMobile: { control: 'boolean' },
     showStepNumber: { control: 'boolean' },
     showLabel: { control: 'boolean' },
     showDescription: { control: 'boolean' },
@@ -57,7 +56,7 @@ export const CircleHorizontal: Story = {
     variant: 'circle',
     orientation: 'horizontal',
     stepItems: withLabels,
-    hideCopyOnMobile: false,
+
     showStepNumber: true,
     showLabel: true,
     showDescription: true,
@@ -71,7 +70,7 @@ export const CircleVertical: Story = {
     variant: 'circle',
     orientation: 'vertical',
     stepItems: withLabels,
-    hideCopyOnMobile: false,
+
     showStepNumber: true,
     showLabel: true,
     showDescription: true,
@@ -85,7 +84,7 @@ export const TabHorizontal: Story = {
     variant: 'tab',
     orientation: 'horizontal',
     stepItems: withLabelsOnly,
-    hideCopyOnMobile: false,
+
     showStepNumber: true,
     showLabel: true,
     showDescription: true,
@@ -99,35 +98,7 @@ export const TabVertical: Story = {
     variant: 'tab',
     orientation: 'vertical',
     stepItems: withLabelsOnly,
-    hideCopyOnMobile: false,
-    showStepNumber: true,
-    showLabel: true,
-    showDescription: true,
-  },
-};
 
-export const ArrowsHorizontal: Story = {
-  args: {
-    steps: 4,
-    currentStep: 2,
-    variant: 'arrows',
-    orientation: 'horizontal',
-    stepItems: withLabelsOnly,
-    hideCopyOnMobile: false,
-    showStepNumber: true,
-    showLabel: true,
-    showDescription: true,
-  },
-};
-
-export const ArrowsVertical: Story = {
-  args: {
-    steps: 4,
-    currentStep: 2,
-    variant: 'arrows',
-    orientation: 'vertical',
-    stepItems: withLabelsOnly,
-    hideCopyOnMobile: false,
     showStepNumber: true,
     showLabel: true,
     showDescription: true,
@@ -142,21 +113,10 @@ export const NoLabels: Story = {
     variant: 'circle',
     orientation: 'horizontal',
     stepItems: [],
-    hideCopyOnMobile: false,
+
     showStepNumber: true,
     showLabel: true,
     showDescription: true,
   },
 };
 
-export const HideCopyOnMobile: Story = {
-  name: 'Hide Copy on Mobile',
-  args: {
-    steps: 4,
-    currentStep: 2,
-    variant: 'circle',
-    orientation: 'horizontal',
-    stepItems: withLabels,
-    hideCopyOnMobile: true,
-  },
-};
