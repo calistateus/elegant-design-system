@@ -117,7 +117,7 @@ A vertical bar chart component that renders a series of labeled bars with relati
 - **Title:** Use sentence case. Keep to one short phrase (e.g. "Monthly revenue"). The title is rendered at `--primitive-font-size-base` (1 rem); longer titles will wrap.
 - **Description:** Use for unit clarification or data source context (e.g. "Bookings per month, in thousands."). Keep to one sentence. Rendered at `--primitive-font-size-xs` (0.75 rem).
 - **Labels:** Each bar label is truncated at 12 characters. Use short, unambiguous category names (month abbreviations, short product names, etc.).
-- **Values:** Integer values are shown as-is; non-integer values are formatted to one decimal place (`toFixed(1)`). The component does not add currency symbols or percent signs — pre-format values before passing them in if a suffix is needed (note: suffix formatting is not currently supported at the component level — [NEEDS CONFIRMATION]).
+- **Values:** Integer values are shown as-is; non-integer values are formatted to one decimal place (`toFixed(1)`). The component does not add currency symbols or percent signs — pre-format values before passing them in. Suffix formatting is not supported at the component level; format the `value` prop itself (e.g. `"$42k"`) if a label is needed.
 
 ## 8. Accessibility
 - **Keyboard navigation:** No keyboard interaction; the chart is purely presentational.
@@ -184,8 +184,8 @@ Gotcha: with no axis line and no title, the chart loses all textual context. Ens
 | Component | When to use it instead |
 |---|---|
 | KPI Card | When you need to highlight a single scalar metric with a delta indicator |
-| HeatmapGrid | When your data has a natural row × column structure and you want to show density across two dimensions |
-| DataTable | When users need to read or compare the exact values rather than relative proportions |
+| [HeatmapGrid](/design-system/docs/heatmap-grid-zh) | When your data has a natural row × column structure and you want to show density across two dimensions |
+| [DataTable](/design-system/docs/data-table-zh) | When users need to read or compare the exact values rather than relative proportions |
 
 ## 13. Do's and don'ts
 

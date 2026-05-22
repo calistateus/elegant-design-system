@@ -68,14 +68,20 @@ This component has a single configurable story (all items share the same visual 
 
 ## 5. States
 
+| State | Ancestor link | Current page item |
+|---|---|---|
+| **Default** | `--color-text-muted`, regular weight | `--color-text-title`, medium weight |
+| **Hover** | Color → `--color-text-body`; 150 ms ease | No hover (non-interactive `<span>`) |
+| **Focus** | Browser default focus ring (no custom ring; known gap) | Not focusable (`aria-current="page"` on `<span>`) |
+
 **Default**
-- Ancestor links render in `--color-text-muted` (#666666), regular weight.
-- Current page renders in `--color-text-title` (#1e1e1e), medium weight.
+- Ancestor links render in `--color-text-muted`, regular weight.
+- Current page renders in `--color-text-title`, medium weight.
 - Separator renders in `--color-text-muted`.
 
 **Hover (ancestor links)**
 - Triggered when the pointer enters an ancestor `<a>` element.
-- Color transitions from `--color-text-muted` to `--color-text-body` (#171717) over 150 ms (`ease`).
+- Color transitions from `--color-text-muted` to `--color-text-body` over 150 ms (`ease`).
 - No change on the current page item (it is a `<span>`, not a link).
 
 **Focus**
@@ -141,9 +147,9 @@ Do not place inside `ElegantTopNav` — the nav bar uses a fixed 3 rem height wi
 ## 12. Related components
 | Component | When to use it instead |
 |---|---|
-| Tabs | When the user is switching between sibling views at the same level, not navigating a hierarchy |
-| Pagination | When the user is moving forward/backward through sequential pages, not traversing a tree |
-| TopNav | When the user needs to jump between top-level sections, not retrace their current path |
+| [Tabs](/design-system/docs/tabs-zh) | When the user is switching between sibling views at the same level, not navigating a hierarchy |
+| [Pagination](/design-system/docs/pagination-zh) | When the user is moving forward/backward through sequential pages, not traversing a tree |
+| [TopNav](/design-system/docs/top-nav-zh) | When the user needs to jump between top-level sections, not retrace their current path |
 
 ## 13. Do's and don'ts
 

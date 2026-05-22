@@ -222,9 +222,9 @@ Set `disabled={true}` on the top-level component to prevent all column interacti
 ## 12. Related components
 | Component | When to use it instead |
 |---|---|
-| DateTimePicker | When a calendar grid is preferred over scroll drums for date selection |
-| DateInput | When the user prefers typing a date directly |
-| Dropdown | When selecting from a short, unordered list (fewer than ~8 options) |
+| [DateTimePicker](/design-system/docs/date-time-picker-zh) | When a calendar grid is preferred over scroll drums for date selection |
+| [DateInput](/design-system/docs/date-input-zh) | When the user prefers typing a date directly |
+| [Dropdown](/design-system/docs/dropdown-zh) | When selecting from a short, unordered list (fewer than ~8 options) |
 
 ## 13. Do's and don'ts
 

@@ -73,6 +73,14 @@ A multi-line text input with optional character/word counter, resize handle, lab
 
 ## 5. States
 
+| State | Border | Focus ring | Counter |
+|---|---|---|---|
+| **Default** | `1px solid var(--primitive-gray-300)` | None | Normal |
+| **Focus** | `var(--primitive-gray-600)` | `0 0 0 2px var(--primitive-gray-200)` | Normal |
+| **Error** | `var(--color-error-border)` | Suppressed | Normal |
+| **Over-limit** | `var(--color-error-border)` | Suppressed | Red counter text |
+| **Disabled** | `var(--color-interactive-disabled-border)` | Suppressed | `var(--color-interactive-disabled-bg)` bg; opacity 0.5; cursor not-allowed |
+
 **Default**
 - Triggered: on initial render with no user interaction.
 - Visually: `1px solid var(--primitive-gray-300)` border, white background, muted placeholder.
@@ -85,7 +93,7 @@ A multi-line text input with optional character/word counter, resize handle, lab
 
 **Error**
 - Triggered: when `showError={true}` and `error` is non-empty.
-- Visually: border becomes `var(--color-error-border)` (`#dc2626`); `ElegantErrorMessage` rendered below.
+- Visually: border becomes `var(--color-error-border)`; `ElegantErrorMessage` rendered below.
 - Behavior: focus ring not shown on focus; error message visible even when field has content.
 
 **Over-limit**
@@ -95,7 +103,7 @@ A multi-line text input with optional character/word counter, resize handle, lab
 
 **Disabled**
 - Triggered: when `disabled={true}`.
-- Visually: background `var(--color-interactive-disabled-bg)` (#f5f5f5); border `var(--color-interactive-disabled-border)` (#e5e5e5); opacity `var(--opacity-disabled)` (0.5); cursor `not-allowed`.
+- Visually: background `var(--color-interactive-disabled-bg)`; border `var(--color-interactive-disabled-border)`; opacity `var(--opacity-disabled)` (0.5); cursor `not-allowed`.
 - Behavior: native `<textarea disabled>` prevents all interaction and removes the element from tab order.
 
 `[STORYBOOK BLOCK: Simple/Forms/Textarea/Textarea]`
@@ -202,9 +210,9 @@ Set `counter="word"` with a description like "Aim for 150–200 words." Since th
 ## 12. Related components
 | Component | When to use it instead |
 |---|---|
-| TextInput | When the value fits on a single line |
-| Search | When the user is querying data rather than composing content |
-| DateInput | When the user needs to enter a structured date |
+| [TextInput](/design-system/docs/text-input-zh) | When the value fits on a single line |
+| [Search](/design-system/docs/search-zh) | When the user is querying data rather than composing content |
+| [DateInput](/design-system/docs/date-input-zh) | When the user needs to enter a structured date |
 
 ## 13. Do's and don'ts
 

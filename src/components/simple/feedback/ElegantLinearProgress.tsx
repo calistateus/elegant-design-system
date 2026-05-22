@@ -225,7 +225,7 @@ export function ElegantLinearProgress({
       <div
         style={{
           display: 'flex',
-          alignItems: 'center',
+          alignItems: 'flex-start',
           justifyContent: 'space-between',
           gap: 'var(--size-card-gap)',
         }}
@@ -249,6 +249,7 @@ export function ElegantLinearProgress({
         display: 'flex',
         flexDirection: 'column',
         gap: 'var(--size-heading-to-body)',
+        width: '100%',
       }}
     >
       {placement === 'top' && labelRow}

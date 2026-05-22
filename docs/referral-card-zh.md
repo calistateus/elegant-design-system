@@ -131,9 +131,9 @@ Use three or four ReferralCards without avatars when photos are unavailable, in 
 ## 12. Related components
 | Component | When to use it instead |
 |---|---|
-| CaseStudyCard | When the content is a project case study with an image, description, and outcome |
-| Avatar | When the person's photo needs to appear standalone outside a testimonial context |
-| CardPack | When rendering multiple ReferralCards in a responsive grid layout |
+| [CaseStudyCard](/design-system/docs/case-study-card-zh) | When the content is a project case study with an image, description, and outcome |
+| [Avatar](/design-system/docs/avatar-zh) | When the person's photo needs to appear standalone outside a testimonial context |
+| [CardPack](/design-system/docs/card-pack-zh) | When rendering multiple ReferralCards in a responsive grid layout |
 
 ## 13. Do's and don'ts
 

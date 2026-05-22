@@ -9,7 +9,7 @@
 **Files missing:** None
 
 **Sections needing human review:**
-- Section 5 (States): Drag-over state is implemented but not captured as a separate Storybook story — marked [NEEDS CONFIRMATION] for exact visual treatment.
+- Section 5 (States): Drag-over state is implemented. No dedicated Storybook story exists for it — visual treatment must be tested at runtime by dragging a file over the dropzone.
 - Section 8 (Accessibility): The dropzone uses `role="button"` and keyboard Enter/Space, but there is no `aria-label` update to reflect the current number of files selected; flagged as a known gap.
 
 **Recommended follow-ups:**
@@ -67,6 +67,15 @@ A file selection control that lets users attach one or more files either via a b
 
 ## 5. States
 
+| State | Button variant | Dropzone variant |
+|---|---|---|
+| **Default / Empty** | "Upload" button, no chips | Upload icon, "Click or drag files here" label |
+| **Files selected** | Label → "Upload more"; file chips displayed | File chips displayed |
+| **Drag over** | — | `--color-fileupload-dropzone-border` bg; `--color-fileupload-dropzone-active-border` border; label → "Drop to upload" |
+| **Error** | `ElegantErrorMessage` below chip strip | `ElegantErrorMessage` below chip strip |
+| **Focus** | — | `0 0 0 2px --color-interactive-primary-bg` box-shadow ring |
+| **Disabled** | opacity 0.5; cursor not-allowed; click blocked | `--color-interactive-disabled-bg` bg; opacity 0.5; cursor not-allowed; drag/click blocked |
+
 **Default / Empty**
 - Button variant shows "Upload" button with no chips.
 - Dropzone shows the Upload icon and "Click or drag files here" label.
@@ -82,7 +91,7 @@ A file selection control that lets users attach one or more files either via a b
 - Background color shifts from `--color-fileupload-dropzone-bg` to `--color-fileupload-dropzone-border` (subtle highlight).
 - Border color shifts from `--color-fileupload-dropzone-border` to `--color-fileupload-dropzone-active-border` (black).
 - Label text changes from "Click or drag files here" to "Drop to upload".
-- [NEEDS CONFIRMATION] No dedicated story exists for this state.
+- No dedicated Storybook story exists for this state; it must be demonstrated by dragging a file over a live running instance.
 
 **Error**
 - Triggered when a file fails type validation or when the max file count is exceeded.
@@ -93,7 +102,7 @@ A file selection control that lets users attach one or more files either via a b
 **Disabled**
 - Triggered: when `disabled={true}`.
 - Button variant: upload button receives `disabled` + `aria-disabled`, click and hover events are blocked; style uses `opacity: var(--opacity-disabled)` (0.5) and `cursor: not-allowed`. The hidden input also receives `disabled`.
-- Dropzone variant: background shifts to `--color-interactive-disabled-bg` (#f5f5f5); border shifts to `--color-interactive-disabled-border` (#e5e5e5); `opacity: var(--opacity-disabled)`; `cursor: not-allowed`; `tabIndex: -1`; all drag and click events blocked. `aria-disabled="true"` set.
+- Dropzone variant: background shifts to `--color-interactive-disabled-bg`; border shifts to `--color-interactive-disabled-border`; `opacity: var(--opacity-disabled)`; `cursor: not-allowed`; `tabIndex: -1`; all drag and click events blocked. `aria-disabled="true"` set.
 
 **Focus** (dropzone variant)
 - The dropzone receives a `box-shadow: 0 0 0 2px var(--color-interactive-primary-bg)` focus ring on keyboard focus.
@@ -178,8 +187,8 @@ Pass `allowedTypes={['.pdf', '.docx']}` to restrict accepted files. The dropzone
 | Component | When to use it instead |
 |---|---|
 | ElegantChip | The chip strip uses ElegantChip internally. Use ElegantChip directly for non-file tag displays. |
-| ElegantButton | Use when a custom upload trigger with different styling or icon is needed outside this component. |
-| ElegantErrorMessage | Used internally by FileUpload. Use directly for validation errors on other custom inputs. |
+| [ElegantButton](/design-system/docs/button-zh) | Use when a custom upload trigger with different styling or icon is needed outside this component. |
+| [ElegantErrorMessage](/design-system/docs/error-message-zh) | Used internally by FileUpload. Use directly for validation errors on other custom inputs. |
 
 ## 13. Do's and don'ts
 

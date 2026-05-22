@@ -48,7 +48,6 @@ const meta: Meta<typeof ElegantTextInput> = {
 export default meta;
 type Story = StoryObj<typeof ElegantTextInput>;
 
-export const ElegantTextInputStory: Story = {
-  name: 'ElegantTextInput',
+export const TextInput: Story = {
   render: (args) => <ElegantTextInputDemo {...args} />,
 };

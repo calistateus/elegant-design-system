@@ -31,7 +31,7 @@ A calendar-based date picker that presents a trigger button displaying the selec
 | Use | Don't use |
 |---|---|
 | When users benefit from seeing a calendar to orient themselves in time | When the user knows the exact date and prefers typing — use DateInput |
-| Booking, scheduling, or event creation flows | When time selection is also required — no time UI exists [NEEDS CONFIRMATION] |
+| Booking, scheduling, or event creation flows | When time selection is also required — this component is date-only; pair with a separate time input |
 | When a min/max date constraint must be visually enforced | When only month and year are needed — a custom solution may serve better |
 | Forms where selecting "Today" is a common action | When multiple dates must be selected — no range or multi-select support |
 
@@ -65,6 +65,16 @@ A calendar-based date picker that presents a trigger button displaying the selec
 
 ## 5. States
 
+| State | Trigger | Day cell | Today button |
+|---|---|---|---|
+| **Default (closed)** | `1px solid --primitive-gray-300` border; placeholder or formatted date | Transparent bg; body text color | `--color-text-muted` text |
+| **Focused / Open** | `--primitive-gray-600` border; `0 0 0 2px --primitive-gray-200` ring | — | — |
+| **Day hovered** | — | `--primitive-gray-100` bg; 100 ms | → `--color-text-title` text |
+| **Day selected** | — | `--color-interactive-primary-bg` bg; `--color-interactive-primary-fg` text; medium weight | — |
+| **Day disabled** | — | `--primitive-gray-300` text; cursor not-allowed | `--primitive-gray-300` text; cursor not-allowed |
+| **Error** | `--color-error-border` border; ring suppressed | — | — |
+| **Disabled** | `--primitive-gray-100` bg; opacity 0.6; cursor not-allowed | — | — |
+
 **Default (closed)**
 - Trigger: `1px solid var(--primitive-gray-300)` border, muted placeholder or formatted date.
 
@@ -87,7 +97,7 @@ A calendar-based date picker that presents a trigger button displaying the selec
 - Background: `var(--primitive-gray-100)`. Transition: `100ms`.
 
 **Day cell — selected**
-- Background: `var(--primitive-black)` (`#1e1e1e`); text: `var(--primitive-white)`; font weight medium. Selecting closes the popover.
+- Background: `var(--color-interactive-primary-bg)`; text: `var(--color-interactive-primary-fg)`; font weight medium. Selecting closes the popover.
 
 **Day cell — disabled**
 - Applies when day falls outside `minDate`/`maxDate` range.
@@ -101,7 +111,7 @@ A calendar-based date picker that presents a trigger button displaying the selec
 - When today falls outside `minDate`/`maxDate`, button is disabled: text `var(--primitive-gray-300)`, cursor `not-allowed`.
 
 **Error**
-- Trigger border: `var(--color-error-border)` (`#dc2626`); focus ring suppressed.
+- Trigger border: `var(--color-error-border)`; focus ring suppressed.
 - `ElegantErrorMessage` renders below.
 
 **Disabled**
@@ -219,9 +229,9 @@ Mount the picker without a label in a filter bar context (`showLabel={false}`), 
 ## 12. Related components
 | Component | When to use it instead |
 |---|---|
-| DateInput | When the user prefers typing dates directly (keyboard-first, no calendar) |
-| WheelPicker | When a scroll-drum metaphor is better suited (mobile-native, time/date columns) |
-| TextInput | When the date format is free-form or non-standard |
+| [DateInput](/design-system/docs/date-input-zh) | When the user prefers typing dates directly (keyboard-first, no calendar) |
+| [WheelPicker](/design-system/docs/wheel-picker-zh) | When a scroll-drum metaphor is better suited (mobile-native, time/date columns) |
+| [TextInput](/design-system/docs/text-input-zh) | When the date format is free-form or non-standard |
 
 ## 13. Do's and don'ts
 

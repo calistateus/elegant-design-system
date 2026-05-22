@@ -121,9 +121,7 @@ export function ElegantTopNav({ logo = 'Portfolio', items, cta }: ElegantTopNavP
       {/* Top bar */}
       <div
         style={{
-          maxWidth: 'var(--size-max-width)',
-          margin: '0 auto',
-          padding: '0 var(--size-page-gutter)',
+          padding: '0 var(--grid-normal-margin)',
           height: '3rem',
           display: 'flex',
           alignItems: 'center',
@@ -226,7 +224,7 @@ export function ElegantTopNav({ logo = 'Portfolio', items, cta }: ElegantTopNavP
           style={{
             borderTop: '1px solid var(--color-border-subtle)',
             backgroundColor: 'var(--color-bg-main)',
-            padding: '0 var(--size-page-gutter) var(--size-card-padding)',
+            padding: '0 var(--grid-normal-margin) var(--size-card-padding)',
           }}
         >
           {items.map((item) => (

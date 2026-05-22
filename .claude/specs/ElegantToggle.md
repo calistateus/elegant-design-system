@@ -13,6 +13,8 @@ On/off toggle switch (pill + thumb). Supports both uncontrolled (internal state)
 | `description` | `string \| false` | — | Optional helper text below the label. |
 | `toggled` | `boolean` | `false` | Controlled on/off state. |
 | `onToggle` | `(value: boolean) => void` | — | When provided, switches to controlled mode. |
+| `disabled` | `boolean` | `false` | Disables the toggle. Applies `opacity: var(--opacity-disabled)`, `cursor: not-allowed`, removes tab stop, and blocks click/keyboard interaction. |
+| `ariaLabel` | `string` | `label` | Accessible name override. Defaults to the visible label text. |
 
 ## Controlled vs uncontrolled
 - **Controlled** (`onToggle` provided): `isOn` reads from `toggled` prop.
@@ -22,7 +24,7 @@ On/off toggle switch (pill + thumb). Supports both uncontrolled (internal state)
 
 | State | Pill background | Thumb position |
 |---|---|---|
-| Off | `--primitive-gray-300` | left: 0.125 rem |
+| Off | `--color-interactive-primary-bg` | left: 0.125 rem |
 | On | `--color-interactive-primary-bg` | left: `calc(2rem - 1rem - 0.125rem)` |
 
 Thumb: 1 rem × 1 rem, white (`--color-interactive-primary-fg`), 0.2s ease transition.
@@ -32,8 +34,7 @@ Thumb: 1 rem × 1 rem, white (`--color-interactive-primary-fg`), 0.2s ease trans
 - Text group (label + description) comes first; pill is on the right
 
 ## Tokens used
-- `--primitive-gray-300` — off pill
-- `--color-interactive-primary-bg` — on pill
+- `--color-interactive-primary-bg` — pill background (both on and off states; thumb position indicates state)
 - `--color-interactive-primary-fg` — thumb colour
 - `--size-tag-gap` — wrapper gap
 - `--size-label-to-description` — gap between label and description

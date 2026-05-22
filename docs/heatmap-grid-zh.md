@@ -171,8 +171,8 @@ In Storybook, use the `FromFile` story to let users upload their own `.csv` or `
 ## 12. Related components
 | Component | When to use it instead |
 |---|---|
-| BarChart | When comparing magnitudes across a single categorical dimension with labeled values |
-| DataTable | When users need to read or interact with the precise values behind the heatmap |
+| [BarChart](/design-system/docs/bar-chart-zh) | When comparing magnitudes across a single categorical dimension with labeled values |
+| [DataTable](/design-system/docs/data-table-zh) | When users need to read or interact with the precise values behind the heatmap |
 | KPI Card | When you need to surface a single scalar metric rather than a matrix overview |
 
 ## 13. Do's and don'ts

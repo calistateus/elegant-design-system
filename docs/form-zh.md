@@ -68,12 +68,12 @@ The Form component has no visual variants itself. Its sub-components (FormHeader
 **Submitting**
 - Triggered when `onSubmit` is called and the native validity check passes.
 - `isSubmitting` becomes `true` in context for the duration of the async `onSubmit` handler.
-- [NEEDS CONFIRMATION] Child components should read `isSubmitting` from context to show loading indicators. Currently no built-in visual change at the Form level.
+- Child components that want to reflect the submitting state should read `isSubmitting` from `useFormState()`. The Form wrapper itself produces no visual change — loading indicators are the responsibility of the child components.
 
 **Disabled**
 - Passed via the `disabled` prop to the root `<form>`.
 - `isDisabled: true` is set in context.
-- [NEEDS CONFIRMATION] Child components should individually honor `isDisabled` from context; the Form wrapper itself does not apply a CSS `disabled` state to the `<form>` element.
+- Child components that want to reflect the disabled state should read `isDisabled` from `useFormState()`. The Form `<form>` element itself does not receive a CSS disabled state — each child component is responsible for reading and applying the disabled context.
 
 **Resetting**
 - Triggered by a native `<button type="reset">` inside the form.
@@ -197,9 +197,9 @@ function MyInput() {
 ## 12. Related components
 | Component | When to use it instead |
 |---|---|
-| Individual field components (TextInput, Dropdown, etc.) | For single-field inline edits that don't need a form shell or submit lifecycle. |
-| Modal / Drawer | When the form needs to appear in an overlay rather than inline on the page. |
-| ElegantButton | Use directly (not wrapped in FormFooter) when you need an action outside a form context. |
+| Individual field components ([TextInput](/design-system/docs/text-input-zh), [Dropdown](/design-system/docs/dropdown-zh), etc.) | For single-field inline edits that don't need a form shell or submit lifecycle. |
+| [Modal](/design-system/docs/modal-zh) / [Drawer](/design-system/docs/drawer-sheet-zh) | When the form needs to appear in an overlay rather than inline on the page. |
+| [ElegantButton](/design-system/docs/button-zh) | Use directly (not wrapped in FormFooter) when you need an action outside a form context. |
 
 ## 13. Do's and don'ts
 

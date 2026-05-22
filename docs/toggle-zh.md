@@ -9,7 +9,7 @@
 **Files missing:** None
 
 **Sections needing human review:**
-- Section 5 (States): No disabled state is implemented; flagged as [NEEDS CONFIRMATION].
+- Section 5 (States): Disabled state is implemented via `disabled` prop — applies `opacity: var(--opacity-disabled)`, `cursor: not-allowed`, `tabIndex=-1`, and blocks click/keyboard interaction.
 - Section 8 (Accessibility): The toggle renders a `<div>` with `role="switch"` rather than a native `<input type="checkbox">`; no visible focus ring is applied beyond the browser default.
 - Section 10 (Responsive behavior): No breakpoint-specific behavior is defined; inferred from layout structure.
 
@@ -40,7 +40,7 @@ A binary on/off control rendered as a sliding pill, used to enable or disable a 
 2. **Text group** — Column-flex container holding the label and optional description.
 3. **Label** — Required text identifying what the toggle controls. Rendered in medium weight at `--primitive-font-size-sm`.
 4. **Description** (optional) — Supporting text in muted color at `--primitive-font-size-xs`.
-5. **Pill track** — Rounded pill background; black when on, `--primitive-gray-300` when off. `aria-hidden="true"`.
+5. **Pill track** — Rounded pill background; always `--color-interactive-primary-bg`. Thumb position (left vs right) indicates off vs on state. `aria-hidden="true"`.
 6. **Thumb** — White circular indicator that slides within the pill track to indicate state.
 
 `[STORYBOOK BLOCK: Simple/Forms/ElegantToggle/Default]`
@@ -65,13 +65,13 @@ The Toggle has a single visual form but two content configurations:
 
 | State | Pill background | Thumb position | `aria-checked` |
 |---|---|---|---|
-| **Off** | `--primitive-gray-300` | `left: 0.125rem` | `"false"` |
+| **Off** | `--color-interactive-primary-bg` | `left: 0.125rem` | `"false"` |
 | **On** | `--color-interactive-primary-bg` | `left: 0.875rem` | `"true"` |
 | **Focus** | Unchanged | Unchanged | — (browser default outline; no custom ring; known gap) |
 | **Disabled** | Unchanged; wrapper opacity 0.5 | Unchanged | `aria-disabled="true"`; `tabIndex="-1"` |
 
 **Off (default)**
-- Pill background: `--primitive-gray-300`.
+- Pill background: `--color-interactive-primary-bg`.
 - Thumb positioned at left: `left: 0.125rem`.
 - `aria-checked="false"`.
 
@@ -122,7 +122,7 @@ The Toggle has a single visual form but two content configurations:
 |---|---|---|
 | `--color-interactive-primary-bg` | `var(--primitive-black)` → #1e1e1e | Pill background when toggled on |
 | `--color-interactive-primary-fg` | `var(--primitive-white)` → #ffffff | Thumb color |
-| `--color-border-default` | `var(--primitive-gray-200)` = #e5e5e5 | Pill background when toggled off |
+| `--color-interactive-primary-bg` | `var(--primitive-black)` → #1e1e1e | Pill background (both on and off; thumb position indicates state) |
 | `--color-text-title` | `var(--primitive-black)` → #1e1e1e | Label text color |
 | `--color-text-muted` | `var(--primitive-gray-600)` → #666666 | Description text color |
 | `--size-tag-gap` | `var(--primitive-scale-3)` → 0.75rem | Gap between text group and pill |

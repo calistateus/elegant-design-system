@@ -41,7 +41,7 @@ CaseStudyCard is a portfolio card that presents a case study with a featured ima
 4. **Upload placeholder (empty state)** — a clickable area with a dashed border, `ImagePlus` icon, and "Upload image" label; appears when `data.imagePath` is empty and `onImageUpload` is provided.
 5. **Content area** — padded div containing tags, title, description, and outcome; applies a subtle scale animation on hover via GSAP.
 6. **Tags** — uppercase, tracked, muted-color label string(s) above the title.
-7. **Title** — `<h3>` in serif (Lora), 2xl size, regular weight; the primary identifier.
+7. **Title** — `<h4>` in serif (Lora), applying `--type-h4-family`, `--type-h4-size`, `--type-h4-weight`, `--type-h4-line-height`; the primary identifier.
 8. **Description** — sans-serif body copy, sm size, body color.
 9. **Outcome** — sans-serif body copy, sm size, accent color (green); the measurable result.
 
@@ -108,7 +108,7 @@ No discrete named variants. The two states of the image slot function as the pri
 
 ## 8. Accessibility
 - **Keyboard navigation**: The card itself is not interactive. The upload placeholder (when `onImageUpload` is set) is not keyboard-accessible in the current implementation — [NEEDS CONFIRMATION] as a known gap.
-- **Screen reader behavior**: The `<article>` element provides a landmark. The image div has `aria-hidden="true"`. Tags, `<h3>` title, and `<p>` elements are read in source order. The hidden file input has no accessible label.
+- **Screen reader behavior**: The `<article>` element provides a landmark. The image div has `aria-hidden="true"`. Tags, `<h4>` title, and `<p>` elements are read in source order. The hidden file input has no accessible label.
 - **Color and contrast**: Title (#1e1e1e on #fafafa): high contrast. Description (#171717 on #fafafa): high contrast. Outcome (#2e6f40 on #fafafa): approximately 4.6:1 — passes WCAG AA for normal text. Tag labels (#666666 on #fafafa): approximately 4.5:1 — passes AA.
 - **Motion**: GSAP hover scale animations are not gated on `prefers-reduced-motion`. Users who have requested reduced motion will still see the scale effect — this is a known gap.
 - **Touch / pointer**: The card is a display component. When `onImageUpload` is not provided, the image area is non-interactive and no touch target requirements apply to the card shell — the pointer cursor is purely decorative. When `onImageUpload` is provided, the upload placeholder occupies the full card width at a 16:9 aspect ratio — adequate in width; height depends on rendered card width (e.g., at 320px card width, the slot is 180px tall — well above 44px).
@@ -155,9 +155,9 @@ Pass `onImageUpload` to enable in-place image replacement. Handle the returned `
 ## 12. Related components
 | Component | When to use it instead |
 |---|---|
-| IconCard | When no image or outcome is needed — just icon, heading, and description |
-| ReferralCard | When the card content is a testimonial quote rather than a project description |
-| CardPack | When rendering multiple CaseStudyCards in a responsive grid layout |
+| [IconCard](/design-system/docs/icon-card-zh) | When no image or outcome is needed — just icon, heading, and description |
+| [ReferralCard](/design-system/docs/referral-card-zh) | When the card content is a testimonial quote rather than a project description |
+| [CardPack](/design-system/docs/card-pack-zh) | When rendering multiple CaseStudyCards in a responsive grid layout |
 
 ## 13. Do's and don'ts
 | Do | Don't |

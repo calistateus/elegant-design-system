@@ -77,7 +77,7 @@ A vertically stacked list of collapsible panels — each showing a heading trigg
 - Only one item can be open at a time — opening a new item collapses the previously open one.
 
 **Trigger hover**
-- No explicit hover background or color change in the source — inherits browser default for buttons on transparent background. [NEEDS CONFIRMATION] whether a hover state should be designed.
+- No hover background or color change is implemented. The trigger inherits the browser default cursor affordance on transparent background. A hover state is a known gap — if interactive feedback is needed, it should be added at the component level.
 
 **Trigger focus**
 - Browser default focus ring applies. Each trigger is a native `<button>` — the global `.elegant-btn:focus-visible` rule is not applied here, so no custom focus ring is set. Known gap.
@@ -153,9 +153,9 @@ Place supplementary information (e.g. legal disclaimers, technical details) in a
 ## 12. Related components
 | Component | When to use it instead |
 |---|---|
-| ElegantForm / ElegantFormSection | When the collapsed region needs to contain interactive form fields, not just text. |
+| [ElegantForm](/design-system/docs/form-zh) / ElegantFormSection | When the collapsed region needs to contain interactive form fields, not just text. |
 | Tab navigation | When users need to switch between sections of equal importance and may want to compare content. |
-| ElegantPicklist | When the collapsed region is a selection list rather than informational content. |
+| [ElegantPicklist](/design-system/docs/picklist-zh) | When the collapsed region is a selection list rather than informational content. |
 
 ## 13. Do's and don'ts
 

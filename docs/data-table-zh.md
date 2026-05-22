@@ -217,8 +217,8 @@ Gotcha: `rowMultiSelect` takes precedence over `rowSelect` — do not enable bot
 | Component | When to use it instead |
 |---|---|
 | KPI Card | When you need to highlight a single metric rather than a full dataset |
-| HeatmapGrid | When the data has a natural two-dimensional structure (rows × columns of intensity values) |
-| BarChart | When the primary goal is visualising relative magnitude across categories rather than reading individual values |
+| [HeatmapGrid](/design-system/docs/heatmap-grid-zh) | When the data has a natural two-dimensional structure (rows × columns of intensity values) |
+| [BarChart](/design-system/docs/bar-chart-zh) | When the primary goal is visualising relative magnitude across categories rather than reading individual values |
 
 ## 13. Do's and don'ts
 

@@ -22,423 +22,12 @@ function GitHubIcon({ size = 16 }: { size?: number }) {
 // Set NEXT_PUBLIC_STORYBOOK_URL in .env.local for your hosted Storybook.
 // Set NEXT_PUBLIC_GITHUB_URL for your repository URL.
 const STORYBOOK_URL =
-  process.env.NEXT_PUBLIC_STORYBOOK_URL ?? 'http://localhost:6007';
+  process.env.NEXT_PUBLIC_STORYBOOK_URL ?? 'http://localhost:6006';
+const STORYBOOK_IS_LOCAL = STORYBOOK_URL.includes('localhost');
 const GITHUB_URL =
   process.env.NEXT_PUBLIC_GITHUB_URL ?? 'https://github.com';
 
-// ── Types ─────────────────────────────────────────────────────────────
-type Category = 'All' | 'Forms' | 'Navigation' | 'Feedback' | 'Data' | 'Display';
-
-interface ComponentDef {
-  name: string;
-  category: Exclude<Category, 'All'>;
-  /** Exact Storybook story ID: lowercase title (slashes→dashes) + "--" + lowercase story export name */
-  storyId: string;
-  /** Filename in docs/ folder, e.g. "button-zh.md" */
-  docFile: string;
-  description: string;
-}
-
-// ── Component catalogue ───────────────────────────────────────────────
-const COMPONENTS: ComponentDef[] = [
-  // Forms ────────────────────────────────────────────────────────────────
-  {
-    name: 'Button',
-    category: 'Forms',
-    storyId: 'simple-forms-elegantbutton--button',
-    docFile: 'button-zh.md',
-    description: 'Primary action trigger with multiple variants, sizes, and loading state.',
-  },
-  {
-    name: 'Button Group',
-    category: 'Forms',
-    storyId: 'simple-forms-elegantbuttongroup--button-group',
-    docFile: 'button-group-zh.md',
-    description: 'Segmented action cluster for related operations.',
-  },
-  {
-    name: 'Text Input',
-    category: 'Forms',
-    storyId: 'simple-forms-eleganttextinput--elegant-text-input-story',
-    docFile: 'text-input-zh.md',
-    description: 'Single-line text entry with label, helper text, and validation.',
-  },
-  {
-    name: 'Textarea',
-    category: 'Forms',
-    storyId: 'simple-forms-eleganttextarea--elegant-textarea-story',
-    docFile: 'textarea-zh.md',
-    description: 'Multi-line text entry with optional character count.',
-  },
-  {
-    name: 'Dropdown',
-    category: 'Forms',
-    storyId: 'simple-forms-elegantdropdown--elegant-dropdown-story',
-    docFile: 'dropdown-zh.md',
-    description: 'Select from a searchable list of options.',
-  },
-  {
-    name: 'Search',
-    category: 'Forms',
-    storyId: 'simple-forms-elegantsearch--elegant-search-story',
-    docFile: 'search-zh.md',
-    description: 'Search input with clear and loading states.',
-  },
-  {
-    name: 'Toggle',
-    category: 'Forms',
-    storyId: 'simple-forms-eleganttoggle--default',
-    docFile: 'toggle-zh.md',
-    description: 'Binary on/off switch with full ARIA switch role.',
-  },
-  {
-    name: 'Checkbox',
-    category: 'Forms',
-    storyId: 'simple-forms-elegantcheckbox--default',
-    docFile: 'checkbox-zh.md',
-    description: 'Boolean selection with indeterminate state support.',
-  },
-  {
-    name: 'Checkbox Group',
-    category: 'Forms',
-    storyId: 'simple-forms-elegantcheckboxgroup--default',
-    docFile: 'checkbox-group-zh.md',
-    description: 'Grouped checkboxes in a fieldset with legend.',
-  },
-  {
-    name: 'Radio',
-    category: 'Forms',
-    storyId: 'simple-forms-elegantradio--default',
-    docFile: 'radio-zh.md',
-    description: 'Single selection from mutually exclusive options.',
-  },
-  {
-    name: 'Radio Group',
-    category: 'Forms',
-    storyId: 'simple-forms-elegantradiogroup--default',
-    docFile: 'radio-group-zh.md',
-    description: 'Radio controls in a fieldset with validation.',
-  },
-  {
-    name: 'Date Input',
-    category: 'Forms',
-    storyId: 'simple-forms-elegantdateinput--elegant-date-input-story',
-    docFile: 'date-input-zh.md',
-    description: 'Segmented date entry with auto-advance between fields.',
-  },
-  {
-    name: 'Date Time Picker',
-    category: 'Forms',
-    storyId: 'simple-forms-elegantdatetimepicker--elegant-date-time-picker-story',
-    docFile: 'date-time-picker-zh.md',
-    description: 'Calendar-based date picker with month navigation.',
-  },
-  {
-    name: 'Wheel Picker',
-    category: 'Forms',
-    storyId: 'simple-forms-elegantwheelpicker--elegant-wheel-picker-story',
-    docFile: 'wheel-picker-zh.md',
-    description: 'Scroll-drum value selector for time and enumerated values.',
-  },
-  {
-    name: 'Range Slider',
-    category: 'Forms',
-    storyId: 'simple-forms-elegantrangeslider--default',
-    docFile: 'range-slider-zh.md',
-    description: 'Single or dual-handle slider for continuous value ranges.',
-  },
-  {
-    name: 'Rating Input',
-    category: 'Forms',
-    storyId: 'simple-forms-elegantratinginput--thumbs',
-    docFile: 'rating-input-zh.md',
-    description: 'Star-based rating with half-star and read-only modes.',
-  },
-  {
-    name: 'File Upload',
-    category: 'Forms',
-    storyId: 'simple-forms-elegantfileupload--button-variant',
-    docFile: 'file-upload-zh.md',
-    description: 'Drag-and-drop file selection with preview and validation.',
-  },
-  {
-    name: 'Pin Input',
-    category: 'Forms',
-    storyId: 'simple-forms-elegantpininput--four-digit',
-    docFile: 'pin-input-zh.md',
-    description: 'OTP and PIN code entry with auto-advance.',
-  },
-  {
-    name: 'Picklist',
-    category: 'Forms',
-    storyId: 'simple-forms-elegantpicklist--elegant-picklist-story',
-    docFile: 'picklist-zh.md',
-    description: 'Dual-panel transfer list for multi-select scenarios.',
-  },
-  {
-    name: 'Form',
-    category: 'Forms',
-    storyId: 'simple-forms-elegantform--default',
-    docFile: 'form-zh.md',
-    description: 'Validated form container composing multiple input components.',
-  },
-  // Navigation ────────────────────────────────────────────────────────────
-  {
-    name: 'Top Nav',
-    category: 'Navigation',
-    storyId: 'simple-navigation-eleganttopnav--default',
-    docFile: 'top-nav-zh.md',
-    description: 'Fixed top bar with logo, nav items, mobile hamburger, and CTA.',
-  },
-  {
-    name: 'Bottom Nav',
-    category: 'Navigation',
-    storyId: 'simple-navigation-elegantbottomnav--desktop',
-    docFile: 'bottom-nav-zh.md',
-    description: 'Mobile-first tab bar with icon and label.',
-  },
-  {
-    name: 'Breadcrumbs',
-    category: 'Navigation',
-    storyId: 'simple-navigation-elegantbreadcrumbs--breadcrumbs',
-    docFile: 'breadcrumbs-zh.md',
-    description: 'Hierarchical path trail with separator and overflow handling.',
-  },
-  {
-    name: 'Pagination',
-    category: 'Navigation',
-    storyId: 'simple-navigation-elegantpagination--pagination',
-    docFile: 'pagination-zh.md',
-    description: 'Page navigation with previous, next, and page-jump controls.',
-  },
-  {
-    name: 'Tabs',
-    category: 'Navigation',
-    storyId: 'simple-content-eleganttabs--tabs',
-    docFile: 'tabs-zh.md',
-    description: 'Horizontal tab switching with associated content panels.',
-  },
-  {
-    name: 'Action Menu',
-    category: 'Navigation',
-    storyId: 'simple-navigation-elegantactionmenu--action-menu',
-    docFile: 'action-menu-zh.md',
-    description: 'Contextual dropdown with icon support and keyboard navigation.',
-  },
-  {
-    name: 'Drawer Sheet',
-    category: 'Navigation',
-    storyId: 'simple-navigation-elegantdrawersheet--default',
-    docFile: 'drawer-sheet-zh.md',
-    description: 'Side-panel overlay for secondary content and workflows.',
-  },
-  // Feedback ──────────────────────────────────────────────────────────────
-  {
-    name: 'Alert',
-    category: 'Feedback',
-    storyId: 'simple-communications-elegantalert--default',
-    docFile: 'alert-zh.md',
-    description: 'Inline status messages with info, success, warning, and error variants.',
-  },
-  {
-    name: 'Toast',
-    category: 'Feedback',
-    storyId: 'simple-communications-eleganttoast--default',
-    docFile: 'toast-zh.md',
-    description: 'Transient notification with auto-dismiss and manual close.',
-  },
-  {
-    name: 'Modal',
-    category: 'Feedback',
-    storyId: 'simple-communications-elegantmodal--heading-only',
-    docFile: 'modal-zh.md',
-    description: 'Focus-contained dialog with header, body, and footer slots.',
-  },
-  {
-    name: 'Tooltip',
-    category: 'Feedback',
-    storyId: 'simple-communications-eleganttooltip--top',
-    docFile: 'tooltip-zh.md',
-    description: 'Hover-triggered hint with four placement options.',
-  },
-  {
-    name: 'Error Message',
-    category: 'Feedback',
-    storyId: 'simple-forms-eleganterrormessage--elegant-error-message-story',
-    docFile: 'error-message-zh.md',
-    description: 'Field-level validation error with icon.',
-  },
-  {
-    name: 'Spinner',
-    category: 'Feedback',
-    storyId: 'simple-feedback-elegantspinner--default',
-    docFile: 'spinner-zh.md',
-    description: 'Indeterminate loading indicator with size variants.',
-  },
-  {
-    name: 'Skeleton',
-    category: 'Feedback',
-    storyId: 'simple-feedback-elegantskeleton--text',
-    docFile: 'skeleton-zh.md',
-    description: 'Shimmer placeholder matching content layout dimensions.',
-  },
-  {
-    name: 'Linear Progress',
-    category: 'Feedback',
-    storyId: 'simple-feedback-elegantlinearprogress--label-top',
-    docFile: 'linear-progress-zh.md',
-    description: 'Horizontal progress bar with determinate and indeterminate modes.',
-  },
-  {
-    name: 'Circular Progress',
-    category: 'Feedback',
-    storyId: 'simple-feedback-elegantcircularprogress--percentage',
-    docFile: 'circular-progress-zh.md',
-    description: 'SVG ring progress with optional center label.',
-  },
-  {
-    name: 'Stepper',
-    category: 'Feedback',
-    storyId: 'simple-feedback-elegantstepper--circle-horizontal',
-    docFile: 'stepper-zh.md',
-    description: 'Multi-step workflow indicator with arrows and numbered variants.',
-  },
-  // Data ──────────────────────────────────────────────────────────────────
-  {
-    name: 'Data Table',
-    category: 'Data',
-    storyId: 'simple-data-elegantdatatable--default',
-    docFile: 'data-table-zh.md',
-    description: 'Sortable, selectable table with row actions and pagination.',
-  },
-  {
-    name: 'KPI Card',
-    category: 'Data',
-    storyId: 'simple-data-elegantkpicard--kpi-card',
-    docFile: 'kpi-card-zh.md',
-    description: 'Metric display with trend delta and status badge.',
-  },
-  {
-    name: 'Bar Chart',
-    category: 'Data',
-    storyId: 'simple-data-elegantbarchart--default',
-    docFile: 'bar-chart-zh.md',
-    description: 'Horizontal bar visualization with value labels and color variants.',
-  },
-  {
-    name: 'Heatmap Grid',
-    category: 'Data',
-    storyId: 'simple-data-elegantheatmapgrid--default',
-    docFile: 'heatmap-grid-zh.md',
-    description: 'Calendar-style activity heatmap with multi-color intensity scale.',
-  },
-  // Display ───────────────────────────────────────────────────────────────
-  {
-    name: 'Avatar',
-    category: 'Display',
-    storyId: 'simple-assets-elegantavatar--default',
-    docFile: 'avatar-zh.md',
-    description: 'User identity with image, initials, and icon fallbacks.',
-  },
-  {
-    name: 'Avatar Group',
-    category: 'Display',
-    storyId: 'simple-assets-elegantavatargroup--default',
-    docFile: 'avatar-group-zh.md',
-    description: 'Stacked avatars with overflow count.',
-  },
-  {
-    name: 'Badge',
-    category: 'Display',
-    storyId: 'simple-elegantbadge--badge',
-    docFile: 'badge-zh.md',
-    description: 'Semantic status label with eight color variants.',
-  },
-  {
-    name: 'Chip',
-    category: 'Display',
-    storyId: 'simple-elegantchip--neutral',
-    docFile: 'chip-zh.md',
-    description: 'Interactive tag with optional dismiss action.',
-  },
-  {
-    name: 'Accordion',
-    category: 'Display',
-    storyId: 'simple-content-elegantaccordion--default',
-    docFile: 'accordion-zh.md',
-    description: 'Collapsible content sections with smooth animation.',
-  },
-  {
-    name: 'Carousel',
-    category: 'Display',
-    storyId: 'simple-assets-elegantcarousel--case-study-cards',
-    docFile: 'carousel-zh.md',
-    description: 'Auto-sliding card carousel with dot navigation.',
-  },
-  {
-    name: 'Card Pack',
-    category: 'Display',
-    storyId: 'simple-cards-elegantcardpack--default',
-    docFile: 'card-pack-zh.md',
-    description: 'Responsive grid container for card collections.',
-  },
-  {
-    name: 'Image',
-    category: 'Display',
-    storyId: 'simple-assets-elegantimage--default',
-    docFile: 'image-zh.md',
-    description: 'Token-compliant image with aspect ratio and border radius controls.',
-  },
-  {
-    name: 'Icon Card',
-    category: 'Display',
-    storyId: 'simple-cards-eleganticoncard--default',
-    docFile: 'icon-card-zh.md',
-    description: 'Feature card with icon, title, and description.',
-  },
-  {
-    name: 'Case Study Card',
-    category: 'Display',
-    storyId: 'simple-cards-elegantcasestudycard--default',
-    docFile: 'case-study-card-zh.md',
-    description: 'Portfolio card with image, tags, and outcome metric.',
-  },
-  {
-    name: 'Referral Card',
-    category: 'Display',
-    storyId: 'simple-cards-elegantreferralcard--default',
-    docFile: 'referral-card-zh.md',
-    description: 'Testimonial card with quote, name, and optional avatar.',
-  },
-  {
-    name: 'List',
-    category: 'Display',
-    storyId: 'simple-content-elegantlist--default',
-    docFile: 'list-zh.md',
-    description: 'Styled unordered list with optional two-column layout.',
-  },
-  {
-    name: 'Numerated List',
-    category: 'Display',
-    storyId: 'simple-content-elegantnumeratedlist--default',
-    docFile: 'numerated-list-zh.md',
-    description: 'Ordered list with large number styling and dividers.',
-  },
-  {
-    name: 'Divider',
-    category: 'Display',
-    storyId: 'simple-layout-elegantdivider--default',
-    docFile: 'divider-zh.md',
-    description: 'Horizontal separator with optional label.',
-  },
-  {
-    name: 'Container',
-    category: 'Display',
-    storyId: 'simple-layout-elegantcontainer--vertical-stack',
-    docFile: 'container-zh.md',
-    description: 'Flex layout container for stacking and row composition.',
-  },
-];
+import { COMPONENTS, type Category, type ComponentDef } from './components-data';
 
 const CATEGORIES: Category[] = [
   'All',
@@ -808,38 +397,39 @@ export default function DesignSystemPage() {
           })}
         </div>
 
-        {/* Storybook notice */}
-        <div style={{
-          display: 'flex',
-          alignItems: 'flex-start',
-          gap: '10px',
-          padding: '10px 14px',
-          background: 'var(--color-bg-surface)',
-          border: '1px solid var(--color-border-subtle)',
-          borderRadius: 'var(--primitive-radius-md)',
-          marginBottom: '24px',
-        }}>
-          <span style={{
-            display: 'inline-block',
-            width: '6px',
-            height: '6px',
-            borderRadius: '50%',
-            background: 'var(--color-text-muted)',
-            flexShrink: 0,
-            marginTop: '5px',
-          }} />
-          <span style={{
-            fontFamily: 'var(--primitive-font-mono)',
-            fontSize: 'var(--primitive-font-size-2xs)',
-            color: 'var(--color-text-muted)',
-            lineHeight: 1.6,
+        {/* Storybook notice — only shown when no hosted URL is configured */}
+        {STORYBOOK_IS_LOCAL && (
+          <div style={{
+            display: 'flex',
+            alignItems: 'flex-start',
+            gap: '10px',
+            padding: '10px 14px',
+            background: 'var(--color-bg-surface)',
+            border: '1px solid var(--color-border-subtle)',
+            borderRadius: 'var(--primitive-radius-md)',
+            marginBottom: '24px',
           }}>
-            Live previews require Storybook at{' '}
-            <strong style={{ color: 'var(--color-text-body)' }}>{STORYBOOK_URL}</strong>.{' '}
-            Run <code style={{ background: 'var(--color-border-subtle)', padding: '1px 5px', borderRadius: '2px' }}>npm run storybook</code> locally,
-            or set <code style={{ background: 'var(--color-border-subtle)', padding: '1px 5px', borderRadius: '2px' }}>NEXT_PUBLIC_STORYBOOK_URL</code> to your deployed instance.
-          </span>
-        </div>
+            <span style={{
+              display: 'inline-block',
+              width: '6px',
+              height: '6px',
+              borderRadius: '50%',
+              background: 'var(--color-text-muted)',
+              flexShrink: 0,
+              marginTop: '5px',
+            }} />
+            <span style={{
+              fontFamily: 'var(--primitive-font-mono)',
+              fontSize: 'var(--primitive-font-size-2xs)',
+              color: 'var(--color-text-muted)',
+              lineHeight: 1.6,
+            }}>
+              Live previews require Storybook running locally.{' '}
+              Run <code style={{ background: 'var(--color-border-subtle)', padding: '1px 5px', borderRadius: '2px' }}>npm run storybook</code>,
+              or set <code style={{ background: 'var(--color-border-subtle)', padding: '1px 5px', borderRadius: '2px' }}>NEXT_PUBLIC_STORYBOOK_URL</code> to your deployed instance.
+            </span>
+          </div>
+        )}
 
         {/* Grid */}
         <div style={{

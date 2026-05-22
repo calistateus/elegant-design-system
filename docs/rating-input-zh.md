@@ -187,9 +187,9 @@ Use the heart variant in list items or gallery cards where a like/save action is
 ## 12. Related components
 | Component | When to use it instead |
 |---|---|
-| ElegantRadioGroup | When users need to select one option from a set of labeled choices (e.g. "Poor / Fair / Good / Excellent"). |
-| ElegantPicklist | When users need to select multiple items from a list, not express a sentiment. |
-| ElegantButton | When the feedback action is a standalone CTA (e.g. "Submit review") rather than an inline widget. |
+| [ElegantRadioGroup](/design-system/docs/radio-group-zh) | When users need to select one option from a set of labeled choices (e.g. "Poor / Fair / Good / Excellent"). |
+| [ElegantPicklist](/design-system/docs/picklist-zh) | When users need to select multiple items from a list, not express a sentiment. |
+| [ElegantButton](/design-system/docs/button-zh) | When the feedback action is a standalone CTA (e.g. "Submit review") rather than an inline widget. |
 
 ## 13. Do's and don'ts
 

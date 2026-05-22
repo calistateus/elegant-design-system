@@ -62,14 +62,22 @@ The component has a single visual design; behavior varies via `siblings` and the
 
 ## 5. States
 
+| State | Page button | Prev / Next button |
+|---|---|---|
+| **Default (inactive)** | No bg; `--color-text-body` text; cursor pointer | `--primitive-gray-300` icon; `1px solid --primitive-gray-200` border |
+| **Active (current page)** | `--color-interactive-primary-bg` bg; `--color-interactive-primary-fg` text; medium weight; `aria-current="page"` | — |
+| **Hover** | `--primitive-gray-200` border; `--color-text-title` text; 150 ms ease | `--primitive-gray-400` border; `--color-text-title` icon |
+| **Disabled** | — | `disabled` attr; `--primitive-gray-300` icon; no hover effect |
+| **Focus** | Browser default outline (no custom ring; known gap) | Browser default outline |
+
 **Default (inactive page button)**
 - Background: none; border: transparent.
-- Color: `--color-text-body` (#171717).
+- Color: `--color-text-body`.
 - Cursor: pointer.
 
 **Active (current page)**
-- Background: `--color-interactive-primary-bg` (#1e1e1e, black).
-- Text: `--color-interactive-primary-fg` (#ffffff, white).
+- Background: `--color-interactive-primary-bg`.
+- Text: `--color-interactive-primary-fg`.
 - Border: `1px solid --primitive-black`.
 - Font weight: medium (500).
 - Cursor: default — the button is not re-clickable.
@@ -161,9 +169,9 @@ Appropriate for any list, table, or grid where content is loaded client-side. Go
 ## 12. Related components
 | Component | When to use it instead |
 |---|---|
-| Breadcrumbs | When users need to navigate the site hierarchy, not step through a sequence of pages |
-| Tabs | When content sections are always rendered and users switch views, not pages |
-| BottomNav | When navigating between distinct app sections rather than paging through dataset items |
+| [Breadcrumbs](/design-system/docs/breadcrumbs-zh) | When users need to navigate the site hierarchy, not step through a sequence of pages |
+| [Tabs](/design-system/docs/tabs-zh) | When content sections are always rendered and users switch views, not pages |
+| [BottomNav](/design-system/docs/bottom-nav-zh) | When navigating between distinct app sections rather than paging through dataset items |
 
 ## 13. Do's and don'ts
 

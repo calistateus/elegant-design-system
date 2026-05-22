@@ -14,25 +14,28 @@ Inline contextual alert banner. Three semantic variants (`info`, `success`, `err
 | `title` | `string` | — | Optional bold title above the message. |
 | `onDismiss` | `() => void` | — | When provided, renders an `X` dismiss button. |
 | `showIcon` | `boolean` | `true` | Whether to render the leading icon. |
+| `liveRegion` | `'polite' \| 'assertive'` | `'polite'` | Controls `aria-live` urgency. Use `'assertive'` for errors that demand immediate attention. |
 
 ## Variant map
 
 | Variant | Border | Icon | Icon colour |
 |---|---|---|---|
-| `info` | `--primitive-gray-300` | `Info` | `--color-text-muted` |
-| `success` | `--primitive-green-500` | `CheckCircle` | `--color-text-accent` |
-| `error` | `--primitive-red-500` | `XCircle` | `--color-error-text` |
+| `info` | `--color-info-border` | `Info` | `--color-text-muted` |
+| `success` | `--color-text-accent` | `CheckCircle` | `--color-text-accent` |
+| `error` | `--color-error-text` | `XCircle` | `--color-error-text` |
 
 ## Tokens used
-- `--primitive-gray-300`, `--primitive-green-500`, `--primitive-red-500` — borders
-- `--color-text-muted`, `--color-text-accent`, `--color-error-text` — icon colours
+- `--color-info-border` — info variant border
+- `--color-text-accent` — success variant border and icon
+- `--color-error-text` — error variant border and icon
+- `--color-text-muted`, `--color-text-body` — text and icon colours
 - `--color-bg-surface` — background
-- `--primitive-radius-md`
-- `--primitive-scale-3`, `--primitive-scale-4` — padding
-- `--primitive-font-sans`
+- `--size-notification-padding` — container padding
+- `--size-notification-gap` — gap between icon, body, dismiss
+- `--size-notification-radius` — border radius
 - `--primitive-font-size-sm`
 - `--primitive-font-weight-bold`, `--primitive-font-weight-regular`
-- `--color-text-body`, `--color-text-muted`
+- `--motion-interactive-color` — dismiss button hover transition
 
 ## ARIA
 - `role="alert"` on the root element

@@ -11,7 +11,7 @@ Circular avatar element. Renders a cover-fit `<img>` when a `src` is provided; f
 |---|---|---|---|
 | `src` | `string` | — | Image URL. When absent, shows the upload placeholder. |
 | `alt` | `string` | `''` | Alt text for the `<img>`. |
-| `size` | `string` | `'var(--primitive-scale-12)'` | CSS size value (width & height). Defaults to 48 px. |
+| `size` | `'sm' \| 'md' \| 'lg'` | `'md'` | Size preset: `sm` = 32 px, `md` = 40 px, `lg` = 48 px. |
 
 ## States
 
@@ -33,6 +33,12 @@ Circular avatar element. Renders a cover-fit `<img>` when a `src` is provided; f
 ```
 
 ## Notes
-- `size` accepts any valid CSS length — use design tokens where possible.
 - `flexShrink: 0` is set internally so the avatar never squishes inside flex parents.
 - Used inside `ElegantReferralCard` for the `showAvatar` slot.
+- Used inside `ElegantAvatarGroup` where the size is fixed by the group.
+
+## Usage example
+```tsx
+<ElegantAvatar src="/team/alex.jpg" alt="Alex Rivera" size="md" />
+<ElegantAvatar size="sm" />
+```

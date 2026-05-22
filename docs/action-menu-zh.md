@@ -75,11 +75,18 @@ Trigger configuration is the primary variant axis.
 
 ## 5. States
 
+| State | Trigger | Action item | Sub-menu item |
+|---|---|---|---|
+| **Default** | Transparent bg, `1px solid --color-border-subtle` border | Transparent bg | Transparent bg |
+| **Hover / Open** | `--color-interactive-hover-bg` bg; 150 ms ease | `--primitive-gray-50` bg (default); `--primitive-red-100` bg (danger); 100 ms ease | Same as action item |
+| **Focus — trigger** | No visible ring (known accessibility gap) | — | — |
+| **Focus — menu items** | — | Programmatic `.focus()`; keyboard-navigable via ArrowDown/Up/Home/End | Same as action items |
+
 **Trigger — default**
 - Background: transparent; border: `1px solid --color-border-subtle`.
 
 **Trigger — hovered or open**
-- Background: `--primitive-gray-100` (#f5f5f5).
+- Background: `--color-interactive-hover-bg`.
 - Transition: `--motion-dropdown-trigger` (border-color + box-shadow, 150 ms ease).
 
 **Main menu — closed**
@@ -209,9 +216,9 @@ Use `subItems` to group related options under a parent label (e.g. "Export" > "A
 ## 12. Related components
 | Component | When to use it instead |
 |---|---|
-| Tabs | When switching between content views, not triggering actions |
-| TopNav | When providing top-level site navigation, not contextual actions |
-| Breadcrumbs | When the user needs to navigate a hierarchy, not act on an item |
+| [Tabs](/design-system/docs/tabs-zh) | When switching between content views, not triggering actions |
+| [TopNav](/design-system/docs/top-nav-zh) | When providing top-level site navigation, not contextual actions |
+| [Breadcrumbs](/design-system/docs/breadcrumbs-zh) | When the user needs to navigate a hierarchy, not act on an item |
 
 ## 13. Do's and don'ts
 

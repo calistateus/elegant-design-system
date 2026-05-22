@@ -3,7 +3,7 @@
 `src/components/simple/ElegantCaseStudyCard.tsx`
 
 ## Summary
-Work/portfolio card with a 16:9 image slot, tag row, serif H3 title, body description, and accent-coloured outcome line. Image zooms on hover via GSAP.
+Work/portfolio card with a 16:9 image slot, tag row, serif H4 title, body description, and accent-coloured outcome line. Image zooms on hover via GSAP.
 
 ## Props
 
@@ -29,7 +29,7 @@ interface CaseStudy {
   [image slot — 16:9, overflow hidden]
   [content area — padding: --size-card-padding]
     [tags row]
-    [h3 title]
+    [h4 title]
     [description]
     [outcome]
 </article>
@@ -49,7 +49,7 @@ GSAP hover: `scale(1.05)` on enter, `scale(1)` on leave, `duration: 0.35`, `ease
 | Element | Font | Size | Weight | Colour |
 |---|---|---|---|---|
 | Tags | sans | xs | regular | muted, uppercase, letter-spacing 0.1em |
-| Title (h3) | serif | 2xl | regular | title, letter-spacing −0.02em |
+| Title (h4) | serif | 2xl | regular | title, letter-spacing −0.02em |
 | Description | sans | sm | regular | body |
 | Outcome | sans | sm | regular | accent |
 
@@ -60,8 +60,9 @@ GSAP hover: `scale(1.05)` on enter, `scale(1)` on leave, `duration: 0.35`, `ease
 - `--size-heading-to-sub` — tag row bottom margin
 - `--size-heading-to-body` — title bottom margin
 - `--size-body-to-body` — description bottom margin
-- `--primitive-font-serif`, `--primitive-font-sans`
-- `--primitive-font-size-xs`, `--primitive-font-size-sm`, `--primitive-font-size-2xl`
+- `--type-h4-family`, `--type-h4-size`, `--type-h4-weight`, `--type-h4-line-height` — title typography
+- `--primitive-font-sans`
+- `--primitive-font-size-xs`, `--primitive-font-size-sm`
 - `--primitive-font-weight-regular`
 - `--color-text-muted`, `--color-text-title`, `--color-text-body`, `--color-text-accent`
 - `--color-bg-main` — placeholder background

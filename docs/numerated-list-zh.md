@@ -159,7 +159,7 @@ Non-interactive. No touch targets.
 **Known gaps**
 - No `aria-labelledby` association between the `h5` heading and the `ol`.
 - No `aria-label` fallback when both `heading` and `description` are absent.
-- Last list item still receives `padding-bottom` and `border-bottom` — this produces a trailing divider line at the bottom of the list. Confirm whether this is intentional [NEEDS CONFIRMATION].
+- Last list item receives `padding-bottom` and `border-bottom` — this produces a trailing divider line at the bottom of the list. This is intentional: it keeps spacing consistent and allows the list to be placed inside bordered containers without a doubled border effect. If you need to suppress the trailing line, add `border-bottom: none` to the last child at the parent level.
 
 ## 9. Design tokens
 
@@ -211,8 +211,8 @@ Gotcha: without a heading, the list lacks an accessible name for screen readers 
 
 | Component | When to use it instead |
 |---|---|
-| List | When items have equal weight, order is arbitrary, and visual icons (not numbers) are the appropriate indicator — List renders a `ul` with optional Lucide icons |
-| Container + custom children | When steps need richer content (images, code blocks, CTAs) — NumeratedList limits items to label + description |
+| [List](/design-system/docs/list-zh) | When items have equal weight, order is arbitrary, and visual icons (not numbers) are the appropriate indicator — List renders a `ul` with optional Lucide icons |
+| [Container](/design-system/docs/container-zh) + custom children | When steps need richer content (images, code blocks, CTAs) — NumeratedList limits items to label + description |
 | ElegantCarousel | When there are many sequenced items and a scrollable/paginated view is preferable to a long vertical list |
 
 ## 13. Do's and don'ts

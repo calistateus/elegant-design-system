@@ -74,6 +74,7 @@ export function ElegantSkeleton({
           display: 'flex',
           flexDirection: 'column',
           gap: 'var(--size-body-to-body)',
+          width: typeof width === 'number' ? `${width}px` : width,
         }}
       >
         {Array.from({ length: lines }).map((_, i) => (
@@ -89,7 +90,7 @@ export function ElegantSkeleton({
   }
 
   return (
-    <span aria-busy="true" aria-label="Loading…" style={{ display: 'block' }}>
+    <span aria-busy="true" aria-label="Loading…" style={{ display: 'block', width: typeof width === 'number' ? `${width}px` : width }}>
       <SkeletonBlock width={width} height={resolvedHeight} borderRadius={radius} />
     </span>
   );

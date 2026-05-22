@@ -159,9 +159,9 @@ Gotcha: `fullWidth` must be `true` for `justify="between"` to distribute space a
 
 | Component | When to use it instead |
 |---|---|
-| Wrapper | When the region needs a background color (`surface`), border, or border-radius — Container has no surface styling |
+| [Wrapper](/design-system/docs/wrapper-zh) | When the region needs a background color (`surface`), border, or border-radius — Container has no surface styling |
 | Tailwind layout utilities (`layout-compact`, `layout-normal`) | When you need a responsive CSS Grid layout across columns — Container is flex-only |
-| ElegantList / ElegantNumeratedList | When the children are semantically a list of items (features, steps) — those components provide correct `ul`/`ol` semantics and built-in item spacing |
+| [ElegantList](/design-system/docs/list-zh) / [ElegantNumeratedList](/design-system/docs/numerated-list-zh) | When the children are semantically a list of items (features, steps) — those components provide correct `ul`/`ol` semantics and built-in item spacing |
 
 ## 13. Do's and don'ts
 

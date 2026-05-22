@@ -46,7 +46,7 @@ A thin 1 px line that visually separates sections or elements, available in hori
 **Vertical:**
 1. **`<div>`** — `width: 1px; align-self: stretch; background: --color-border-subtle; flex-shrink: 0`. Carries `role="separator" aria-orientation="vertical"`.
 
-`[STORYBOOK BLOCK: Simple/Layout/Divider/Horizontal]`
+`[STORYBOOK BLOCK: Simple/Layout/ElegantDivider/Horizontal]`
 
 ## 4. Variants
 
@@ -68,9 +68,9 @@ A thin 1 px line that visually separates sections or elements, available in hori
 - Choose when splitting two adjacent elements in a horizontal flex container.
 - Constraint: the parent element must be a flex container — `align-self: stretch` only works in flex or grid context.
 
-`[STORYBOOK BLOCK: Simple/Layout/Divider/Horizontal]`
-`[STORYBOOK BLOCK: Simple/Layout/Divider/HorizontalWithLabel]`
-`[STORYBOOK BLOCK: Simple/Layout/Divider/Vertical]`
+`[STORYBOOK BLOCK: Simple/Layout/ElegantDivider/Horizontal]`
+`[STORYBOOK BLOCK: Simple/Layout/ElegantDivider/WithLabel]`
+`[STORYBOOK BLOCK: Simple/Layout/ElegantDivider/Vertical]`
 
 ## 5. States
 This component is purely presentational and has no interactive states. It does not respond to hover, focus, active, disabled, or loading conditions.
@@ -145,14 +145,14 @@ Place a vertical Divider between two sibling flex children to draw a 1 px column
 </div>
 ```
 
-`[STORYBOOK BLOCK: Simple/Layout/Divider/HorizontalWithLabel]`
+`[STORYBOOK BLOCK: Simple/Layout/ElegantDivider/WithLabel]`
 
 ## 12. Related components
 | Component | When to use it instead |
 |---|---|
-| Tabs | When sections should be switchable panels rather than stacked separated sections |
-| Breadcrumbs | When the goal is wayfinding in a hierarchy, not visual separation |
-| ActionMenu | When separating groups of actions within a dropdown — consider using a visual divider inside the menu list (not yet implemented as a component) |
+| [Tabs](/design-system/docs/tabs-zh) | When sections should be switchable panels rather than stacked separated sections |
+| [Breadcrumbs](/design-system/docs/breadcrumbs-zh) | When the goal is wayfinding in a hierarchy, not visual separation |
+| [ActionMenu](/design-system/docs/action-menu-zh) | When separating groups of actions within a dropdown — consider using a visual divider inside the menu list (not yet implemented as a component) |
 
 ## 13. Do's and don'ts
 

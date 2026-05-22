@@ -189,9 +189,9 @@ Render a row of badges for multi-value attributes (e.g., tags). Use neutral colo
 ## 12. Related components
 | Component | When to use it instead |
 |---|---|
-| Chip | When the label is dismissible or represents a user-applied filter |
-| Alert | For larger, more prominent inline status messages with an action path |
-| Toast | For transient, system-generated status notifications |
+| [Chip](/design-system/docs/chip-zh) | When the label is dismissible or represents a user-applied filter |
+| [Alert](/design-system/docs/alert-zh) | For larger, more prominent inline status messages with an action path |
+| [Toast](/design-system/docs/toast-zh) | For transient, system-generated status notifications |
 
 ## 13. Do's and don'ts
 

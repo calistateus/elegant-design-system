@@ -93,12 +93,6 @@
   --color-progress-track: var(--primitive-gray-200);
   --color-interactive-primary-bg: var(--primitive-black);
   --color-interactive-primary-fg: var(--primitive-white);
-  --color-interactive-primary-hover-bg: var(--primitive-white);
-  --color-interactive-hover-bg: var(--primitive-gray-100);
-  --color-interactive-disabled-bg: var(--primitive-gray-100);
-  --color-interactive-disabled-border: var(--primitive-gray-200);
-  --color-interactive-disabled-fg: var(--primitive-gray-400);
-  --opacity-disabled: 0.5;
   --color-heatmap-empty: var(--primitive-gray-200);
   --color-heatmap-low: var(--primitive-green-100);
   --color-heatmap-medium: var(--primitive-green-300);
@@ -132,9 +126,6 @@
   --color-badge-purple-bg: var(--primitive-purple-100);
   --color-badge-purple-text: var(--primitive-purple-800);
   --color-badge-purple-border: var(--primitive-purple-100);
-  /* ⚠️  Contrast notice: white badge uses white text on a transparent background.
-     This only passes WCAG AA contrast when placed on a dark image or dark-coloured
-     background (e.g. a hero photo, dark card). Never place it on a light background. */
   --color-badge-white-bg: transparent;
   --color-badge-white-text: var(--primitive-white);
   --color-badge-white-border: var(--primitive-white);
@@ -158,9 +149,6 @@
   --color-skeleton-base: var(--primitive-gray-200);
   --color-skeleton-highlight: var(--primitive-gray-100);
   --color-overlay-scrim: rgba(30, 30, 30, 0.4);
-  --color-border-default: var(--primitive-gray-200);      /* structural dividers, widget borders */
-  --color-border-input: var(--primitive-gray-300);        /* form control default border */
-  --color-border-input-focus: var(--primitive-gray-600);  /* form control focused border */
 
   /* spacing */
   --size-page-gutter: var(--primitive-scale-6);
@@ -219,12 +207,6 @@
   --size-icon-md: 16px;
   --size-icon-lg: 24px;
   --size-icon-stroke: 1.5;
-  --size-input-padding: var(--primitive-scale-2) var(--primitive-scale-3);
-  --size-input-radius: var(--primitive-radius-md);
-  --size-notification-padding: var(--primitive-scale-3) var(--primitive-scale-4);
-  --size-notification-gap: var(--primitive-scale-3);
-  --size-notification-radius: var(--primitive-radius-md);
-  --size-menu-item-padding: var(--primitive-scale-2) var(--primitive-scale-3);
 
   /* typography */
   --type-line-height-none: 1;
@@ -236,11 +218,6 @@
   --type-tracking-tight: -0.01em;
   --type-tracking-display: -0.02em;
   --type-tracking-wide: 0.1em;
-  /* h4 — sans, lg, medium */
-  --type-h4-family: var(--primitive-font-sans);
-  --type-h4-size: var(--primitive-font-size-lg);
-  --type-h4-weight: var(--primitive-font-weight-medium);
-  --type-h4-line-height: 1.4;
   --type-h5-family: var(--primitive-font-sans);
   --type-h5-size: var(--primitive-font-size-base);
   --type-h5-weight: var(--primitive-font-weight-bold);

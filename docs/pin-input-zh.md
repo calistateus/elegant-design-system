@@ -58,6 +58,13 @@ A one-time-code / PIN entry control that renders individual digit cells, auto-ad
 
 ## 5. States
 
+| State | Border | Focus ring | Background |
+|---|---|---|---|
+| **Default / Empty** | `--primitive-gray-300` | None | White |
+| **Focused** | `--primitive-gray-600` | `0 0 0 2px var(--primitive-gray-200)` | White |
+| **Filled** | `--primitive-gray-300` | None | White (digit visible in monospace) |
+| **Disabled** | `--color-interactive-disabled-border` | Suppressed | `--color-interactive-disabled-bg`; opacity 0.5; cursor not-allowed |
+
 **Default / Empty**
 - All cells are blank with a `--primitive-gray-300` border.
 - No shadow or highlight.
@@ -72,7 +79,7 @@ A one-time-code / PIN entry control that renders individual digit cells, auto-ad
 - No separate visual treatment for the filled state beyond the digit being visible.
 
 **Disabled**
-- All cells receive `backgroundColor: var(--color-interactive-disabled-bg)` (#f5f5f5); border becomes `var(--color-interactive-disabled-border)` (#e5e5e5); `opacity: var(--opacity-disabled)` (0.5); `cursor: not-allowed`. Focus ring is suppressed when disabled.
+- All cells receive `backgroundColor: var(--color-interactive-disabled-bg)`; border becomes `var(--color-interactive-disabled-border)`; `opacity: var(--opacity-disabled)` (0.5); `cursor: not-allowed`. Focus ring is suppressed when disabled.
 - The action link button is also `disabled`.
 - User interaction is blocked.
 
@@ -80,8 +87,6 @@ A one-time-code / PIN entry control that renders individual digit cells, auto-ad
 - Triggered internally when all cells are non-empty.
 - `onComplete(value)` is called with the full PIN string.
 - No built-in visual state change — consumer handles post-completion behavior (e.g. spinner, navigation).
-
-`[STORYBOOK BLOCK: Simple/Forms/ElegantPinInput/Disabled]`
 
 ## 6. Properties
 | Prop | Type | Default | Required | Description |
@@ -160,9 +165,9 @@ Use `NoActionLink` pattern when the context is already clear (e.g. a modal with 
 ## 12. Related components
 | Component | When to use it instead |
 |---|---|
-| TextInput | For alphanumeric codes or free-form text entry. |
-| ElegantForm | To wrap the PinInput in a form context with a submit lifecycle. |
-| ElegantButton | To provide an explicit "Verify" submit action alongside the PinInput (use `onComplete` to trigger it). |
+| [TextInput](/design-system/docs/text-input-zh) | For alphanumeric codes or free-form text entry. |
+| [ElegantForm](/design-system/docs/form-zh) | To wrap the PinInput in a form context with a submit lifecycle. |
+| [ElegantButton](/design-system/docs/button-zh) | To provide an explicit "Verify" submit action alongside the PinInput (use `onComplete` to trigger it). |
 
 ## 13. Do's and don'ts
 

@@ -169,10 +169,10 @@ Keep `showError={false}` until the user attempts to submit. On submit, if `selec
 ## 12. Related components
 | Component | When to use it instead |
 |---|---|
-| CheckboxGroup | When multiple options can be selected simultaneously |
-| Radio | The building block used inside this component — not for direct use in forms |
-| Toggle | When each setting is an independent immediate-effect on/off control |
-| Select / Dropdown | When the option list is long (10+) and a compact form control is preferred |
+| [CheckboxGroup](/design-system/docs/checkbox-group-zh) | When multiple options can be selected simultaneously |
+| [Radio](/design-system/docs/radio-zh) | The building block used inside this component — not for direct use in forms |
+| [Toggle](/design-system/docs/toggle-zh) | When each setting is an independent immediate-effect on/off control |
+| Select / [Dropdown](/design-system/docs/dropdown-zh) | When the option list is long (10+) and a compact form control is preferred |
 
 ## 13. Do's and don'ts
 

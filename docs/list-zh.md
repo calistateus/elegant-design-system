@@ -207,9 +207,9 @@ Gotcha: if this use case is common, NumeratedList is likely a better fit for ord
 
 | Component | When to use it instead |
 |---|---|
-| NumeratedList | When the sequence number conveys meaning — steps in a process, ranked items, a numbered methodology — use NumeratedList which renders an `ol` with styled ordinal indicators |
-| Container + custom children | When items need richer content than label + description (images, CTAs, interactive elements) — List constrains items to text and an icon |
-| ElegantIconCard in a Carousel | When each feature needs significantly more content (long description, visual) and should be displayed in a scrollable/sliding format |
+| [NumeratedList](/design-system/docs/numerated-list-zh) | When the sequence number conveys meaning — steps in a process, ranked items, a numbered methodology — use NumeratedList which renders an `ol` with styled ordinal indicators |
+| [Container](/design-system/docs/container-zh) + custom children | When items need richer content than label + description (images, CTAs, interactive elements) — List constrains items to text and an icon |
+| ElegantIconCard in a [Carousel](/design-system/docs/carousel-zh) | When each feature needs significantly more content (long description, visual) and should be displayed in a scrollable/sliding format |
 
 ## 13. Do's and don'ts
 

@@ -132,9 +132,9 @@ All buttons use compact sizing. Typically all secondary style. Use for navigatio
 ## 12. Related components
 | Component | When to use it instead |
 |---|---|
-| Button | When only a single call-to-action is needed — no layout wrapper required |
+| [Button](/design-system/docs/button-zh) | When only a single call-to-action is needed — no layout wrapper required |
 | Native `<nav>` + anchor links | When the button group is purely navigational, not triggering actions |
-| ActionMenu / DropdownMenu | When 5+ options exist or options are conditional — a grouped button row becomes unwieldy |
+| [ActionMenu](/design-system/docs/action-menu-zh) / DropdownMenu | When 5+ options exist or options are conditional — a grouped button row becomes unwieldy |
 
 ## 13. Do's and don'ts
 

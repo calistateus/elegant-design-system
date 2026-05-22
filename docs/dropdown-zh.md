@@ -60,6 +60,16 @@ A custom select control that presents a scrollable list of options in a floating
 
 ## 5. States
 
+| State | Trigger | Option |
+|---|---|---|
+| **Default (closed)** | `1px solid --primitive-gray-300`; placeholder/selected label; chevron ↓ | — |
+| **Open** | `--primitive-gray-600` border; `0 0 0 2px --primitive-gray-200` ring; chevron 180° | Listbox appears |
+| **Focus** | `--primitive-gray-600` border; `0 0 0 2px --primitive-gray-200` ring | — |
+| **Option hover** | — | `--primitive-gray-50` bg |
+| **Option selected** | — | `--primitive-gray-100` bg; medium weight |
+| **Error** | `--color-error-border` border; ring suppressed | — |
+| **Disabled** | `--color-interactive-disabled-bg` bg; `--color-interactive-disabled-border`; opacity 0.5; cursor not-allowed | — |
+
 **Default (closed)**
 - Triggered: on initial render or after closing.
 - Visually: trigger with `1px solid var(--primitive-gray-300)` border, placeholder or selected label visible, chevron pointing down.
@@ -96,7 +106,7 @@ A custom select control that presents a scrollable list of options in a floating
 
 **Disabled**
 - Triggered: `disabled={true}`.
-- Visually: background `var(--color-interactive-disabled-bg)` (#f5f5f5); border `var(--color-interactive-disabled-border)` (#e5e5e5); opacity `var(--opacity-disabled)` (0.5); cursor `not-allowed`.
+- Visually: background `var(--color-interactive-disabled-bg)`; border `var(--color-interactive-disabled-border)`; opacity `var(--opacity-disabled)` (0.5); cursor `not-allowed`.
 - Behavior: clicks do not open the listbox; button is native-disabled.
 
 `[STORYBOOK BLOCK: Simple/Forms/Dropdown/Dropdown]`
@@ -203,9 +213,9 @@ When `options` is an empty array, the listbox shows "No options" in muted text. 
 ## 12. Related components
 | Component | When to use it instead |
 |---|---|
-| Search | When the user needs to filter a large list by typing |
-| TextInput | When the value is free-form rather than from a fixed set |
-| WheelPicker | When selecting from ordered/numeric columns (time, date) on touch-first interfaces |
+| [Search](/design-system/docs/search-zh) | When the user needs to filter a large list by typing |
+| [TextInput](/design-system/docs/text-input-zh) | When the value is free-form rather than from a fixed set |
+| [WheelPicker](/design-system/docs/wheel-picker-zh) | When selecting from ordered/numeric columns (time, date) on touch-first interfaces |
 
 ## 13. Do's and don'ts
 

@@ -48,9 +48,7 @@ export function ElegantToggle({
     height: '1.25rem',
     marginTop: '0.125rem',
     borderRadius: '999px',
-    backgroundColor: isOn
-      ? 'var(--color-interactive-primary-bg)'
-      : 'var(--color-border-input)',
+    backgroundColor: 'var(--color-interactive-primary-bg)',
     position: 'relative',
     transition: 'background-color 0.2s ease',
   };

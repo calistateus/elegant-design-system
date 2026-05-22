@@ -148,9 +148,9 @@ Use `variant="steps"`, `size="sm"`, `showStepCount=true`, and no label for a min
 ## 12. Related components
 | Component | When to use it instead |
 |---|---|
-| Spinner | When progress is indeterminate and no value is available |
-| Linear Progress | When a horizontal bar communicates progress more naturally (e.g., within a wizard header or reading progress) |
-| Stepper | When each step needs a visible connector, label, and description alongside its indicator |
+| [Spinner](/design-system/docs/spinner-zh) | When progress is indeterminate and no value is available |
+| [Linear Progress](/design-system/docs/linear-progress-zh) | When a horizontal bar communicates progress more naturally (e.g., within a wizard header or reading progress) |
+| [Stepper](/design-system/docs/stepper-zh) | When each step needs a visible connector, label, and description alongside its indicator |
 
 ## 13. Do's and don'ts
 | Do | Don't |

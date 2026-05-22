@@ -71,5 +71,6 @@ const [open, setOpen] = useState(false);
 
 ## Notes
 - When `open` is `false`, returns `null` — no DOM node is mounted.
-- Focus management (trap) is not built in — add with a library if required.
+- **Focus trap is built in**: on open, focus moves to the panel; Tab and Shift+Tab cycle only through focusable elements inside the panel; focus returns to the previously focused element on close.
+- **Escape key** calls `onClose` when provided.
 - `onClick` propagation is stopped on the panel so clicks inside don't dismiss the modal.

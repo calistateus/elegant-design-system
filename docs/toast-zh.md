@@ -183,9 +183,9 @@ try {
 ## 12. Related components
 | Component | When to use it instead |
 |---|---|
-| Alert | For persistent, inline messages that must stay visible until the condition resolves |
-| Modal | When the user must explicitly acknowledge an error or confirm a destructive action |
-| Badge | For compact, static status labels within lists or tables |
+| [Alert](/design-system/docs/alert-zh) | For persistent, inline messages that must stay visible until the condition resolves |
+| [Modal](/design-system/docs/modal-zh) | When the user must explicitly acknowledge an error or confirm a destructive action |
+| [Badge](/design-system/docs/badge-zh) | For compact, static status labels within lists or tables |
 
 ## 13. Do's and don'ts
 

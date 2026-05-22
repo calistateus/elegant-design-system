@@ -119,8 +119,8 @@ Use `layout="unstacked"`, `size="lg"`, and `showOverflow={false}` with a small `
 ## 12. Related components
 | Component | When to use it instead |
 |---|---|
-| Avatar | When displaying a single person's photo, not a collection |
-| ReferralCard | When each person also needs a name, role, and quote displayed |
+| [Avatar](/design-system/docs/avatar-zh) | When displaying a single person's photo, not a collection |
+| [ReferralCard](/design-system/docs/referral-card-zh) | When each person also needs a name, role, and quote displayed |
 
 ## 13. Do's and don'ts
 

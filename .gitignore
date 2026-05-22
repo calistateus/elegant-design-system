@@ -47,3 +47,6 @@ storybook-static
 .claude/
 .claude.json
 .claudeignore
+
+# Personal notes
+*_site_copy*.md

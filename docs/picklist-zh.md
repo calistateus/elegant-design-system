@@ -57,6 +57,16 @@ The Picklist has a single visual variant. Behavior is controlled by the `options
 
 ## 5. States
 
+| State | Trigger | Option |
+|---|---|---|
+| **Default** | Placeholder text; `--primitive-gray-300` border; chevron ↓ | — |
+| **Open** | `--primitive-gray-600` border; `0 0 0 2px --primitive-gray-200` ring; chevron 180° | Listbox visible |
+| **Focused** | `--primitive-gray-600` border; `0 0 0 2px --primitive-gray-200` ring | — |
+| **Option hover** | — | `--primitive-gray-50` bg; 100 ms ease |
+| **Option selected** | Selected chips appear in trigger | `--primitive-gray-100` bg; medium weight; green check icon (`--color-text-accent`) |
+| **Error** | `--color-error-border` border; focus ring removed | — |
+| **Disabled** | `--color-interactive-disabled-bg` bg; `--color-interactive-disabled-border`; opacity 0.5; cursor not-allowed | — |
+
 **Default / Empty**
 - Trigger shows the placeholder text in muted color.
 - Chevron is in default (down) orientation.
@@ -91,13 +101,13 @@ The Picklist has a single visual variant. Behavior is controlled by the `options
 - Box shadow `0 0 0 2px var(--primitive-gray-200)` applied.
 
 **Error**
-- Trigger border changes to `--color-error-border` (#dc2626).
+- Trigger border changes to `--color-error-border`.
 - The focus ring is removed in error state.
 - An `ElegantErrorMessage` is rendered below the trigger.
 
 **Disabled**
 - Triggered: `disabled={true}`.
-- Visually: trigger background `var(--color-interactive-disabled-bg)` (#f5f5f5); border `var(--color-interactive-disabled-border)` (#e5e5e5); opacity `var(--opacity-disabled)` (0.5); cursor `not-allowed`.
+- Visually: trigger background `var(--color-interactive-disabled-bg)`; border `var(--color-interactive-disabled-border)`; opacity `var(--opacity-disabled)` (0.5); cursor `not-allowed`.
 - Behavior: clicks do not open the listbox; trigger is native-disabled.
 
 **Empty options**
@@ -186,9 +196,9 @@ Initialize `value` with an array of pre-selected option values to reflect an exi
 ## 12. Related components
 | Component | When to use it instead |
 |---|---|
-| ElegantDropdown | When only a single option can be selected. |
-| ElegantRadioGroup | When the user must choose one option from a mutually exclusive set and all options should be visible. |
-| ElegantCheckboxGroup | When multiple options are needed in an always-visible layout (no dropdown). |
+| [ElegantDropdown](/design-system/docs/dropdown-zh) | When only a single option can be selected. |
+| [ElegantRadioGroup](/design-system/docs/radio-group-zh) | When the user must choose one option from a mutually exclusive set and all options should be visible. |
+| [ElegantCheckboxGroup](/design-system/docs/checkbox-group-zh) | When multiple options are needed in an always-visible layout (no dropdown). |
 
 ## 13. Do's and don'ts
 

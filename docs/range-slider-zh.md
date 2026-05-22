@@ -172,9 +172,9 @@ Use `disabled={true}` to show a locked slider value in a read-only settings pane
 ## 12. Related components
 | Component | When to use it instead |
 |---|---|
-| TextInput | For precise numeric entry without a bounded visual range, or for non-numeric values. |
-| ElegantPicklist / Dropdown | For selecting from a discrete set of options that do not map to a continuous scale. |
-| ElegantRatingInput | For subjective rating (stars, thumbs) rather than a quantitative bounded value. |
+| [TextInput](/design-system/docs/text-input-zh) | For precise numeric entry without a bounded visual range, or for non-numeric values. |
+| [ElegantPicklist](/design-system/docs/picklist-zh) / [Dropdown](/design-system/docs/dropdown-zh) | For selecting from a discrete set of options that do not map to a continuous scale. |
+| [ElegantRatingInput](/design-system/docs/rating-input-zh) | For subjective rating (stars, thumbs) rather than a quantitative bounded value. |
 
 ## 13. Do's and don'ts
 

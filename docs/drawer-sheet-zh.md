@@ -183,9 +183,9 @@ Use `side="bottom"` for contextual action menus or selection panels on mobile.
 ## 12. Related components
 | Component | When to use it instead |
 |---|---|
-| Modal | For compact, centered dialogs requiring an explicit decision (confirmation, deletion) |
-| Alert | For inline persistent messages that do not use an overlay |
-| Toast | For transient, auto-dismissing feedback after an action |
+| [Modal](/design-system/docs/modal-zh) | For compact, centered dialogs requiring an explicit decision (confirmation, deletion) |
+| [Alert](/design-system/docs/alert-zh) | For inline persistent messages that do not use an overlay |
+| [Toast](/design-system/docs/toast-zh) | For transient, auto-dismissing feedback after an action |
 
 ## 13. Do's and don'ts
 

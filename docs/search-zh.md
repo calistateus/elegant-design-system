@@ -63,6 +63,16 @@ A search field with an optional autocomplete suggestion list, used to filter or 
 
 ## 5. States
 
+| State | Input | Suggestion item |
+|---|---|---|
+| **Default (empty)** | `1px solid --primitive-gray-300`; no clear button | — |
+| **Focused** | `--primitive-gray-600` border; `0 0 0 2px --primitive-gray-200` ring; listbox opens if suggestions exist | — |
+| **With value** | Clear (`X`) button visible; right padding adjusts | — |
+| **Suggestion hover** | — | `--primitive-gray-100` bg |
+| **Suggestion active (keyboard)** | `aria-activedescendant` set | `--primitive-gray-100` bg |
+| **No results** | — | Muted `"No results for "{value}""` text; `aria-live="polite"` |
+| **Disabled** | `--color-interactive-disabled-bg` bg; opacity 0.5; cursor not-allowed | Listbox cannot open |
+
 **Default (empty)**
 - Triggered: on initial render with no value.
 - Visually: left search icon, placeholder text, `1px solid var(--primitive-gray-300)` border, no clear button.
@@ -95,7 +105,7 @@ A search field with an optional autocomplete suggestion list, used to filter or 
 
 **Disabled**
 - Triggered: when `disabled={true}`.
-- Visually: input background becomes `--color-interactive-disabled-bg` (#f5f5f5); border becomes `--color-interactive-disabled-border` (#e5e5e5); opacity drops to `var(--opacity-disabled)` (0.5); cursor becomes `not-allowed`.
+- Visually: input background becomes `--color-interactive-disabled-bg`; border becomes `--color-interactive-disabled-border`; opacity drops to `var(--opacity-disabled)` (0.5); cursor becomes `not-allowed`.
 - Behavior: input receives `disabled` and `aria-disabled="true"`. `onChange` is blocked. Focus ring is suppressed. The suggestion listbox cannot open.
 
 **Blurred**
@@ -211,9 +221,9 @@ Mount Search without a label (`showLabel={false}`) above a data table. Wire `onC
 ## 12. Related components
 | Component | When to use it instead |
 |---|---|
-| TextInput | When the field is for text entry, not search/filter |
-| Dropdown | When the user must pick from a fixed list without typing |
-| DateInput | When the "query" is specifically a date value |
+| [TextInput](/design-system/docs/text-input-zh) | When the field is for text entry, not search/filter |
+| [Dropdown](/design-system/docs/dropdown-zh) | When the user must pick from a fixed list without typing |
+| [DateInput](/design-system/docs/date-input-zh) | When the "query" is specifically a date value |
 
 ## 13. Do's and don'ts
 

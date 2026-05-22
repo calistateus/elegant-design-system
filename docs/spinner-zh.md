@@ -88,9 +88,9 @@ Replace a button's label with a Spinner (`size="sm"`) during form submission to 
 ## 12. Related components
 | Component | When to use it instead |
 |---|---|
-| Linear Progress | When progress is step-based or percentage-based and can be displayed as a horizontal bar |
-| Circular Progress | When progress is percentage-based and a circular indicator better fits the layout |
-| Skeleton | When an entire content region (cards, paragraphs, avatars) is loading and you want to preserve spatial layout |
+| [Linear Progress](/design-system/docs/linear-progress-zh) | When progress is step-based or percentage-based and can be displayed as a horizontal bar |
+| [Circular Progress](/design-system/docs/circular-progress-zh) | When progress is percentage-based and a circular indicator better fits the layout |
+| [Skeleton](/design-system/docs/skeleton-zh) | When an entire content region (cards, paragraphs, avatars) is loading and you want to preserve spatial layout |
 
 ## 13. Do's and don'ts
 

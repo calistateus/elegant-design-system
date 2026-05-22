@@ -63,24 +63,31 @@ The component has one story (`Default`). Configurable axes are `logo`, `count` (
 
 ## 5. States
 
+| State | Desktop nav link | Mobile drawer link | CTA button |
+|---|---|---|---|
+| **Default** | `--color-text-muted`; regular weight; `letter-spacing: -0.01em` | `--color-text-muted` | `--color-interactive-primary-bg` bg; `--color-interactive-primary-fg` text |
+| **Hover** | → `--color-text-title`; 150 ms ease | → `--color-text-accent`; 150 ms ease | `--color-interactive-primary-hover-bg` bg; `--color-interactive-primary-bg` text; 150 ms ease |
+| **Focus** | Browser default outline (no custom ring) | Browser default outline | Browser default outline |
+| **Mobile drawer** | — | Rendered in drawer below top bar; click closes drawer and restores focus to hamburger | Hamburger → X icon; `aria-expanded="true"` |
+
 **Default (nav links)**
-- Color: `--color-text-muted` (#666666), regular weight, `letter-spacing: -0.01em`.
+- Color: `--color-text-muted`, regular weight, `letter-spacing: -0.01em`.
 - No active/current-page state — all links look identical.
 
 **Hover (desktop nav links)**
-- Color transitions to `--color-text-title` (#1e1e1e) over 150 ms ease.
+- Color transitions to `--color-text-title` over 150 ms ease.
 
 **Hover (mobile drawer links)**
-- Color transitions to `--color-text-accent` (#2e6f40, green) over 150 ms ease. Note: this differs from the desktop hover behavior.
+- Color transitions to `--color-text-accent` over 150 ms ease. Note: this differs from the desktop hover behavior.
 
 **CTA default**
-- Background: `--color-interactive-primary-bg` (#1e1e1e).
-- Text: `--color-interactive-primary-fg` (#ffffff).
+- Background: `--color-interactive-primary-bg`.
+- Text: `--color-interactive-primary-fg`.
 - Border: `1px solid --color-interactive-primary-bg`.
 
 **CTA hover**
-- Background: `--primitive-white` (#ffffff).
-- Text: `--color-interactive-primary-bg` (#1e1e1e).
+- Background: `--color-interactive-primary-hover-bg`.
+- Text: `--color-interactive-primary-bg`.
 - Transition: 150 ms ease on `background-color` and `color`.
 
 **Mobile drawer open**
@@ -173,9 +180,9 @@ If the CTA leads to a contact page, pass `href="/contact"` — this renders a pr
 ## 12. Related components
 | Component | When to use it instead |
 |---|---|
-| BottomNav | When navigation should persist at the bottom of the screen — typically for social/external links on portfolio sites |
-| Tabs | When switching between sibling content panels on a single page, not sections of the site |
-| Breadcrumbs | When users need to retrace a path through a deep hierarchy, not jump between top-level sections |
+| [BottomNav](/design-system/docs/bottom-nav-zh) | When navigation should persist at the bottom of the screen — typically for social/external links on portfolio sites |
+| [Tabs](/design-system/docs/tabs-zh) | When switching between sibling content panels on a single page, not sections of the site |
+| [Breadcrumbs](/design-system/docs/breadcrumbs-zh) | When users need to retrace a path through a deep hierarchy, not jump between top-level sections |
 
 ## 13. Do's and don'ts
 

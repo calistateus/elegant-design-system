@@ -152,9 +152,9 @@ Wrap abbreviated text with a tooltip to provide the full form.
 ## 12. Related components
 | Component | When to use it instead |
 |---|---|
-| Modal | When the supplementary content is long, interactive, or requires user action |
-| Badge | For persistent, always-visible status labels that do not require hover |
-| Alert | For inline persistent messages that do not depend on hover interaction |
+| [Modal](/design-system/docs/modal-zh) | When the supplementary content is long, interactive, or requires user action |
+| [Badge](/design-system/docs/badge-zh) | For persistent, always-visible status labels that do not require hover |
+| [Alert](/design-system/docs/alert-zh) | For inline persistent messages that do not depend on hover interaction |
 
 ## 13. Do's and don'ts
 

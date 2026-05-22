@@ -12,6 +12,7 @@ Inline label chip used for tags, statuses, and categories. Eight semantic colour
 | `label` | `string` | — | Badge text. Required. |
 | `icon` | `LucideIcon` | — | Optional 10 px icon rendered before the label. |
 | `color` | `BadgeColor` | `'neutral'` | Colour variant. |
+| `ariaLabel` | `string` | — | Accessible name for icon-only badges (when `label` is `""`). Always set this when `label` is empty so the icon name is announced by screen readers. |
 
 ### `BadgeColor` values
 `'neutral' \| 'red' \| 'green' \| 'blue' \| 'yellow' \| 'purple' \| 'white' \| 'black'`
@@ -30,7 +31,6 @@ Additional tokens:
 - `--primitive-scale-1` — icon gap and vertical padding
 - `--primitive-scale-2` — horizontal padding
 - `--size-badge-radius` — border radius
-- `--primitive-font-sans`
 - `--primitive-font-size-xs`
 - `--primitive-font-weight-regular`
 

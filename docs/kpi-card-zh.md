@@ -9,7 +9,7 @@
 **Files missing:** None
 
 **Sections needing human review:**
-- Section 5 (States): No interactive states (hover, focus, active) are implemented in the source. The card is presentational-only. Flagged with [NEEDS CONFIRMATION].
+- Section 5 (States): No interactive states are implemented. KpiCard is presentational-only. If hover or click behavior is needed, wrap in a `<button>` or `<a>` at the parent level.
 - Section 10 (Responsive behavior): Component sets `width: 100%` and the story caps it at `maxWidth: 280px`. True responsive grid behavior depends on parent layout, which is not defined in source.
 
 **Recommended follow-ups:**
@@ -145,9 +145,9 @@ Gotcha: ensure all cards in a row have consistent prop presence (all with deltas
 ## 12. Related components
 | Component | When to use it instead |
 |---|---|
-| DataTable | When presenting multiple metrics with rows, columns, sorting, or filtering |
-| BarChart | When showing a metric trend across time periods rather than a single current value |
-| HeatmapGrid | When the metric varies across a two-dimensional matrix (e.g. activity by day and month) |
+| [DataTable](/design-system/docs/data-table-zh) | When presenting multiple metrics with rows, columns, sorting, or filtering |
+| [BarChart](/design-system/docs/bar-chart-zh) | When showing a metric trend across time periods rather than a single current value |
+| [HeatmapGrid](/design-system/docs/heatmap-grid-zh) | When the metric varies across a two-dimensional matrix (e.g. activity by day and month) |
 
 ## 13. Do's and don'ts
 

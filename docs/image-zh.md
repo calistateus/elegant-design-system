@@ -143,8 +143,8 @@ Individual Image instances are not typically used in grids; CardPack handles lay
 ## 12. Related components
 | Component | When to use it instead |
 |---|---|
-| Avatar | User identity photos requiring circular clipping and size presets |
-| CaseStudyCard | When the image is part of a card with title, description, and outcome — the card manages its own image slot |
+| [Avatar](/design-system/docs/avatar-zh) | User identity photos requiring circular clipping and size presets |
+| [CaseStudyCard](/design-system/docs/case-study-card-zh) | When the image is part of a card with title, description, and outcome — the card manages its own image slot |
 
 ## 13. Do's and don'ts
 | Do | Don't |

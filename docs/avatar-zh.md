@@ -9,7 +9,7 @@
 **Files missing:** None
 
 **Sections needing human review:**
-- Section 5 (States): hover, focus, active, disabled states are not implemented in the component — marked [NEEDS CONFIRMATION]
+- Section 5 (States): No hover, focus, active, or disabled states are implemented. Avatar is a purely presentational component. Interactive behavior (e.g. uploading a photo) must be implemented by wrapping Avatar in a `<button>` at the parent level.
 - Section 8 (Accessibility): no explicit `role` or ARIA label is applied to the outer div; behavior when used inside interactive elements needs verification
 - Section 10 (Responsive behavior): no breakpoint-specific sizing changes are implemented
 
@@ -59,8 +59,8 @@ The component does not expose named visual variants beyond size. The two visual 
 - Static display; no interaction affordances
 - Photo: circular clipped image; Placeholder: dashed ring + icon
 
-**Loading / No image** [NEEDS CONFIRMATION]
-- No explicit loading state is implemented. If the `src` URL is valid but the image is still loading, the browser renders its native broken-image treatment until the image resolves. Consider adding an `onError` handler or skeleton wrapper at the parent level.
+**Loading / No image**
+- No explicit loading state is implemented. If `src` is provided but still loading, the browser renders its native broken-image treatment until the image resolves. For a graceful loading experience, wrap Avatar in `ElegantSkeleton` at the parent level or add an `onError` handler to fall back to the placeholder.
 
 ## 6. Properties
 | Prop | Type | Default | Required | Description |
@@ -106,8 +106,8 @@ Use Avatar without `src` as an upload trigger target — the dashed ring and `Im
 ## 12. Related components
 | Component | When to use it instead |
 |---|---|
-| AvatarGroup | When displaying 2 or more avatars together in stacked or side-by-side layout |
-| Image | When displaying content images (not user identity) with captions and aspect ratio control |
+| [AvatarGroup](/design-system/docs/avatar-group-zh) | When displaying 2 or more avatars together in stacked or side-by-side layout |
+| [Image](/design-system/docs/image-zh) | When displaying content images (not user identity) with captions and aspect ratio control |
 
 ## 13. Do's and don'ts
 

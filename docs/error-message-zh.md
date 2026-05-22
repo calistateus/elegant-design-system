@@ -72,9 +72,14 @@ The component has a single visual variant. There are no named variant props.
 
 ## 5. States
 
+| State | Visual | Screen reader |
+|---|---|---|
+| **Visible** | `--color-error-text` icon + text | `role="alert"` announces on DOM insertion |
+| **Absent** | Component unmounted | No announcement |
+
 **Default / visible**
 - Triggered when: the parent renders `<ErrorMessage>` with a `message` value.
-- Visual change: icon and text appear in `--color-error-text` (`#dc2626`).
+- Visual change: icon and text appear in `--color-error-text`.
 - Screen reader: `role="alert"` causes the message to be announced immediately by most screen readers when the element is inserted into the DOM or when its content changes.
 
 **Hidden / absent**
@@ -208,8 +213,8 @@ Conditionally render based on a boolean error state. Do not pass an empty `messa
 
 | Component | When to use it instead |
 |---|---|
-| `Banner` / `Alert` | For page-level or section-level errors that are not tied to a single form field — they carry more visual weight and support actions like "Retry" or "Dismiss" |
-| `Toast` | For transient system errors that appear after an async action (file upload failed, network error) and auto-dismiss after a few seconds |
+| `Banner` / [`Alert`](/design-system/docs/alert-zh) | For page-level or section-level errors that are not tied to a single form field — they carry more visual weight and support actions like "Retry" or "Dismiss" |
+| [`Toast`](/design-system/docs/toast-zh) | For transient system errors that appear after an async action (file upload failed, network error) and auto-dismiss after a few seconds |
 | `HelperText` | For neutral or informational copy below a field that does not signal an error state — same position, different semantic colour and icon |
 
 ---

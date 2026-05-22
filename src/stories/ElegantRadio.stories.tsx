@@ -58,3 +58,15 @@ export const WithoutDescription: Story = {
     radioState: 'unselected',
   },
 };
+
+export const Disabled: Story = {
+  render: () => (
+    <ElegantRadio
+      label="Receive email notifications"
+      description="We'll send you updates about your account and activity."
+      radioState="unselected"
+      disabled={true}
+    />
+  ),
+  args: {},
+};

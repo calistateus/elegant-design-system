@@ -47,21 +47,21 @@ An inline, persistent feedback banner that communicates informational, success, 
 ## 4. Variants
 
 **Info**
-- Renders a gray border (`--primitive-gray-300`) and an Info icon in muted text color.
+- Renders a neutral gray border (`--color-info-border`) and an Info icon in muted text color.
 - Use for neutral guidance or contextual notes that carry no urgency.
 - No constraint on usage frequency within a page, but prefer sparing use.
 
 `[STORYBOOK BLOCK: Simple/Communications/ElegantAlert/Default]`
 
 **Success**
-- Renders a green border (`--primitive-green-500`) and a CheckCircle icon in accent color.
+- Renders a green border (`--color-text-accent`) and a CheckCircle icon in accent color.
 - Use to confirm a completed action or a positive system state (e.g., "Verification complete").
 - Should be paired with a specific outcome — avoid vague success messages.
 
 `[STORYBOOK BLOCK: Simple/Communications/ElegantAlert/Default]`
 
 **Error**
-- Renders a red border (`--primitive-red-500`) and an XCircle icon in error text color.
+- Renders a red border (`--color-error-text`) and an XCircle icon in error text color.
 - Use for actionable error states the user must resolve (e.g., "Payment failed").
 - Pair with specific remediation instructions in the message body.
 
@@ -113,7 +113,7 @@ An inline, persistent feedback banner that communicates informational, success, 
 ## 9. Design tokens
 | Token | Value (from globals.css) | Where it's applied |
 |---|---|---|
-| `--color-border-default` | `var(--primitive-gray-200)` = `#e5e5e5` | Info variant border color |
+| `--color-info-border` | `var(--primitive-gray-200)` = `#e5e5e5` | Info variant border color |
 | `--color-text-accent` | `var(--primitive-green-500)` → `#2e6f40` | Success variant border color; success icon color |
 | `--color-error-text` | `var(--primitive-red-500)` → `#dc2626` | Error variant border color; error icon color |
 | `--color-text-muted` | `var(--primitive-gray-600)` → `#666666` | Info icon color; message text; dismiss button |
@@ -164,9 +164,9 @@ Omit `onDismiss` for alerts that must stay visible until the underlying conditio
 ## 12. Related components
 | Component | When to use it instead |
 |---|---|
-| Toast | For transient feedback triggered by user actions (auto-dismisses after 4 s, positioned as an overlay) |
-| Modal | When the user must acknowledge an error or confirm a destructive action before proceeding |
-| Badge | For compact, non-interactive status labels within a list or table cell |
+| [Toast](/design-system/docs/toast-zh) | For transient feedback triggered by user actions (auto-dismisses after 4 s, positioned as an overlay) |
+| [Modal](/design-system/docs/modal-zh) | When the user must acknowledge an error or confirm a destructive action before proceeding |
+| [Badge](/design-system/docs/badge-zh) | For compact, non-interactive status labels within a list or table cell |
 
 ## 13. Do's and don'ts
 

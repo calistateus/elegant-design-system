@@ -166,9 +166,9 @@ Use a standalone Checkbox (outside the group) in `indeterminate` state when some
 ## 12. Related components
 | Component | When to use it instead |
 |---|---|
-| Checkbox | When only a single standalone confirmation is needed (not a grouped list) |
-| RadioGroup | When only one option from the set may be selected at a time |
-| Toggle | When each setting is an independent immediate-effect on/off control |
+| [Checkbox](/design-system/docs/checkbox-zh) | When only a single standalone confirmation is needed (not a grouped list) |
+| [RadioGroup](/design-system/docs/radio-group-zh) | When only one option from the set may be selected at a time |
+| [Toggle](/design-system/docs/toggle-zh) | When each setting is an independent immediate-effect on/off control |
 
 ## 13. Do's and don'ts
 

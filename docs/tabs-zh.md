@@ -64,17 +64,23 @@ A tab strip component that switches between two to five labeled content panels, 
 
 ## 5. States
 
+| State | Inactive tab | Active tab — underlined | Active tab — contained |
+|---|---|---|---|
+| **Default** | `--color-text-muted`; regular weight; cursor pointer | `--color-text-title`; medium weight; 2px `--color-interactive-primary-bg` bottom border | `--color-text-title`; medium weight; `--color-bg-main` bg; bottom border erased |
+| **Hover** | → `--color-text-body`; 150 ms ease | — | — |
+| **Focus** | Browser default outline (no custom ring; known gap) | Browser default outline | Browser default outline |
+
 **Default (inactive tab)**
-- Color: `--color-text-muted` (#666666).
+- Color: `--color-text-muted`.
 - Font weight: regular (400).
 - Cursor: pointer.
 
 **Hover (inactive tab)**
-- Color transitions to `--color-text-body` (#171717).
+- Color transitions to `--color-text-body`.
 - Transition: 150 ms ease on `color` and (for underlined) `border-color`.
 
 **Active (selected tab)**
-- Color: `--color-text-title` (#1e1e1e).
+- Color: `--color-text-title`.
 - Font weight: medium (500).
 - Cursor: default.
 - `aria-selected="true"` is set.
@@ -153,9 +159,9 @@ The `content` slot accepts any `ReactNode`. Pass full components (cards, forms, 
 ## 12. Related components
 | Component | When to use it instead |
 |---|---|
-| Breadcrumbs | When the user navigates between pages in a hierarchy, not views within a single page |
-| BottomNav | When switching between top-level app sections that each have distinct URLs |
-| ActionMenu | When choosing from a list of actions, not switching between content panels |
+| [Breadcrumbs](/design-system/docs/breadcrumbs-zh) | When the user navigates between pages in a hierarchy, not views within a single page |
+| [BottomNav](/design-system/docs/bottom-nav-zh) | When switching between top-level app sections that each have distinct URLs |
+| [ActionMenu](/design-system/docs/action-menu-zh) | When choosing from a list of actions, not switching between content panels |
 
 ## 13. Do's and don'ts
 

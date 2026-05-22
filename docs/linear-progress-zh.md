@@ -146,9 +146,9 @@ Use `placement="vertical"` in a sidebar column alongside step labels to give use
 ## 12. Related components
 | Component | When to use it instead |
 |---|---|
-| Spinner | When progress is indeterminate and no step count is available |
-| Circular Progress | When a circular indicator better suits the layout (e.g., inline with a profile card) |
-| Stepper | When each step deserves a visible node, label, and connector — not just a filled bar |
+| [Spinner](/design-system/docs/spinner-zh) | When progress is indeterminate and no step count is available |
+| [Circular Progress](/design-system/docs/circular-progress-zh) | When a circular indicator better suits the layout (e.g., inline with a profile card) |
+| [Stepper](/design-system/docs/stepper-zh) | When each step deserves a visible node, label, and connector — not just a filled bar |
 
 ## 13. Do's and don'ts
 

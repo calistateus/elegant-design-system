@@ -94,6 +94,12 @@ A paginated slide container that displays case study cards, icon cards, referral
 
 ## 5. States
 
+| State | Arrow button | Dot indicator |
+|---|---|---|
+| **Default** | 85% opacity | `0.5rem` wide, `--color-border-subtle` color; `aria-selected="false"` |
+| **Hover** | 100% opacity; box shadow elevates from `0 1px 3px` → `0 2px 8px`; 150 ms | — |
+| **Active** | — | `1.25rem` wide, `--color-text-body` color; `aria-selected="true"` |
+
 **Default (idle)**
 - Current slide(s) visible, arrows flanking the track, dots below.
 - Arrow buttons at 85% opacity (`--motion-opacity-hover` at rest).
@@ -102,11 +108,11 @@ A paginated slide container that displays case study cards, icon cards, referral
 - Opacity increases to 100%. Box shadow elevates from `0 1px 3px` to `0 2px 8px`. Transition: `--primitive-duration-fast` (150ms).
 
 **Dot — active**
-- Width expands to `1.25rem`, color is `--color-text-body` (#171717).
+- Width expands to `1.25rem`, color is `--color-text-body`.
 - `aria-selected="true"`.
 
 **Dot — inactive**
-- Width is `0.5rem`, color is `--color-border-subtle` (#f5f5f5).
+- Width is `0.5rem`, color is `--color-border-subtle`.
 - `aria-selected="false"`.
 
 **Auto-sliding**
@@ -257,9 +263,9 @@ Gotcha: uploaded images are stored as data URLs in component state. They are los
 
 | Component | When to use it instead |
 |---|---|
-| ElegantCaseStudyCard (standalone) | When you have a single case study to display — no carousel chrome needed, card can be placed directly in a grid or stack |
-| Container with `direction="row-wrap"` | When all items should be visible simultaneously (e.g., 3 icon cards in a row) — no navigation needed, no hidden slides |
-| ElegantList / ElegantNumeratedList | When content is textual and benefits from a scannable vertical or grid layout rather than sequential browsing |
+| [ElegantCaseStudyCard](/design-system/docs/case-study-card-zh) (standalone) | When you have a single case study to display — no carousel chrome needed, card can be placed directly in a grid or stack |
+| [Container](/design-system/docs/container-zh) with `direction="row-wrap"` | When all items should be visible simultaneously (e.g., 3 icon cards in a row) — no navigation needed, no hidden slides |
+| [ElegantList](/design-system/docs/list-zh) / [ElegantNumeratedList](/design-system/docs/numerated-list-zh) | When content is textual and benefits from a scannable vertical or grid layout rather than sequential browsing |
 
 ## 13. Do's and don'ts
 

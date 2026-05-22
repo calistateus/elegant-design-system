@@ -118,9 +118,9 @@ When building a card skeleton:
 ## 12. Related components
 | Component | When to use it instead |
 |---|---|
-| Spinner | When content shape is unknown or when a small inline loading indicator is sufficient |
-| Linear Progress | When file upload or step-based progress is quantifiable and you want the user to see how much remains |
-| Circular Progress | When a compact percentage indicator is more appropriate than a full skeleton |
+| [Spinner](/design-system/docs/spinner-zh) | When content shape is unknown or when a small inline loading indicator is sufficient |
+| [Linear Progress](/design-system/docs/linear-progress-zh) | When file upload or step-based progress is quantifiable and you want the user to see how much remains |
+| [Circular Progress](/design-system/docs/circular-progress-zh) | When a compact percentage indicator is more appropriate than a full skeleton |
 
 ## 13. Do's and don'ts
 

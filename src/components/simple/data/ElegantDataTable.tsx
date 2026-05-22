@@ -2,10 +2,10 @@
 
 import { useState, useRef, useCallback } from 'react';
 import { Upload, ChevronUp, ChevronDown, ChevronsUpDown } from 'lucide-react';
-import { ElegantSearch } from '../ElegantSearch';
-import { ElegantCheckbox, CheckboxState } from '../ElegantCheckbox';
-import { ElegantRadio } from '../ElegantRadio';
-import { ToastProvider, useToast } from '../ElegantToast';
+import { ElegantSearch } from '../forms/ElegantSearch';
+import { ElegantCheckbox, CheckboxState } from '../forms/ElegantCheckbox';
+import { ElegantRadio } from '../forms/ElegantRadio';
+import { ToastProvider, useToast } from '../communications/ElegantToast';
 
 // ─── Types ────────────────────────────────────────────────────
 

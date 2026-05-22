@@ -65,13 +65,19 @@ The component has no named style variants. The key variation axes are `count` (2
 
 ## 5. States
 
+| State | Visual |
+|---|---|
+| **Default** | `--color-text-muted` color; `xs` font (0.75 rem), regular weight |
+| **Hover** | Color → `--color-text-title`; 150 ms ease; no background change |
+| **Focus** | Browser default focus ring (no custom `:focus-visible` ring applied) |
+
 **Default**
-- All links render in `--color-text-muted` (#666666).
+- All links render in `--color-text-muted`.
 - Font: `xs` (0.75 rem), regular weight, letter-spacing `-0.01em`.
 - No active/current-page state is available — all links appear identical regardless of the current URL.
 
 **Hover**
-- Color transitions from `--color-text-muted` to `--color-text-title` (#1e1e1e) over 150 ms ease.
+- Color transitions from `--color-text-muted` to `--color-text-title` over 150 ms ease.
 - No background change; no underline added.
 
 **Focus**
@@ -155,9 +161,9 @@ Use TopNav for primary section navigation and BottomNav for social/external link
 ## 12. Related components
 | Component | When to use it instead |
 |---|---|
-| TopNav | When primary navigation belongs at the top of the page and should be reachable on both mobile and desktop |
-| Breadcrumbs | When users need to navigate a hierarchical path, not a flat set of destinations |
-| ActionMenu | When a list of actions should appear contextually on demand, not persistently |
+| [TopNav](/design-system/docs/top-nav-zh) | When primary navigation belongs at the top of the page and should be reachable on both mobile and desktop |
+| [Breadcrumbs](/design-system/docs/breadcrumbs-zh) | When users need to navigate a hierarchical path, not a flat set of destinations |
+| [ActionMenu](/design-system/docs/action-menu-zh) | When a list of actions should appear contextually on demand, not persistently |
 
 ## 13. Do's and don'ts
 

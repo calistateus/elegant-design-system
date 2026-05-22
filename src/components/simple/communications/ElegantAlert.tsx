@@ -33,7 +33,7 @@ export interface ElegantAlertProps {
 // ─── Variant maps ─────────────────────────────────────────────
 
 const VARIANT_BORDER: Record<AlertVariant, string> = {
-  info:    'var(--color-border-input)',
+  info:    'var(--color-info-border)',
   success: 'var(--color-text-accent)',
   error:   'var(--color-error-text)',
 };

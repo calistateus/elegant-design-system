@@ -54,16 +54,21 @@ A call-to-action element that triggers a user action, available in primary (fill
 - In `menu` context: text is `--color-text-muted` (#666666). On hover: text shifts to `--color-interactive-primary-bg`.
 - Use for supporting or supplementary actions that should not compete with the primary CTA.
 
-`[STORYBOOK BLOCK: Simple/Forms/ElegantButton/Button]`
+`[STORYBOOK BLOCK: Simple/Forms/ElegantButton/Secondary]`
 
 ## 5. States
+
+| State | Primary | Secondary — `default` context | Secondary — `menu` context |
+|---|---|---|---|
+| **Default** | `--color-interactive-primary-bg` background, `--color-interactive-primary-fg` text | Transparent bg, `--color-text-body` text | Transparent bg, `--color-text-muted` text |
+| **Hover** | `--color-interactive-primary-hover-bg` bg, `--color-interactive-primary-bg` text; scale 1.05 | `--color-interactive-primary-bg` text; scale 1.05 | `--color-interactive-primary-bg` text; no scale |
+| **Focus** | 2px `--color-interactive-primary-bg` outline, 3px offset, 4px radius (keyboard only) | Same as primary | Same as primary |
+| **Disabled** | opacity 0.5, `cursor: not-allowed`, hover blocked | opacity 0.5, `cursor: not-allowed`, hover blocked | opacity 0.5, `cursor: not-allowed`, hover blocked |
 
 **Default**
 - Primary: filled black background, white text.
 - Secondary (`default` context): transparent, body-color text.
 - Secondary (`menu` context): transparent, muted-color text.
-
-`[STORYBOOK BLOCK: Simple/Forms/ElegantButton/Button]`
 
 **Hover**
 - Triggered by `onMouseEnter`; reversed by `onMouseLeave`.
@@ -73,7 +78,7 @@ A call-to-action element that triggers a user action, available in primary (fill
 
 **Focus**
 - Implemented via the global `.elegant-btn:focus-visible` rule in `globals.css`.
-- Visual: `outline: 2px solid var(--color-interactive-primary-bg)` (#1e1e1e), `outline-offset: 3px`, `border-radius: var(--size-btn-radius)` (4px).
+- Visual: `outline: 2px solid var(--color-interactive-primary-bg)`, `outline-offset: 3px`, `border-radius: var(--size-btn-radius)`.
 - Only appears on keyboard navigation (`:focus-visible`), suppressed on mouse click.
 - Disabled buttons: focus is blocked by the native `disabled` attribute; no ring appears.
 
@@ -152,9 +157,9 @@ In navigation bars or compact toolbars, pass `context="menu"` to reduce padding 
 ## 12. Related components
 | Component | When to use it instead |
 |---|---|
-| ButtonGroup | When rendering 2–5 buttons side-by-side with consistent spacing and shared context |
+| [ButtonGroup](/design-system/docs/button-group-zh) | When rendering 2–5 buttons side-by-side with consistent spacing and shared context |
 | Native `<a>` | When the action is navigation to a URL rather than a client-side interaction |
-| ElegantErrorMessage | Not a replacement — use alongside a button when form submission produces an error |
+| [ElegantErrorMessage](/design-system/docs/error-message-zh) | Not a replacement — use alongside a button when form submission produces an error |
 
 ## 13. Do's and don'ts
 

@@ -40,7 +40,7 @@ A single-line text input field with optional label, supporting description, trai
 4. **Trailing icon** — A decorative icon (Search or ArrowRight) anchored to the right edge; `pointerEvents: none`.
 5. **Error message** — An `ElegantErrorMessage` component rendered below the field when `showError` is `true` and `error` is non-empty.
 
-`[STORYBOOK BLOCK: Simple/Forms/TextInput/TextInput]`
+`[STORYBOOK BLOCK: Simple/Forms/ElegantTextInput/TextInput]`
 
 ## 4. Variants
 
@@ -49,23 +49,30 @@ A single-line text input field with optional label, supporting description, trai
 - Use when the field's purpose is to filter or look up items.
 - Default variant (`icon="search"`).
 
-`[STORYBOOK BLOCK: Simple/Forms/TextInput/TextInput]`
+`[STORYBOOK BLOCK: Simple/Forms/ElegantTextInput/TextInput]`
 
 **Arrow icon**
 - Renders the Lucide `ArrowRight` icon (14 px, stroke 1.5) at the trailing edge.
 - Use when the field triggers navigation or submission on commit (e.g., a URL bar or go-to field).
 - Set `icon="arrow"`.
 
-`[STORYBOOK BLOCK: Simple/Forms/TextInput/TextInput]`
+`[STORYBOOK BLOCK: Simple/Forms/ElegantTextInput/TextInput]`
 
 **No icon**
 - Removes the trailing icon and adjusts horizontal padding symmetrically (`var(--primitive-scale-3)` on both sides).
 - Use for plain text fields where an icon adds no semantic value.
 - Set `showIcon={false}`.
 
-`[STORYBOOK BLOCK: Simple/Forms/TextInput/TextInput]`
+`[STORYBOOK BLOCK: Simple/Forms/ElegantTextInput/TextInput]`
 
 ## 5. States
+
+| State | Border | Focus ring | Background |
+|---|---|---|---|
+| **Default** | `1px solid var(--primitive-gray-300)` | None | White |
+| **Focus** | `var(--primitive-gray-600)` | `0 0 0 2px var(--primitive-gray-200)` | White |
+| **Error** | `var(--color-error-border)` | Suppressed | White |
+| **Disabled** | `var(--color-interactive-disabled-border)` | Suppressed | `var(--color-interactive-disabled-bg)`; opacity 0.5; cursor not-allowed |
 
 **Default**
 - Triggered: on initial render with no user interaction.
@@ -79,15 +86,15 @@ A single-line text input field with optional label, supporting description, trai
 
 **Error**
 - Triggered: when `showError={true}` and `error` is a non-empty string.
-- Visually: border changes to `var(--color-error-border)` (`#dc2626`); focus ring is not shown on focus; `ElegantErrorMessage` appears below.
+- Visually: border changes to `var(--color-error-border)`; focus ring is not shown on focus; `ElegantErrorMessage` appears below.
 - Behavior: `aria-invalid="true"` is set on the input. The error message element receives a stable `id` (via `useId`) and is linked to the input via `aria-describedby`.
 
 **Disabled**
 - Triggered: when `disabled={true}`.
-- Visually: background becomes `var(--color-interactive-disabled-bg)` (#f5f5f5); border becomes `var(--color-interactive-disabled-border)` (#e5e5e5); opacity drops to `var(--opacity-disabled)` (0.5); cursor becomes `not-allowed`.
+- Visually: background becomes `var(--color-interactive-disabled-bg)`; border becomes `var(--color-interactive-disabled-border)`; opacity drops to `var(--opacity-disabled)` (0.5); cursor becomes `not-allowed`.
 - Behavior: the native `<input disabled>` attribute prevents all interaction and removes the field from the tab order.
 
-`[STORYBOOK BLOCK: Simple/Forms/TextInput/TextInput]`
+`[STORYBOOK BLOCK: Simple/Forms/ElegantTextInput/TextInput]`
 
 ## 6. Properties
 
@@ -187,15 +194,15 @@ Set `showError={true}` after form validation to reveal inline error messaging. P
 **No-label search bar (narrow)**
 Set `showLabel={false}` and `showDescription={false}` with `icon="search"` for a compact, unlabeled search trigger. Ensure a surrounding `<form role="search">` or visible context provides semantic meaning.
 
-`[STORYBOOK BLOCK: Simple/Forms/TextInput/TextInput]`
+`[STORYBOOK BLOCK: Simple/Forms/ElegantTextInput/TextInput]`
 
 ## 12. Related components
 | Component | When to use it instead |
 |---|---|
-| Textarea | When the user needs to enter more than one line of text |
-| Search | When typing should filter a list with autocomplete suggestions |
-| Dropdown | When the user must select from a predefined set of options |
-| DateInput | When the field specifically captures a calendar date |
+| [Textarea](/design-system/docs/textarea-zh) | When the user needs to enter more than one line of text |
+| [Search](/design-system/docs/search-zh) | When typing should filter a list with autocomplete suggestions |
+| [Dropdown](/design-system/docs/dropdown-zh) | When the user must select from a predefined set of options |
+| [DateInput](/design-system/docs/date-input-zh) | When the field specifically captures a calendar date |
 
 ## 13. Do's and don'ts
 

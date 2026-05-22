@@ -49,7 +49,7 @@ No discrete variants are defined. All visual variation comes from swapping the `
 ## 5. States
 **Default (only state)**
 - Static card; no hover, focus, active, or disabled behavior is implemented
-- [NEEDS CONFIRMATION]: If interactive states are planned, they are not in the current implementation
+- No interactive states (hover, focus, active, disabled) are implemented. IconCard is a purely presentational component. If interactive behavior is needed, wrap it in a `<button>` or `<a>` at the parent level.
 
 ## 6. Properties
 | Prop | Type | Default | Required | Description |
@@ -106,8 +106,8 @@ A single IconCard can be placed in a sidebar or beside a block of body text as a
 ## 12. Related components
 | Component | When to use it instead |
 |---|---|
-| CardPack | When rendering multiple IconCards in a responsive grid layout |
-| CaseStudyCard | When the card needs an image, outcome stat, and extended description |
+| [CardPack](/design-system/docs/card-pack-zh) | When rendering multiple IconCards in a responsive grid layout |
+| [CaseStudyCard](/design-system/docs/case-study-card-zh) | When the card needs an image, outcome stat, and extended description |
 | KpiCard | When the card content is a metric value with trend direction |
 
 ## 13. Do's and don'ts

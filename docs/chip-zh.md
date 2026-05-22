@@ -172,9 +172,9 @@ Use without `onDismiss` when a chip represents a fixed, non-removable attribute.
 ## 12. Related components
 | Component | When to use it instead |
 |---|---|
-| Badge | For non-interactive, system-generated status or category labels |
-| Alert | For inline persistent status messages with supporting text |
-| Toast | For transient, auto-dismissing system notifications |
+| [Badge](/design-system/docs/badge-zh) | For non-interactive, system-generated status or category labels |
+| [Alert](/design-system/docs/alert-zh) | For inline persistent status messages with supporting text |
+| [Toast](/design-system/docs/toast-zh) | For transient, auto-dismissing system notifications |
 
 ## 13. Do's and don'ts
 

@@ -16,14 +16,16 @@ Labelled group of `ElegantRadio` items inside a `<fieldset>`. Single-selection: 
 | `onChange` | `(id: string) => void` | — | Called with the `id` of the newly selected item. |
 | `error` | `string` | — | Group-level error message text. |
 | `showError` | `boolean` | `false` | Whether to display the error. |
+| `disabled` | `boolean` | `false` | Disables all radio items in the group. Per-item `disabled` in `RadioGroupItem` takes precedence for individual items. |
 
 ### `RadioGroupItem`
 
-| Field | Type | Description |
-|---|---|---|
-| `id` | `string` | Unique identifier. |
-| `label` | `string` | Item label. |
-| `description` | `string \| false` | Optional per-item helper text. |
+| Field | Type | Default | Description |
+|---|---|---|---|
+| `id` | `string` | — | Unique identifier. |
+| `label` | `string` | — | Item label. |
+| `description` | `string \| false` | — | Optional per-item helper text. |
+| `disabled` | `boolean` | `false` | Disables this specific item while leaving others interactive. |
 
 ## Structure
 ```

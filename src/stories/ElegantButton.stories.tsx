@@ -55,3 +55,12 @@ export const Button: Story = {
     context: 'default',
   },
 };
+
+export const Secondary: Story = {
+  args: {
+    text: 'Learn more',
+    style: 'secondary',
+    icon: ArrowRight,
+    context: 'default',
+  },
+};

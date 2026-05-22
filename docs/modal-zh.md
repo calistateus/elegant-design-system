@@ -167,9 +167,9 @@ For destructive or high-consequence actions where consequences must be stated ex
 ## 12. Related components
 | Component | When to use it instead |
 |---|---|
-| Drawer Sheet | When the supplementary content is larger, or when a side panel is more appropriate than a centered overlay |
-| Alert | For non-blocking inline messages that do not require user acknowledgment |
-| Toast | For transient, auto-dismissing feedback after an action completes |
+| [Drawer Sheet](/design-system/docs/drawer-sheet-zh) | When the supplementary content is larger, or when a side panel is more appropriate than a centered overlay |
+| [Alert](/design-system/docs/alert-zh) | For non-blocking inline messages that do not require user acknowledgment |
+| [Toast](/design-system/docs/toast-zh) | For transient, auto-dismissing feedback after an action completes |
 
 ## 13. Do's and don'ts
 

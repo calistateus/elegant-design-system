@@ -147,9 +147,9 @@ Gotcha: `as="aside"` creates a `complementary` landmark — it should contain co
 
 | Component | When to use it instead |
 |---|---|
-| Container | When no background, border, or border-radius is needed — Container is identical in layout capability without the surface overhead |
-| ElegantCaseStudyCard / ElegantIconCard / ElegantReferralCard | When the card content has a specific, designed shape — those components manage their own surface and internal layout |
-| Modal / Drawer | When the surface needs to float above the page with an overlay and focus trap |
+| [Container](/design-system/docs/container-zh) | When no background, border, or border-radius is needed — Container is identical in layout capability without the surface overhead |
+| [ElegantCaseStudyCard](/design-system/docs/case-study-card-zh) / ElegantIconCard / ElegantReferralCard | When the card content has a specific, designed shape — those components manage their own surface and internal layout |
+| [Modal](/design-system/docs/modal-zh) / [Drawer](/design-system/docs/drawer-sheet-zh) | When the surface needs to float above the page with an overlay and focus trap |
 
 ## 13. Do's and don'ts
 

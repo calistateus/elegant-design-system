@@ -95,3 +95,43 @@ export const Default: Story = {
     item3ShowDescription: false,
   },
 };
+
+export const WithError: Story = {
+  render: () => {
+    const items: RadioGroupItem[] = [
+      { id: 'email', label: 'Email updates', description: 'Weekly digest of new content.' },
+      { id: 'sms', label: 'SMS alerts', description: 'Standard rates may apply.' },
+      { id: 'push', label: 'Push notifications' },
+    ];
+    return (
+      <ElegantRadioGroup
+        heading="Notification preferences"
+        description="Choose how you'd like to hear from us."
+        items={items}
+        error="Please select an option."
+        showError={true}
+      />
+    );
+  },
+  args: {},
+};
+
+export const Disabled: Story = {
+  render: () => {
+    const items: RadioGroupItem[] = [
+      { id: 'email', label: 'Email updates', description: 'Weekly digest of new content.' },
+      { id: 'sms', label: 'SMS alerts', description: 'Standard rates may apply.' },
+      { id: 'push', label: 'Push notifications' },
+    ];
+    return (
+      <ElegantRadioGroup
+        heading="Notification preferences"
+        description="Choose how you'd like to hear from us."
+        items={items}
+        selectedId="email"
+        disabled={true}
+      />
+    );
+  },
+  args: {},
+};

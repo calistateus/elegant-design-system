@@ -12,7 +12,7 @@
 - Section 4 (Variants): Only one story (`Default`) exists using `cardType="icon"`. Separate named stories for each card type would improve zeroheight embeds.
 - Section 5 (States): CardPack is a layout container; states are delegated to child card components.
 - Section 6 (Properties): `CardOverride` interface is complex — per-field availability varies by `cardType`; this is documented but should be confirmed with the team.
-- Section 10 (Responsive behavior): Grid breakpoints are inferred from the injected `<style>` block; `md` and `lg` breakpoints match Tailwind overrides in globals.css (600px / 1024px respectively — note the component uses `768px` for tablet, not the design system's 600px override — [NEEDS CONFIRMATION]).
+- Section 10 (Responsive behavior): Grid breakpoints are inferred from the injected `<style>` block; the component uses `768px` for tablet and `1024px` for desktop — these differ from the design system's standard grid breakpoints (600px / 1136px). Documented as a known deviation in §10.
 
 **Recommended follow-ups:**
 - Add separate stories for `cardType="case-study"`, `cardType="referral"`, and `cardType="kpi"`
@@ -129,7 +129,7 @@ CardPack injects a scoped `<style>` block with three breakpoints:
 | Tablet (≥768px) | `min(2, perRow)` columns |
 | Desktop (≥1024px) | `perRow` columns (1–4) |
 
-[NEEDS CONFIRMATION]: The component uses `768px` and `1024px` as breakpoints; the design system globals.css defines `md=600px` and `lg=1136px`. This mismatch should be resolved.
+**Note:** The component uses `768px` and `1024px` as its injected breakpoints. These differ from the design system's standard grid breakpoints (`md=600px`, `lg=1136px`). If breakpoint consistency with the grid system is required, update the `@media` queries in the component's `<style>` block.
 
 When `fillLastRow={true}`, the desktop grid uses `desktopCols = perRow * leftover` total columns so that the last row's cards span more columns and visually fill the row.
 
@@ -151,9 +151,9 @@ When `fillLastRow={true}`, the desktop grid uses `desktopCols = perRow * leftove
 ## 12. Related components
 | Component | When to use it instead |
 |---|---|
-| IconCard | When rendering a single feature card without a grid |
-| CaseStudyCard | When displaying a single case study with individual control over all props |
-| ReferralCard | When displaying a single testimonial |
+| [IconCard](/design-system/docs/icon-card-zh) | When rendering a single feature card without a grid |
+| [CaseStudyCard](/design-system/docs/case-study-card-zh) | When displaying a single case study with individual control over all props |
+| [ReferralCard](/design-system/docs/referral-card-zh) | When displaying a single testimonial |
 
 ## 13. Do's and don'ts
 | Do | Don't |

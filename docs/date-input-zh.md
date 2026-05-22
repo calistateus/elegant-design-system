@@ -61,6 +61,13 @@ A segmented date input composed of discrete MM, DD, and optional YYYY fields, pr
 
 ## 5. States
 
+| State | Border | Focus ring | Background |
+|---|---|---|---|
+| **Default (empty)** | `--primitive-gray-300` | None | White |
+| **Segment focused** | `--primitive-gray-600` | `0 0 0 2px var(--primitive-gray-200)` | White |
+| **Validation error** | Error-red | — | White |
+| **Disabled** | `--color-interactive-disabled-border` | Suppressed | `--color-interactive-disabled-bg`; opacity 0.5; cursor not-allowed |
+
 **Default (empty)**
 - All segments show their placeholder ("MM", "DD", "YYYY") with default borders.
 - Behavior: Tab moves focus to the Month segment.
@@ -101,7 +108,7 @@ A segmented date input composed of discrete MM, DD, and optional YYYY fields, pr
 
 **Disabled**
 - Triggered: `disabled={true}`.
-- Visually: all segments: background `var(--color-interactive-disabled-bg)` (#f5f5f5); border `var(--color-interactive-disabled-border)` (#e5e5e5); opacity `var(--opacity-disabled)` (0.5); cursor `not-allowed`. Focus ring suppressed when disabled.
+- Visually: all segments: background `var(--color-interactive-disabled-bg)`; border `var(--color-interactive-disabled-border)`; opacity `var(--opacity-disabled)` (0.5); cursor `not-allowed`. Focus ring suppressed when disabled.
 - Behavior: native `disabled` prevents input.
 
 `[STORYBOOK BLOCK: Simple/Forms/DateInput/DateInput]`
@@ -205,9 +212,9 @@ The DateInput manages its own segment focus internally; no special form-library 
 ## 12. Related components
 | Component | When to use it instead |
 |---|---|
-| DateTimePicker | When the user should pick a date from a calendar grid rather than type it |
-| WheelPicker | When a scroll-drum metaphor suits the UI (mobile-native feel) |
-| TextInput | When the date format is nonstandard or free-form |
+| [DateTimePicker](/design-system/docs/date-time-picker-zh) | When the user should pick a date from a calendar grid rather than type it |
+| [WheelPicker](/design-system/docs/wheel-picker-zh) | When a scroll-drum metaphor suits the UI (mobile-native feel) |
+| [TextInput](/design-system/docs/text-input-zh) | When the date format is nonstandard or free-form |
 
 ## 13. Do's and don'ts
 
