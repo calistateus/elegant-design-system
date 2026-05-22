@@ -1,4 +1,4 @@
-import type { CaseStudy } from '@/components/simple/ElegantCaseStudyCard';
+import type { CaseStudy } from '@/components/simple/cards/ElegantCaseStudyCard';
 export type { CaseStudy };
 
 export interface Specialty {
