@@ -90,9 +90,15 @@
   --color-text-muted: var(--primitive-gray-600);
   --color-text-accent: var(--primitive-green-500);
   --color-border-subtle: var(--primitive-gray-100);
+  --color-border-input: var(--primitive-gray-300);
+  --color-border-input-focus: var(--primitive-gray-900);
   --color-progress-track: var(--primitive-gray-200);
   --color-interactive-primary-bg: var(--primitive-black);
   --color-interactive-primary-fg: var(--primitive-white);
+  --color-interactive-hover-bg: var(--primitive-gray-100);
+  --color-interactive-disabled-bg: var(--primitive-gray-50);
+  --color-interactive-disabled-border: var(--primitive-gray-200);
+  --opacity-disabled: 0.5;
   --color-heatmap-empty: var(--primitive-gray-200);
   --color-heatmap-low: var(--primitive-green-100);
   --color-heatmap-medium: var(--primitive-green-300);
@@ -166,6 +172,9 @@
   --size-stack-gap: var(--primitive-scale-8);
   --size-tag-gap: var(--primitive-scale-3);
   --size-drawer-width: 400px;
+  --size-input-padding: var(--primitive-scale-2) var(--primitive-scale-3);
+  --size-input-radius: var(--primitive-radius-md);
+  --size-menu-item-padding: var(--primitive-scale-2) var(--primitive-scale-3);
   --size-btn-px: var(--primitive-scale-4);
   --size-btn-py: var(--primitive-scale-2);
   --size-btn-px-sm: var(--primitive-scale-3);
