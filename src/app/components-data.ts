@@ -31,7 +31,7 @@ export const COMPONENTS: ComponentDef[] = [
   {
     name: 'Text Input',
     category: 'Forms',
-    storyId: 'simple-forms-eleganttextinput--elegant-text-input-story',
+    storyId: 'simple-forms-eleganttextinput--text-input',
     docFile: 'text-input-zh.md',
     description: 'Single-line text entry with label, helper text, and validation.',
   },
@@ -399,7 +399,7 @@ export const COMPONENTS: ComponentDef[] = [
   {
     name: 'Divider',
     category: 'Display',
-    storyId: 'simple-layout-elegantdivider--default',
+    storyId: 'simple-layout-elegantdivider--horizontal',
     docFile: 'divider-zh.md',
     description: 'Horizontal separator with optional label.',
   },
