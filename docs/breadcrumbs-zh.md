@@ -64,8 +64,6 @@ This component has a single configurable story (all items share the same visual 
 - Full depth trail.
 - Constrained by the `count` prop maximum; do not exceed.
 
-`[STORYBOOK BLOCK: Simple/Navigation/ElegantBreadcrumbs/Breadcrumbs]`
-
 ## 5. States
 
 | State | Ancestor link | Current page item |

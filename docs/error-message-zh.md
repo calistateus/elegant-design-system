@@ -66,8 +66,6 @@ The component has a single visual variant. There are no named variant props.
 - Use this variant for all inline field-level validation errors.
 - Constraint: icon size is fixed at 12 px — do not attempt to scale by wrapping in a transform; add an `iconSize` prop if size flexibility is required.
 
-`[STORYBOOK BLOCK: Simple/Forms/ElegantErrorMessage/ElegantErrorMessage]`
-
 ---
 
 ## 5. States

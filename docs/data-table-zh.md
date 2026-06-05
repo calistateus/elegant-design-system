@@ -57,8 +57,6 @@ A feature-rich data table that accepts CSV or JSON uploads and supports optional
 - Use as the baseline display mode when the data is simple and no interaction is needed.
 - Pre-seed with `initialData` for demos; the table is empty by default (all cells blank).
 
-`[STORYBOOK BLOCK: Simple/Data/Default]`
-
 **With zebra striping**
 - Alternates even rows between `--color-bg-main` (white) and `--color-bg-surface` (gray-50).
 - Use when the table has many columns and visual row separation aids scanning.

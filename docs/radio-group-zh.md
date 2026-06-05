@@ -54,8 +54,6 @@ RadioGroup has a single structural form. Content configuration determines varian
 - Heading + description + items.
 - Use when the group needs more context than the heading provides.
 
-`[STORYBOOK BLOCK: Simple/Forms/ElegantRadioGroup/Default]`
-
 **Without group description**
 - Heading + items only.
 - Use when the heading is self-sufficient.
@@ -63,8 +61,6 @@ RadioGroup has a single structural form. Content configuration determines varian
 **With error state**
 - Error message rendered below items when `showError={true}` and `error` string is provided.
 - Typically triggered on form submit when no option has been selected (or when `selectedId` is undefined).
-
-`[STORYBOOK BLOCK: Simple/Forms/ElegantRadioGroup/Default]`
 
 ## 5. States
 

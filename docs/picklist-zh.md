@@ -53,7 +53,6 @@ The Picklist has a single visual variant. Behavior is controlled by the `options
 - Selected items render as chips inside the trigger.
 - Deselecting is possible by clicking an option again or by dismissing the chip.
 - Listbox closes when the user clicks outside the component.
-`[STORYBOOK BLOCK: Simple/Forms/ElegantPicklist/ElegantPicklist]`
 
 ## 5. States
 

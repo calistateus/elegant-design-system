@@ -55,8 +55,6 @@ CheckboxGroup has a single structural form. Variants are defined by content conf
 - Heading + description + items.
 - Use when the group purpose needs elaboration beyond the heading.
 
-`[STORYBOOK BLOCK: Simple/Forms/ElegantCheckboxGroup/Default]`
-
 **Without group description**
 - Heading + items only.
 - Use when the heading is self-sufficient.
@@ -64,8 +62,6 @@ CheckboxGroup has a single structural form. Variants are defined by content conf
 **With error state**
 - Error message rendered below items when `showError={true}` and `error` string is provided.
 - Use to surface validation errors (e.g. required minimum selection).
-
-`[STORYBOOK BLOCK: Simple/Forms/ElegantCheckboxGroup/Default]`
 
 ## 5. States
 

@@ -58,8 +58,6 @@ The stories file exports one named story (`Default`). Column layout is the prima
 - Use for linear sequences where the reader follows items from first to last — process steps, project phases, methodology descriptions.
 - The default story shows 3 items with heading, description, and per-item descriptions.
 
-`[STORYBOOK BLOCK: Simple/Content/ElegantNumeratedList/Default]`
-
 **Two-column layout (columns="two")**
 - Renders items in a `grid-cols-1 md:grid-cols-2` layout — single column below 600px, two columns at 600px+.
 - Use for 4–6 items in a wide layout section where scanning two columns simultaneously is reasonable (e.g., a grid of 4 project outcomes).

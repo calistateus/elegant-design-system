@@ -67,8 +67,6 @@ The component has no discrete visual variants in the stories file — all variat
 - Enforces the chosen aspect ratio with `object-fit: cover`
 - Use to enforce consistency across a grid of images with varying source dimensions
 
-`[STORYBOOK BLOCK: Simple/Assets/ElegantImage/Default]`
-
 ## 5. States
 **Default (image loaded)**
 - Standard rendered state; image visible with radius and optional caption

@@ -53,12 +53,10 @@ The component has no named visual variants. Behavior varies by the `step` prop:
 **Integer step** (default, `step={1}`)
 - Knob snaps to whole numbers.
 - Stepper shows integer values.
-`[STORYBOOK BLOCK: Simple/Forms/ElegantRangeSlider/Default]`
 
 **Decimal step** (`step={0.1}`, etc.)
 - Knob and stepper snap to the nearest step increment.
 - Useful for opacity (0–1), percentage precision.
-`[STORYBOOK BLOCK: Simple/Forms/ElegantRangeSlider/DecimalStep]`
 
 ## 5. States
 

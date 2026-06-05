@@ -60,8 +60,6 @@ No discrete named variants. The two states of the image slot function as the pri
 - Rendered when `data.imagePath` is an empty string or falsy
 - The upload trigger is only active when `onImageUpload` callback is provided; otherwise cursor remains default
 
-`[STORYBOOK BLOCK: Simple/Cards/ElegantCaseStudyCard/Default]`
-
 ## 5. States
 **Default**
 - Static card at rest; image (if present) and content at scale 1

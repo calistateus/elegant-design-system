@@ -55,20 +55,14 @@ A scroll-drum picker composed of one or more independently scrollable columns, u
 - Use for time-of-day selection in scheduling, booking, or alarm interfaces.
 - Set `columns` to the appropriate data arrays; `label="Time"`.
 
-`[STORYBOOK BLOCK: Simple/Forms/WheelPicker/WheelPicker]`
-
 **Date picker (Month / Day / Year)**
 - Two or three columns: Month name, Day (1–31), and optionally Year.
 - Use for compact date selection without a calendar grid.
 - Set `columns` to the date data arrays; `label="Date"`.
 
-`[STORYBOOK BLOCK: Simple/Forms/WheelPicker/WheelPicker]`
-
 **Single column**
 - One drum; useful for picking a single ordered value (e.g., quantity 1–99).
 - Pass a single-element `columns` array; no column header is rendered unless `label` is set on the column.
-
-`[STORYBOOK BLOCK: Simple/Forms/WheelPicker/WheelPicker]`
 
 ## 5. States
 

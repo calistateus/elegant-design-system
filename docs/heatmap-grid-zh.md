@@ -54,8 +54,6 @@ A two-dimensional grid of color-coded cells that visualises the relative intensi
 - Use for activity, contribution, or engagement maps where green signals positive activity.
 - The demo data (7 × 12) auto-applies weekday and month labels.
 
-`[STORYBOOK BLOCK: Simple/Data/ElegantHeatmapGrid/Default]`
-
 **Accent scale**
 - Five-step gradient mixing the system accent color (`--color-text-accent`, green-500) at 20 / 40 / 70 / 100% opacity against the main background.
 - Use when the heatmap must align with the page's primary accent color rather than a semantic green.
@@ -69,8 +67,6 @@ A two-dimensional grid of color-coded cells that visualises the relative intensi
 **FromFile**
 - A Storybook-only wrapper (`HeatmapFileLoader`) that accepts an uploaded `.csv` or `.json` file and parses it into the component's `data` prop.
 - Not a prop variant of the component itself; it is a story-level composition for interactive demos.
-
-`[STORYBOOK BLOCK: Simple/Data/ElegantHeatmapGrid/FromFile]`
 
 ## 5. States
 

@@ -53,7 +53,6 @@ A vertically stacked list of collapsible panels — each showing a heading trigg
 - Body font size: `var(--primitive-font-size-sm)` (0.875rem).
 - Chevron size: 16px.
 - Use for standard content pages, FAQ sections, help center articles.
-`[STORYBOOK BLOCK: Simple/Content/ElegantAccordion/Default]`
 
 **Compact** (`size="compact"`)
 - Trigger padding: `var(--primitive-scale-3)` (0.75rem) vertical, `var(--primitive-scale-4)` (1rem) horizontal.
@@ -61,7 +60,6 @@ A vertically stacked list of collapsible panels — each showing a heading trigg
 - Body font size: `var(--primitive-font-size-xs)` (0.75rem).
 - Chevron size: 14px.
 - Use for dense UI surfaces, sidebars, or embedded settings panels where vertical space is at a premium.
-`[STORYBOOK BLOCK: Simple/Content/ElegantAccordion/Compact]`
 
 ## 5. States
 

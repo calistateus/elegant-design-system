@@ -50,13 +50,9 @@ Radio has a single visual form. State differences (selected/unselected) are the 
 - Label + supporting description below it.
 - Use when the option needs clarification.
 
-`[STORYBOOK BLOCK: Simple/Forms/ElegantRadio/Default]`
-
 **Without description**
 - Label only; `description` set to `false`.
 - Use for self-explanatory options.
-
-`[STORYBOOK BLOCK: Simple/Forms/ElegantRadio/WithoutDescription]`
 
 ## 5. States
 

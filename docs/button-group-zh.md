@@ -48,15 +48,11 @@ A layout container that renders 2–5 Button components side-by-side with consis
 - Use for page-level CTAs (hero sections, section footers, form actions).
 - The `buttons` array determines individual button styles (primary/secondary) and icons independently.
 
-`[STORYBOOK BLOCK: Simple/Forms/ElegantButtonGroup/ButtonGroup]`
-
 **Menu context**
 - Compact padding and smaller font size for all buttons.
 - Gap between buttons: `--size-btn-px-sm` → 0.75rem.
 - Use inside navigation bars, toolbars, or any compact UI surface.
 - All buttons in the group must share this context — mixing is not supported by the API.
-
-`[STORYBOOK BLOCK: Simple/Forms/ElegantButtonGroup/ButtonGroup]`
 
 ## 5. States
 ButtonGroup itself is a stateless layout wrapper. All interactive states are handled by the individual Button children.

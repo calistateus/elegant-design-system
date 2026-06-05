@@ -58,15 +58,11 @@ A paginated slide container that displays case study cards, icon cards, referral
 - Use for portfolio sections where the viewer should browse multiple projects sequentially.
 - Default: 3 slides, 1 visible at a time.
 
-`[STORYBOOK BLOCK: Simple/Assets/ElegantCarousel/CaseStudyCards]`
-
 **IconCards**
 - Renders `ElegantIconCard` slides with title, description, and a Lucide icon.
 - Default: 4 slides, 2 visible at a time — demonstrates the multi-slide layout.
 - Use for feature/capability sections where scanning two items side-by-side is appropriate.
 - Constraint: icon card content is driven by internal placeholder data (`PLACEHOLDER_SPECIALTIES`). Production usage would require extending the component to accept custom data.
-
-`[STORYBOOK BLOCK: Simple/Assets/ElegantCarousel/IconCards]`
 
 **ReferralCards**
 - Renders `ElegantReferralCard` slides with a blockquote, name, and role.
@@ -74,23 +70,17 @@ A paginated slide container that displays case study cards, icon cards, referral
 - Use for testimonials sections.
 - Constraint: referral data is internal placeholder. Production usage requires custom data injection.
 
-`[STORYBOOK BLOCK: Simple/Assets/ElegantCarousel/ReferralCards]`
-
 **Images**
 - Renders `ImageSlide` components — either an upload prompt (dashed border, `ImagePlus` icon) or an `ElegantImage` once a file is uploaded.
 - Controlled by `imageSize` (`sm`, `md`, `lg`, `full`) and `imageRatio` (`1/1`, `4/3`, `3/2`, `16/9`, `21/9`).
 - Use for image galleries in a case study or portfolio section.
 - Constraint: uploaded images are stored in local component state as data URLs — they do not persist across remounts.
 
-`[STORYBOOK BLOCK: Simple/Assets/ElegantCarousel/Images]`
-
 **AutoSlide**
 - Same as CaseStudyCards but with `autoSlide: true` and `autoSlideInterval: 3000`.
 - Demonstrates the auto-advance behavior.
 - Use for ambient display contexts (e.g., an unattended presentation or a hero section). Avoid in reading-heavy layouts.
 - The carousel does not pause on hover or focus — see Known gaps.
-
-`[STORYBOOK BLOCK: Simple/Assets/ElegantCarousel/AutoSlide]`
 
 ## 5. States
 

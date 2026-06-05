@@ -53,8 +53,6 @@ A compact metric display card that presents a single key performance indicator w
 - Choose when the metric has improved relative to the comparison period.
 - Requires `deltaDirection: 'up'` and a `delta` string.
 
-`[STORYBOOK BLOCK: Simple/Data/KpiCard]`
-
 **Negative delta**
 - Renders a red badge with a TrendingDown icon to signal a decrease.
 - Choose when the metric has declined; avoid using red for non-negative contexts.

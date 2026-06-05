@@ -50,14 +50,10 @@ A segmented date input composed of discrete MM, DD, and optional YYYY fields, pr
 - Use for birth dates, event dates, or any context requiring a complete calendar date.
 - Default: `showYear={true}`.
 
-`[STORYBOOK BLOCK: Simple/Forms/DateInput/DateInput]`
-
 **Month and day only (MM / DD)**
 - Year segment is not rendered. The emitted value format is `"MM/DD"`.
 - Use for recurring annual events (birthdays without year, anniversaries).
 - Set `showYear={false}`.
-
-`[STORYBOOK BLOCK: Simple/Forms/DateInput/DateInput]`
 
 ## 5. States
 

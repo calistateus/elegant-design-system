@@ -47,50 +47,34 @@ A compact, pill-shaped label used to communicate status, category, or metadata a
 - Light gray background (`--color-badge-neutral-bg` = `#fafafa`), gray text (`#666666`), gray border (`#f5f5f5`).
 - Default. Use for general-purpose labels with no semantic color meaning.
 
-`[STORYBOOK BLOCK: Simple/ElegantBadge/Badge]`
-
 **Red**
 - Light red background (`--primitive-red-100`), dark red text (`--primitive-red-800`), matching border.
 - Use for error states, destructive categories, or high-priority flags.
-
-`[STORYBOOK BLOCK: Simple/ElegantBadge/Badge]`
 
 **Green**
 - Light green background (`--primitive-green-100`), dark green text (`--primitive-green-800`), matching border.
 - Use for active, success, or healthy states.
 
-`[STORYBOOK BLOCK: Simple/ElegantBadge/Badge]`
-
 **Blue**
 - Light blue background (`--primitive-blue-100`), dark blue text (`--primitive-blue-800`), matching border.
 - Use for informational categories, "in progress" states, or link-adjacent labels.
-
-`[STORYBOOK BLOCK: Simple/ElegantBadge/Badge]`
 
 **Yellow**
 - Light yellow background (`--primitive-yellow-100`), dark amber text (`--primitive-yellow-800`), matching border.
 - Use for warning or caution states, or "pending" categories.
 
-`[STORYBOOK BLOCK: Simple/ElegantBadge/Badge]`
-
 **Purple**
 - Light purple background (`--primitive-purple-100`), dark purple text (`--primitive-purple-800`), matching border.
 - Use for premium tiers, special roles, or custom categories.
-
-`[STORYBOOK BLOCK: Simple/ElegantBadge/Badge]`
 
 **White**
 - Transparent background, white text, white border.
 - Use exclusively on dark or photographic backgrounds where the badge must appear in a light-on-dark style.
 - Invisible on light backgrounds — use only in visually controlled contexts.
 
-`[STORYBOOK BLOCK: Simple/ElegantBadge/Badge]`
-
 **Black**
 - Transparent background, black text (`#1e1e1e`), black border.
 - Use on light backgrounds when a monochrome, high-contrast label is needed without the filled background.
-
-`[STORYBOOK BLOCK: Simple/ElegantBadge/Badge]`
 
 ## 5. States
 Badges are non-interactive static elements. There are no hover, focus, active, or disabled states. They have no internal state changes.

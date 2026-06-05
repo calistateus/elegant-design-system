@@ -51,21 +51,15 @@ An inline, persistent feedback banner that communicates informational, success, 
 - Use for neutral guidance or contextual notes that carry no urgency.
 - No constraint on usage frequency within a page, but prefer sparing use.
 
-`[STORYBOOK BLOCK: Simple/Communications/ElegantAlert/Default]`
-
 **Success**
 - Renders a green border (`--color-text-accent`) and a CheckCircle icon in accent color.
 - Use to confirm a completed action or a positive system state (e.g., "Verification complete").
 - Should be paired with a specific outcome — avoid vague success messages.
 
-`[STORYBOOK BLOCK: Simple/Communications/ElegantAlert/Default]`
-
 **Error**
 - Renders a red border (`--color-error-text`) and an XCircle icon in error text color.
 - Use for actionable error states the user must resolve (e.g., "Payment failed").
 - Pair with specific remediation instructions in the message body.
-
-`[STORYBOOK BLOCK: Simple/Communications/ElegantAlert/Default]`
 
 ## 5. States
 

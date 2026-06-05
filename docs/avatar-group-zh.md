@@ -52,8 +52,6 @@ AvatarGroup renders a horizontal row of Avatar components with optional stacking
 - No separator ring or z-index layering
 - Use when avatars need more visual breathing room or the surface background varies
 
-`[STORYBOOK BLOCK: Simple/Assets/ElegantAvatarGroup/Default]`
-
 ## 5. States
 **Default**
 - Static; no hover, focus, or active behavior on the group itself

@@ -50,28 +50,20 @@ The stories file exposes four named compositions rather than discrete visual var
 - Use for content sections where items should read sequentially — feature lists, step sequences, article bodies.
 - `align: 'stretch'` causes children to fill the container width; this is the correct default for full-width stacked layouts.
 
-`[STORYBOOK BLOCK: Simple/Layout/ElegantContainer/VerticalStack]`
-
 **HorizontalRow**
 - Places children left-to-right in a single non-wrapping line, center-aligned on the cross axis.
 - Use for toolbars, icon+label pairs, or horizontally distributed controls.
 - Does not wrap — if overflow is a concern, use `WrappingRow` instead.
-
-`[STORYBOOK BLOCK: Simple/Layout/ElegantContainer/HorizontalRow]`
 
 **WrappingRow**
 - Places children left-to-right and wraps to the next line when space runs out (`direction: 'row-wrap'`).
 - Use for tag clouds, chip groups, card grids where items vary in width.
 - `align: 'start'` keeps items top-aligned when they wrap to multiple lines.
 
-`[STORYBOOK BLOCK: Simple/Layout/ElegantContainer/WrappingRow]`
-
 **PageSection**
 - Combines `as: 'section'`, `maxWidth: 'page'`, `center: true`, and `paddingY: 'section'` to produce a semantically correct, horizontally centered page band.
 - Use this as the outermost layout shell for every major page section.
 - The `section` element creates a landmark for screen readers; always include a heading inside it.
-
-`[STORYBOOK BLOCK: Simple/Layout/ElegantContainer/PageSection]`
 
 ## 5. States
 

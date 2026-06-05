@@ -48,13 +48,11 @@ A one-time-code / PIN entry control that renders individual digit cells, auto-ad
 - Four equally sized cells; used for shorter PINs.
 - Common use case: login PIN, short OTP.
 - Each cell is 2.75rem wide × 3rem tall.
-`[STORYBOOK BLOCK: Simple/Forms/ElegantPinInput/4-digit]`
 
 **6-digit** (`digits={6}`)
 - Six equally sized cells; used for longer verification codes.
 - Common use case: TOTP authenticator codes, email verification.
 - Same cell dimensions as the 4-digit variant.
-`[STORYBOOK BLOCK: Simple/Forms/ElegantPinInput/6-digit]`
 
 ## 5. States
 

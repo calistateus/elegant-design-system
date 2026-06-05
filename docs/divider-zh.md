@@ -68,10 +68,6 @@ A thin 1 px line that visually separates sections or elements, available in hori
 - Choose when splitting two adjacent elements in a horizontal flex container.
 - Constraint: the parent element must be a flex container — `align-self: stretch` only works in flex or grid context.
 
-`[STORYBOOK BLOCK: Simple/Layout/ElegantDivider/Horizontal]`
-`[STORYBOOK BLOCK: Simple/Layout/ElegantDivider/WithLabel]`
-`[STORYBOOK BLOCK: Simple/Layout/ElegantDivider/Vertical]`
-
 ## 5. States
 This component is purely presentational and has no interactive states. It does not respond to hover, focus, active, disabled, or loading conditions.
 

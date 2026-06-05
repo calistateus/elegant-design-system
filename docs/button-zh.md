@@ -46,15 +46,11 @@ A call-to-action element that triggers a user action, available in primary (fill
 - Use for the single most important action per view or section.
 - Only one primary button should appear per visual hierarchy level.
 
-`[STORYBOOK BLOCK: Simple/Forms/ElegantButton/Button]`
-
 **Secondary**
 - No background or border; text-only appearance.
 - In `default` context: text is `--color-text-body` (#171717). On hover: text shifts to `--color-interactive-primary-bg`.
 - In `menu` context: text is `--color-text-muted` (#666666). On hover: text shifts to `--color-interactive-primary-bg`.
 - Use for supporting or supplementary actions that should not compete with the primary CTA.
-
-`[STORYBOOK BLOCK: Simple/Forms/ElegantButton/Secondary]`
 
 ## 5. States
 

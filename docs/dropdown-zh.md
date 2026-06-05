@@ -49,14 +49,10 @@ A custom select control that presents a scrollable list of options in a floating
 - Trigger shows the `placeholder` in muted text color.
 - Use as the initial state before the user has made a selection.
 
-`[STORYBOOK BLOCK: Simple/Forms/Dropdown/Dropdown]`
-
 **Pre-selected**
 - Trigger shows the matching `option.label` in body text color.
 - Use when a sensible default exists or when editing an existing value.
 - Pass `value` matching an `option.value`.
-
-`[STORYBOOK BLOCK: Simple/Forms/Dropdown/Dropdown]`
 
 ## 5. States
 

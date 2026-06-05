@@ -52,7 +52,6 @@ A lightweight feedback control that lets users express a rating or reaction via 
 - Communicates binary helpful/not-helpful sentiment.
 - Use for help articles, support responses, feature feedback.
 - Value type: `'up' | 'down' | null`.
-`[STORYBOOK BLOCK: Simple/Forms/ElegantRatingInput/Thumbs]`
 
 **Stars** (`variant="stars"`)
 - A row of 1–N star buttons (default N = 5).
@@ -60,7 +59,6 @@ A lightweight feedback control that lets users express a rating or reaction via 
 - Communicates a scaled quality judgment.
 - Use for product ratings, experience feedback, content quality.
 - Value type: `number | null`.
-`[STORYBOOK BLOCK: Simple/Forms/ElegantRatingInput/Stars]`
 
 **Heart** (`variant="heart"`)
 - A single heart toggle button.
@@ -68,7 +66,6 @@ A lightweight feedback control that lets users express a rating or reaction via 
 - Communicates a save/favorite action alongside sentiment.
 - Use for liking posts, saving items to favorites.
 - Value type: `boolean`.
-`[STORYBOOK BLOCK: Simple/Forms/ElegantRatingInput/Heart]`
 
 ## 5. States
 

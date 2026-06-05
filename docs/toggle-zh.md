@@ -53,13 +53,9 @@ The Toggle has a single visual form but two content configurations:
 - Use when the setting requires clarification or has non-obvious implications.
 - Default story demonstrates this: "Enable notifications" + "You'll receive alerts for important updates."
 
-`[STORYBOOK BLOCK: Simple/Forms/ElegantToggle/Default]`
-
 **Without description**
 - Shows label only; `description` prop set to `false`.
 - Use for self-explanatory settings where additional text would add noise.
-
-`[STORYBOOK BLOCK: Simple/Forms/ElegantToggle/WithoutDescription]`
 
 ## 5. States
 

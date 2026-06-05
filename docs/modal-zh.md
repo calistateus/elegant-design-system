@@ -49,13 +49,9 @@ A centered overlay dialog that interrupts the current flow to present a focused 
 - Use for minimal confirmation dialogs where the heading alone communicates the decision.
 - Typically paired with action buttons placed in the `container` slot.
 
-`[STORYBOOK BLOCK: Simple/Communications/ElegantModal/HeadingOnly]`
-
 **With description**
 - Adds a muted paragraph below the heading to elaborate on consequences or context.
 - Use when the heading alone does not provide sufficient information for the user to make a decision (e.g., destructive confirmations).
-
-`[STORYBOOK BLOCK: Simple/Communications/ElegantModal/WithDescription]`
 
 ## 5. States
 

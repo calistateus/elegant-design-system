@@ -55,13 +55,9 @@ A calendar-based date picker that presents a trigger button displaying the selec
 - Trigger shows `placeholder` text in muted color.
 - Calendar opens to the current month on first open.
 
-`[STORYBOOK BLOCK: Simple/Forms/DateTimePicker/DateTimePicker]`
-
 **With selected value**
 - Trigger shows the formatted date (e.g., "April 27, 2026") in body text color.
 - Calendar opens to the month of the selected date.
-
-`[STORYBOOK BLOCK: Simple/Forms/DateTimePicker/DateTimePicker]`
 
 ## 5. States
 

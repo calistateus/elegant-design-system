@@ -52,8 +52,6 @@ The component does not expose named visual variants beyond size. The two visual 
 - Displays a muted `ImagePlus` icon at the center
 - Use during loading states, for anonymous users, or in design/editing contexts where the image has not yet been uploaded
 
-`[STORYBOOK BLOCK: Simple/Assets/ElegantAvatar/Default]`
-
 ## 5. States
 **Default**
 - Static display; no interaction affordances

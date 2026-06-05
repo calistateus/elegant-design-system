@@ -57,8 +57,6 @@ ReferralCard displays a testimonial or referral quote with attribution (name, ro
 - When `avatarPath` is provided, displays the photo; otherwise shows the Avatar placeholder icon
 - Use when the person's face adds credibility or recognition
 
-`[STORYBOOK BLOCK: Simple/Cards/ElegantReferralCard/Default]`
-
 ## 5. States
 **Default (only state)**
 - Static card; no hover, focus, or active behavior is implemented

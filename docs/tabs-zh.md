@@ -60,8 +60,6 @@ A tab strip component that switches between two to five labeled content panels, 
 - Choose when the tab+panel unit should read as a discrete container.
 - Constraint: first tab gets `border-top-left-radius: --primitive-radius-sm`; last tab gets `border-top-right-radius: --primitive-radius-sm`.
 
-`[STORYBOOK BLOCK: Simple/Content/ElegantTabs/Tabs]`
-
 ## 5. States
 
 | State | Inactive tab | Active tab — underlined | Active tab — contained |

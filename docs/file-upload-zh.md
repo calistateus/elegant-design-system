@@ -56,14 +56,12 @@ A file selection control that lets users attach one or more files either via a b
   - **Horizontal**: label left-aligned, button right-aligned, chips and error below.
 - Use when the upload control sits inside a larger form and should not dominate the visual hierarchy.
 - Constraint: chips wrap if many files are selected.
-`[STORYBOOK BLOCK: Simple/Forms/ElegantFileUpload/ButtonVariant]`
 
 **Dropzone variant** (`variant="dropzone"`)
 - A full-width bordered rectangle that emphasizes drag-and-drop affordance.
 - Selected files appear as chips below the dropzone.
 - Use when file uploading is the primary action on the surface (dedicated upload views, import flows).
 - Constraint: always stretches to 100% of its container width.
-`[STORYBOOK BLOCK: Simple/Forms/ElegantFileUpload/DropzoneVariant]`
 
 ## 5. States
 

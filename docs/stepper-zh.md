@@ -47,10 +47,6 @@ A visual navigation landmark that shows a user's position within a multi-step fl
 - Connectors between steps are 1px lines: accent colour for completed → next segment, track colour for upcoming.
 - Use for most onboarding and checkout flows — the most legible and familiar pattern.
 
-`[STORYBOOK BLOCK: Simple/Feedback/ElegantStepper/CircleHorizontal]`
-
-`[STORYBOOK BLOCK: Simple/Feedback/ElegantStepper/CircleVertical]`
-
 **Tab**
 - Each step is a rectangular tab with a coloured top (horizontal) or left (vertical) border — 3px solid.
 - Completed: accent border + accent step number.
@@ -58,10 +54,6 @@ A visual navigation landmark that shows a user's position within a multi-step fl
 - Upcoming: track-colour border + muted-colour step number (`--color-text-muted`).
 - No separate connector element — adjacent tabs share a 2px gap.
 - Use when horizontal space is abundant and a clean, document-style progress bar is preferred (e.g., settings wizards, multi-page forms).
-
-`[STORYBOOK BLOCK: Simple/Feedback/ElegantStepper/TabHorizontal]`
-
-`[STORYBOOK BLOCK: Simple/Feedback/ElegantStepper/TabVertical]`
 
 ## 5. States
 

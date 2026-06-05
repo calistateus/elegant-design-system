@@ -47,21 +47,15 @@ A horizontal (or vertical) progress bar that communicates how far a user has adv
 - Use when the heading provides essential framing for the step (e.g., "Select transportation").
 - The action button is not available in this placement.
 
-`[STORYBOOK BLOCK: Simple/Feedback/ElegantLinearProgress/LabelTop]`
-
 **Label Bottom**
 - The label row sits below the track, optionally accompanied by an action button aligned to the right.
 - Use when the progress bar itself is the primary visual and the label is supplementary, or when you need to combine the label with a "Next" button in a single compact row.
 - The action button (`showButton`, `buttonLabel`, `onButtonClick`) is only rendered in this placement.
 
-`[STORYBOOK BLOCK: Simple/Feedback/ElegantLinearProgress/LabelBottom]`
-
 **Vertical**
 - The track runs vertically (fixed height via `--size-progress-track-length`) with the label and step counter displayed to its right.
 - Use in sidebars or narrow column layouts where horizontal space is constrained.
 - The action button is not available in this placement. Fill grows from top to bottom.
-
-`[STORYBOOK BLOCK: Simple/Feedback/ElegantLinearProgress/Vertical]`
 
 ## 5. States
 **In progress (default)**

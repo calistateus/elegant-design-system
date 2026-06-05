@@ -51,13 +51,9 @@ The Checkbox has a single visual form. State variants (unselected, selected, ind
 - Label and supporting description rendered below it.
 - Use when the option requires clarification.
 
-`[STORYBOOK BLOCK: Simple/Forms/ElegantCheckbox/Default]`
-
 **Without description**
 - Label only; `description` set to `false`.
 - Use for self-explanatory options.
-
-`[STORYBOOK BLOCK: Simple/Forms/ElegantCheckbox/WithoutDescription]`
 
 ## 5. States
 

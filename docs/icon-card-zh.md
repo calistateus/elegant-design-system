@@ -44,8 +44,6 @@ IconCard is a static feature-highlight card that pairs a single Lucide icon with
 ## 4. Variants
 No discrete variants are defined. All visual variation comes from swapping the `icon` prop. The card surface, spacing, and typography are fixed.
 
-`[STORYBOOK BLOCK: Simple/Cards/ElegantIconCard/Default]`
-
 ## 5. States
 **Default (only state)**
 - Static card; no hover, focus, active, or disabled behavior is implemented

@@ -58,8 +58,6 @@ The component has a single visual design; behavior varies via `siblings` and the
 - Page window sits at the right; a leading ellipsis appears after page 1.
 - No trailing ellipsis.
 
-`[STORYBOOK BLOCK: Simple/Navigation/ElegantPagination/Pagination]`
-
 ## 5. States
 
 | State | Page button | Prev / Next button |

@@ -48,19 +48,13 @@ A compact, dismissible tag that represents a user-applied value — such as an a
 - Light gray background, gray text (`#666666`), gray border (`#f5f5f5`).
 - Default. Use for general-purpose filter chips on light surfaces.
 
-`[STORYBOOK BLOCK: Simple/ElegantChip/Neutral]`
-
 **Black**
 - Transparent background, near-black text (`#1e1e1e`), near-black border.
 - Use on light surfaces when a monochrome, minimal aesthetic is preferred.
 
-`[STORYBOOK BLOCK: Simple/ElegantChip/Black]`
-
 **White**
 - Transparent background, white text, white border.
 - Use exclusively on dark or photographic backgrounds. Invisible on light surfaces.
-
-`[STORYBOOK BLOCK: Simple/ElegantChip/White]`
 
 ## 5. States
 

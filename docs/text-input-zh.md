@@ -49,21 +49,15 @@ A single-line text input field with optional label, supporting description, trai
 - Use when the field's purpose is to filter or look up items.
 - Default variant (`icon="search"`).
 
-`[STORYBOOK BLOCK: Simple/Forms/ElegantTextInput/TextInput]`
-
 **Arrow icon**
 - Renders the Lucide `ArrowRight` icon (14 px, stroke 1.5) at the trailing edge.
 - Use when the field triggers navigation or submission on commit (e.g., a URL bar or go-to field).
 - Set `icon="arrow"`.
 
-`[STORYBOOK BLOCK: Simple/Forms/ElegantTextInput/TextInput]`
-
 **No icon**
 - Removes the trailing icon and adjusts horizontal padding symmetrically (`var(--primitive-scale-3)` on both sides).
 - Use for plain text fields where an icon adds no semantic value.
 - Set `showIcon={false}`.
-
-`[STORYBOOK BLOCK: Simple/Forms/ElegantTextInput/TextInput]`
 
 ## 5. States
 

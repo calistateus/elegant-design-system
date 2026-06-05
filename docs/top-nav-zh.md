@@ -59,8 +59,6 @@ The component has one story (`Default`). Configurable axes are `logo`, `count` (
 - All horizontal space is used by nav links only.
 - Choose for purely informational or browse-oriented navigation where no single primary action exists.
 
-`[STORYBOOK BLOCK: Simple/Navigation/ElegantTopNav/Default]`
-
 ## 5. States
 
 | State | Desktop nav link | Mobile drawer link | CTA button |

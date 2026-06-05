@@ -50,28 +50,20 @@ A small floating label that reveals supplementary text on hover, providing conte
 - Arrow points downward from the bubble's bottom edge.
 - Use as the default position when space above the element is available.
 
-`[STORYBOOK BLOCK: Simple/Communications/ElegantTooltip/Top]`
-
 **Bottom**
 - Bubble appears centered below the trigger element.
 - Arrow points upward from the bubble's top edge.
 - Use when the element is near the top of the viewport and upward space is insufficient.
-
-`[STORYBOOK BLOCK: Simple/Communications/ElegantTooltip/Bottom]`
 
 **Left**
 - Bubble appears centered to the left of the trigger element.
 - Arrow points rightward from the bubble's right edge.
 - Use for rightmost elements in a horizontal toolbar.
 
-`[STORYBOOK BLOCK: Simple/Communications/ElegantTooltip/Left]`
-
 **Right**
 - Bubble appears centered to the right of the trigger element.
 - Arrow points leftward from the bubble's left edge.
 - Use for leftmost elements, or when left space is constrained.
-
-`[STORYBOOK BLOCK: Simple/Communications/ElegantTooltip/Right]`
 
 ## 5. States
 

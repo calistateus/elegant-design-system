@@ -54,22 +54,16 @@ A panel that slides in from a viewport edge (right, left, or bottom) to surface 
 - Left corners are rounded (`--size-card-radius`); right border is removed.
 - Standard position for settings, detail panels, and inspection views on desktop.
 
-`[STORYBOOK BLOCK: Simple/Navigation/ElegantDrawerSheet/Default]`
-
 **Left**
 - Panel is fixed to the left edge, full viewport height, 400 px wide.
 - Right corners are rounded; left border is removed.
 - Use when content logically originates from the left (e.g., a navigation tree or sidebar panel that opens contextually).
-
-`[STORYBOOK BLOCK: Simple/Navigation/ElegantDrawerSheet/Default]`
 
 **Bottom**
 - Panel is fixed to the bottom edge, full viewport width.
 - Top corners are rounded; bottom border is removed.
 - Use as a mobile action sheet or a contextual panel in mobile-first layouts.
 - Height is determined by content — no explicit height is set.
-
-`[STORYBOOK BLOCK: Simple/Navigation/ElegantDrawerSheet/Default]`
 
 ## 5. States
 

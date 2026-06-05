@@ -62,8 +62,6 @@ CardPack is a responsive grid layout container that renders 1–12 instances of 
 - Renders KpiCard instances with label, value, delta, delta direction, period, and icon
 - Placeholder data: four business metric examples
 
-`[STORYBOOK BLOCK: Simple/Cards/ElegantCardPack/Default]`
-
 ## 5. States
 CardPack has no visual states of its own; it is a layout container. All interactive and visual states (hover on CaseStudyCard, placeholder image on Avatar, etc.) are owned by the individual child card components.
 

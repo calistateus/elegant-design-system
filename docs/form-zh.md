@@ -51,7 +51,6 @@ The Form component has no visual variants itself. Its sub-components (FormHeader
 - Shows the canonical layout: header → section → footer.
 - The section slot accepts 1–5 configurable fields.
 - All form field types available in the design system (TextInput, Dropdown, Search, Checkbox, CheckboxGroup, Radio, RadioGroup, Toggle, DateInput) can be slotted in.
-`[STORYBOOK BLOCK: Simple/Forms/ElegantForm/Default]`
 
 ## 5. States
 

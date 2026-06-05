@@ -71,8 +71,6 @@ Trigger configuration is the primary variant axis.
 **Item with sub-menu**
 - Setting `subItems` on an item renders a `ChevronRight` indicator. Hovering or pressing ArrowRight opens the flyout sub-menu.
 
-`[STORYBOOK BLOCK: Simple/Navigation/ElegantActionMenu/ActionMenu]`
-
 ## 5. States
 
 | State | Trigger | Action item | Sub-menu item |

@@ -60,9 +60,6 @@ The component has no named style variants. The key variation axes are `count` (2
 - Setting `external: true` on an item adds `target="_blank"` and `rel="noopener noreferrer"`.
 - No visual indicator (e.g. external icon) is added.
 
-`[STORYBOOK BLOCK: Simple/Navigation/ElegantBottomNav/Desktop]`
-`[STORYBOOK BLOCK: Simple/Navigation/ElegantBottomNav/Mobile]`
-
 ## 5. States
 
 | State | Visual |

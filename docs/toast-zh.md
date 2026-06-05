@@ -51,21 +51,15 @@ A transient overlay notification that appears at the viewport edge, communicates
 - Use for neutral informational feedback (e.g., clipboard copy, settings saved).
 - No urgency implied.
 
-`[STORYBOOK BLOCK: Simple/Communications/ElegantToast/Default]`
-
 **Success**
 - Green border (`--primitive-green-500`), CheckCircle icon in accent color.
 - Use to confirm a completed action with a positive outcome.
 - Keep the message concise and past-tense ("Saved successfully", "Uploaded").
 
-`[STORYBOOK BLOCK: Simple/Communications/ElegantToast/Success]`
-
 **Error**
 - Red border (`--primitive-red-500`), XCircle icon in error text color.
 - Use for non-blocking errors that do not prevent the user from continuing.
 - If the error requires resolution, use an Alert or Modal rather than a Toast.
-
-`[STORYBOOK BLOCK: Simple/Communications/ElegantToast/Error]`
 
 ## 5. States
 

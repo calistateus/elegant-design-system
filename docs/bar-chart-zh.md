@@ -55,8 +55,6 @@ A vertical bar chart component that renders a series of labeled bars with relati
 - Use when the chart should align with the site's primary accent.
 - Set `color: 'accent'` (the default).
 
-`[STORYBOOK BLOCK: Simple/Data/ElegantBarChart/Default]`
-
 **Primary color**
 - Bars are filled with `--color-interactive-primary-bg` (black, `#1e1e1e`).
 - Use when the chart should read as a strong primary data element, consistent with primary buttons.
@@ -70,8 +68,6 @@ A vertical bar chart component that renders a series of labeled bars with relati
 **FromFile**
 - A Storybook-only wrapper (`BarChartFileLoader`) that accepts an uploaded `.csv` or `.json` file and parses it into the component's `data` prop.
 - Not a component-level prop variant; it is a story-level composition for interactive demos.
-
-`[STORYBOOK BLOCK: Simple/Data/ElegantBarChart/FromFile]`
 
 ## 5. States
 

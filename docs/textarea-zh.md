@@ -48,28 +48,20 @@ A multi-line text input with optional character/word counter, resize handle, lab
 - Use for open-ended fields without a defined length budget.
 - `counter` prop is `undefined`.
 
-`[STORYBOOK BLOCK: Simple/Forms/Textarea/Textarea]`
-
 **Character counter**
 - Renders a `{charCount}` or `{charCount} / {maxChars}` label at the trailing edge below the textarea.
 - Use when a hard character budget exists (e.g., social bio, SMS-style message).
 - Set `counter="char"`. Pair with `maxChars` to show the limit and enforce a soft cap.
-
-`[STORYBOOK BLOCK: Simple/Forms/Textarea/Textarea]`
 
 **Word counter**
 - Renders a `{wordCount} word(s)` label below the textarea.
 - Use when the requirement is expressed in words rather than characters (e.g., "Max 100 words").
 - Set `counter="word"`. Note: `maxChars` only affects the character counter; there is no `maxWords` prop — word counting is display-only.
 
-`[STORYBOOK BLOCK: Simple/Forms/Textarea/Textarea]`
-
 **Draggable (resizable)**
 - The textarea resize handle is enabled, allowing the user to drag the bottom edge to increase height.
 - Use when input length is unpredictable and allowing more vertical space improves usability.
 - Set `draggable={true}`.
-
-`[STORYBOOK BLOCK: Simple/Forms/Textarea/Textarea]`
 
 ## 5. States
 

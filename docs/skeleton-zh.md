@@ -46,23 +46,15 @@ A shimmering placeholder that mirrors the shape of content still loading, preser
 - When `lines > 1`, multiple blocks are stacked with `--size-body-to-body` gap; the last line is automatically narrowed to 70% of the specified width to mimic the natural ragged end of a paragraph.
 - Use for body copy, headings, labels, or any inline text content.
 
-`[STORYBOOK BLOCK: Simple/Feedback/ElegantSkeleton/Text]`
-
-`[STORYBOOK BLOCK: Simple/Feedback/ElegantSkeleton/TextMultiline]`
-
 **Circle**
 - `borderRadius` is `50%` — produces a perfect circle.
 - Default height is `3rem`. Width and height must be set to the same value for a true circle.
 - Use for avatar placeholders, user icons, or any circular UI element.
 
-`[STORYBOOK BLOCK: Simple/Feedback/ElegantSkeleton/Circle]`
-
 **Rect**
 - `borderRadius` uses `--size-card-radius` (4px) — matches the standard card corner radius.
 - Default height is `8rem`.
 - Use for image thumbnails, card hero areas, chart placeholders, or any rectangular block content.
-
-`[STORYBOOK BLOCK: Simple/Feedback/ElegantSkeleton/Rect]`
 
 ## 5. States
 **Loading (default / only state)**

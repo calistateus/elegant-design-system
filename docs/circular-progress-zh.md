@@ -51,15 +51,11 @@ A circular SVG progress indicator that communicates completion either as a perce
 - Use when progress maps directly to a percentage (file upload, profile completion, survey progress).
 - Constraints: `value`, `showValue` are the relevant props; `steps` and `currentStep` are ignored.
 
-`[STORYBOOK BLOCK: Simple/Feedback/ElegantCircularProgress/Percentage]`
-
 **Steps**
 - Driven by `steps` (total) and `currentStep` (1-based). Fill = `(currentStep / steps) * 100%`.
 - The numeric display shows `"3/7"` style text.
 - Use when progress is step-indexed (onboarding, checkout) and a fraction counter is more meaningful than a percentage.
 - Constraints: `steps`, `currentStep`, `showStepCount` are the relevant props; `value` and `showValue` are ignored.
-
-`[STORYBOOK BLOCK: Simple/Feedback/ElegantCircularProgress/Steps]`
 
 **Label placements (both variants)**
 

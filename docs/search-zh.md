@@ -52,14 +52,10 @@ A search field with an optional autocomplete suggestion list, used to filter or 
 - Use when the suggestion dataset is available client-side.
 - Default in Storybook (`autocomplete: true`).
 
-`[STORYBOOK BLOCK: Simple/Forms/Search/Search]`
-
 **Without autocomplete**
 - `autocomplete={false}`: renders a plain search field with left icon and clear button. No suggestions panel.
 - Use for simple search bars where results are fetched server-side after explicit submission (e.g., pressing Enter), or when no suggestion data is available.
 - `onSelect` will never fire in this mode.
-
-`[STORYBOOK BLOCK: Simple/Forms/Search/Search]`
 
 ## 5. States
 
