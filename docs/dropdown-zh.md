@@ -105,8 +105,6 @@ A custom select control that presents a scrollable list of options in a floating
 - Visually: background `var(--color-interactive-disabled-bg)`; border `var(--color-interactive-disabled-border)`; opacity `var(--opacity-disabled)` (0.5); cursor `not-allowed`.
 - Behavior: clicks do not open the listbox; button is native-disabled.
 
-`[STORYBOOK BLOCK: Simple/Forms/Dropdown/Dropdown]`
-
 ## 6. Properties
 
 | Prop | Type | Default | Required | Description |

@@ -82,8 +82,6 @@ A visual navigation landmark that shows a user's position within a multi-step fl
 - When `stepItems` is empty or no `label`/`description` is provided, only the step indicator and (if `showStepNumber=true`) the step number are rendered.
 - The layout collapses: no label row, connector aligns to the indicator centre.
 
-`[STORYBOOK BLOCK: Simple/Feedback/ElegantStepper/NoLabels]`
-
 ## 6. Properties
 | Prop | Type | Default | Required | Description |
 |---|---|---|---|---|

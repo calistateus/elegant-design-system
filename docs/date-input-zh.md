@@ -107,8 +107,6 @@ A segmented date input composed of discrete MM, DD, and optional YYYY fields, pr
 - Visually: all segments: background `var(--color-interactive-disabled-bg)`; border `var(--color-interactive-disabled-border)`; opacity `var(--opacity-disabled)` (0.5); cursor `not-allowed`. Focus ring suppressed when disabled.
 - Behavior: native `disabled` prevents input.
 
-`[STORYBOOK BLOCK: Simple/Forms/DateInput/DateInput]`
-
 ## 6. Properties
 
 | Prop | Type | Default | Required | Description |

@@ -71,8 +71,6 @@ The Toggle has a single visual form but two content configurations:
 - Thumb positioned at left: `left: 0.125rem`.
 - `aria-checked="false"`.
 
-`[STORYBOOK BLOCK: Simple/Forms/ElegantToggle/Default]`
-
 **On (toggled)**
 - Pill background: `--color-interactive-primary-bg`.
 - Thumb positioned at right: `left: calc(2rem - 1rem - 0.125rem)` = `0.875rem`.

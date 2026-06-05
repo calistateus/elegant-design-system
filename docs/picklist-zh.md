@@ -112,8 +112,6 @@ The Picklist has a single visual variant. Behavior is controlled by the `options
 **Empty options**
 - When `options` is an empty array, the listbox shows "No options" in muted text.
 
-`[STORYBOOK BLOCK: Simple/Forms/ElegantPicklist/ElegantPicklist]`
-
 ## 6. Properties
 | Prop | Type | Default | Required | Description |
 |---|---|---|---|---|

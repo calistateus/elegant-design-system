@@ -68,8 +68,6 @@ RadioGroup has a single structural form. Content configuration determines varian
 - The item whose `id` matches `selectedId` renders as `selected`; all others render as `unselected`.
 - No error message shown.
 
-`[STORYBOOK BLOCK: Simple/Forms/ElegantRadioGroup/Default]`
-
 **No selection (selectedId undefined)**
 - All items render as `unselected`.
 - Use this to represent an uninitialized state before the user makes a choice.

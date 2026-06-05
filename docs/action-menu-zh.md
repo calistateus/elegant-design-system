@@ -114,8 +114,6 @@ Trigger configuration is the primary variant axis.
 **Focus — menu items**
 - Menu items use `tabIndex={-1}` and are focused programmatically via `.focus()` calls. ArrowDown/Up navigates between items; Home/End jumps to first/last; Escape closes the menu and returns focus to the trigger; ArrowRight opens a sub-menu; ArrowLeft/Escape closes the sub-menu. Focus is restored to the trigger when an item is selected or the menu closes via Escape.
 
-`[STORYBOOK BLOCK: Simple/Navigation/ElegantActionMenu/ActionMenu]`
-
 ## 6. Properties
 
 **`ActionMenuProps` (union type — at least one of `icon` or `label` must be provided):**

@@ -69,8 +69,6 @@ CheckboxGroup has a single structural form. Variants are defined by content conf
 - Items render at their individual `checkboxState` values.
 - No error message shown.
 
-`[STORYBOOK BLOCK: Simple/Forms/ElegantCheckboxGroup/Default]`
-
 **Error**
 - Triggered by passing `showError={true}` with a non-empty `error` string.
 - `ElegantErrorMessage` appears below the items list with `--size-form-group-gap` top margin.

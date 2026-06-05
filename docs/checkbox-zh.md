@@ -69,8 +69,6 @@ The Checkbox has a single visual form. State variants (unselected, selected, ind
 - No inner icon.
 - `checkboxState="unselected"`.
 
-`[STORYBOOK BLOCK: Simple/Forms/ElegantCheckbox/Default]`
-
 **Selected**
 - Box: `--color-interactive-primary-bg` fill and border.
 - Checkmark SVG rendered in white.

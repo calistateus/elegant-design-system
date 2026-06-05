@@ -114,8 +114,6 @@ A calendar-based date picker that presents a trigger button displaying the selec
 - Trigger background: `var(--primitive-gray-100)`, opacity `0.6`, cursor `not-allowed`.
 - Clicking does not open the calendar.
 
-`[STORYBOOK BLOCK: Simple/Forms/DateTimePicker/DateTimePicker]`
-
 ## 6. Properties
 
 | Prop | Type | Default | Required | Description |

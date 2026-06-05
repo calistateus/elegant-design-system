@@ -88,8 +88,6 @@ A tab strip component that switches between two to five labeled content panels, 
 **Focus**
 - Active tab has `tabIndex={0}`; inactive tabs have `tabIndex={-1}`. Browser default focus outline appears on the focused `<button>`. No custom `:focus-visible` ring is implemented. Arrow key navigation between tabs is not implemented (only mouse click `onClick`). Users must Tab to the active tab button and then click to switch — this deviates from the ARIA `tablist` pattern which requires Left/Right arrow keys. Known gap.
 
-`[STORYBOOK BLOCK: Simple/Content/ElegantTabs/Tabs]`
-
 ## 6. Properties
 | Prop | Type | Default | Required | Description |
 |---|---|---|---|---|

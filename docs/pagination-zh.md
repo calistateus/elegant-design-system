@@ -97,8 +97,6 @@ The component has a single visual design; behavior varies via `siblings` and the
 **Focus**
 - No explicit `:focus-visible` style set. Browser default outline applies. The `.elegant-btn:focus-visible` global rule is not applied to pagination buttons — no design-system-aligned focus ring is present. Known gap.
 
-`[STORYBOOK BLOCK: Simple/Navigation/ElegantPagination/Pagination]`
-
 ## 6. Properties
 | Prop | Type | Default | Required | Description |
 |---|---|---|---|---|

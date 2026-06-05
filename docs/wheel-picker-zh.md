@@ -94,8 +94,6 @@ A scroll-drum picker composed of one or more independently scrollable columns, u
 - Visually: all drums: opacity `0.45`, `overflow-y: hidden`, cursor `not-allowed`.
 - Behavior: `onChange` calls are silently dropped (replaced with a no-op). Keyboard events are blocked. `tabIndex={-1}` on drums.
 
-`[STORYBOOK BLOCK: Simple/Forms/WheelPicker/WheelPicker]`
-
 ## 6. Properties
 
 ### ElegantWheelPickerProps

@@ -108,8 +108,6 @@ A search field with an optional autocomplete suggestion list, used to filter or 
 - Triggered: focus leaves the container (checked via `containerRef` in `onBlur`).
 - Visually: border returns to `var(--primitive-gray-300)`; focus ring removed; listbox closes.
 
-`[STORYBOOK BLOCK: Simple/Forms/Search/Search]`
-
 ## 6. Properties
 
 | Prop | Type | Default | Required | Description |

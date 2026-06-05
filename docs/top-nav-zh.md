@@ -101,8 +101,6 @@ The component has one story (`Default`). Configurable axes are `logo`, `count` (
 - No custom `:focus-visible` styling is applied to any nav element — browser default outlines apply on all focusable elements.
 - The skip link is properly implemented: visually hidden until it receives keyboard focus, then revealed at the top of the nav. Focus is restored to the hamburger button when a mobile nav link is clicked.
 
-`[STORYBOOK BLOCK: Simple/Navigation/ElegantTopNav/Default]`
-
 ## 6. Properties
 | Prop | Type | Default | Required | Description |
 |---|---|---|---|---|

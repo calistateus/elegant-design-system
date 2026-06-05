@@ -80,8 +80,6 @@ A vertically stacked list of collapsible panels — each showing a heading trigg
 **Trigger focus**
 - Browser default focus ring applies. Each trigger is a native `<button>` — the global `.elegant-btn:focus-visible` rule is not applied here, so no custom focus ring is set. Known gap.
 
-`[STORYBOOK BLOCK: Simple/Content/ElegantAccordion/Default]`
-
 ## 6. Properties
 | Prop | Type | Default | Required | Description |
 |---|---|---|---|---|

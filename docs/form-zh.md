@@ -83,8 +83,6 @@ The Form component has no visual variants itself. Its sub-components (FormHeader
 - After a successful submit, the story replaces the form with a confirmation message.
 - Behavior is consumer-defined; the component does not prescribe a post-submit state.
 
-`[STORYBOOK BLOCK: Simple/Forms/ElegantForm/Default]`
-
 ## 6. Properties
 
 ### Form

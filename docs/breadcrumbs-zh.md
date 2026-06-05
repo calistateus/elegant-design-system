@@ -89,8 +89,6 @@ This component has a single configurable story (all items share the same visual 
 - Rendered as a `<span>`, not interactive; pointer events have no effect.
 - `aria-current="page"` is applied for screen reader announcement.
 
-`[STORYBOOK BLOCK: Simple/Navigation/ElegantBreadcrumbs/Breadcrumbs]`
-
 ## 6. Properties
 | Prop | Type | Default | Required | Description |
 |---|---|---|---|---|

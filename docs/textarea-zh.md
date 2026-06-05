@@ -98,8 +98,6 @@ A multi-line text input with optional character/word counter, resize handle, lab
 - Visually: background `var(--color-interactive-disabled-bg)`; border `var(--color-interactive-disabled-border)`; opacity `var(--opacity-disabled)` (0.5); cursor `not-allowed`.
 - Behavior: native `<textarea disabled>` prevents all interaction and removes the element from tab order.
 
-`[STORYBOOK BLOCK: Simple/Forms/Textarea/Textarea]`
-
 ## 6. Properties
 
 | Prop | Type | Default | Required | Description |

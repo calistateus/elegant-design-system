@@ -88,8 +88,6 @@ A lightweight feedback control that lets users express a rating or reaction via 
 - No visual indicator beyond reduced opacity.
 - All buttons are non-interactive.
 
-`[STORYBOOK BLOCK: Simple/Forms/ElegantRatingInput/Stars]`
-
 ## 6. Properties
 
 ### Shared props (all variants)

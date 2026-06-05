@@ -88,8 +88,6 @@ A single-line text input field with optional label, supporting description, trai
 - Visually: background becomes `var(--color-interactive-disabled-bg)`; border becomes `var(--color-interactive-disabled-border)`; opacity drops to `var(--opacity-disabled)` (0.5); cursor becomes `not-allowed`.
 - Behavior: the native `<input disabled>` attribute prevents all interaction and removes the field from the tab order.
 
-`[STORYBOOK BLOCK: Simple/Forms/ElegantTextInput/TextInput]`
-
 ## 6. Properties
 
 | Prop | Type | Default | Required | Description |

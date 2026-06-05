@@ -80,8 +80,6 @@ The component has no named style variants. The key variation axes are `count` (2
 **Focus**
 - Native `<a>` elements receive browser default focus ring. No custom `:focus-visible` styling is applied. Known gap: no design-system-aligned focus ring.
 
-`[STORYBOOK BLOCK: Simple/Navigation/ElegantBottomNav/Desktop]`
-
 ## 6. Properties
 
 **Component props (`ElegantBottomNavProps`):**

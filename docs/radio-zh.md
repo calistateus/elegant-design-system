@@ -67,8 +67,6 @@ Radio has a single visual form. State differences (selected/unselected) are the 
 - No inner dot.
 - `radioState="unselected"`.
 
-`[STORYBOOK BLOCK: Simple/Forms/ElegantRadio/Default]`
-
 **Selected**
 - Circle: `--color-interactive-primary-bg` fill and border.
 - 6×6px white inner dot centered within the circle.

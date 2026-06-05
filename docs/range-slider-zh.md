@@ -92,8 +92,6 @@ The component has no named visual variants. Behavior varies by the `step` prop:
 - Stepper buttons and knob are not interactive (`cursor: not-allowed`).
 - Stepper − button is also disabled when `current <= min`; + button when `current >= max`.
 
-`[STORYBOOK BLOCK: Simple/Forms/ElegantRangeSlider/Disabled]`
-
 ## 6. Properties
 | Prop | Type | Default | Required | Description |
 |---|---|---|---|---|

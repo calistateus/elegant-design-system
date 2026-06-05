@@ -106,8 +106,6 @@ A file selection control that lets users attach one or more files either via a b
 - The dropzone receives a `box-shadow: 0 0 0 2px var(--color-interactive-primary-bg)` focus ring on keyboard focus.
 - Triggered by Tab navigation to the dropzone element.
 
-`[STORYBOOK BLOCK: Simple/Forms/ElegantFileUpload/DropzoneVariant]`
-
 ## 6. Properties
 | Prop | Type | Default | Required | Description |
 |---|---|---|---|---|
